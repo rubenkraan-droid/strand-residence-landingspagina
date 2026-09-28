@@ -15,6 +15,7 @@ https://rubenkraan-droid.github.io/strand-residence-landingspagina/
 | `bedankt.html` | bedankpagina na verzenden van een formulier |
 | `images/` | projectbeeld, afkomstig uit het officiële archief van strandresidence.nl |
 | `ghl/formulieren.md` | velden, labels en tags voor de twee GoHighLevel-formulieren |
+| `voorstel/` | webversie van het voorstel aan Torero Invest (aanpak verkoop en marketing), met eigen beelden in `voorstel/img/` |
 
 ## Wijzigen
 

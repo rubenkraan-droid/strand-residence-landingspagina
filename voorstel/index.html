@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Strand Residence verkoopaanpak</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Public+Sans:wght@400;600&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --zee:#15304A; --zee-2:#1E4263; --licht:#F7F3EC; --zand:#EDE5D8; --papier:#FFFDF9;
+  --rand:#E3DACB; --roest:#A5602F; --roest-licht:#E0A574; --tekst:#3E4A57; --zacht:#6B7682;
+  --op-zee:#DCE6EE; --op-zee-2:#BFD0DE;
+  --serif:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --sans:'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  --breed:1120px;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--licht); color:var(--tekst); font-family:var(--sans); font-size:17px; line-height:1.55; -webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul,ol,table{margin:0}
+img{max-width:100%; display:block}
+a{color:var(--zee)}
+a:focus-visible{outline:2px solid var(--roest); outline-offset:3px}
+
+.wrap{max-width:var(--breed); margin:0 auto; padding-inline:clamp(16px,4vw,40px)}
+section{padding-block:clamp(56px,8vw,104px)}
+.sectie-kop{display:flex; flex-direction:column; gap:12px; margin-bottom:clamp(28px,4vw,48px); max-width:760px}
+.eyebrow{font-size:13px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--roest)}
+h2{font-family:var(--serif); font-weight:600; font-size:clamp(32px,4.4vw,52px); line-height:1.08; color:var(--zee); text-wrap:balance}
+h3{font-family:var(--serif); font-weight:600; font-size:clamp(24px,2.6vw,30px); line-height:1.15; color:var(--zee); text-wrap:balance}
+.lead{font-size:clamp(18px,1.8vw,21px); line-height:1.5; color:var(--tekst); max-width:65ch}
+.bron{font-size:13.5px; color:var(--zacht); margin-top:28px; max-width:80ch}
+.zand{background:var(--zand)}
+.donker{background:var(--zee); color:var(--op-zee)}
+.donker h2,.donker h3{color:var(--licht)}
+.donker .eyebrow{color:var(--roest-licht)}
+.donker .bron{color:var(--op-zee-2)}
+.num{font-variant-numeric:tabular-nums lining-nums}
+.cijfer b,.rp .groot-getal{font-variant-numeric:lining-nums}
+
+/* navigatie */
+.nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:10; background:rgba(21,48,74,.96); backdrop-filter:blur(6px)}
+.nav .wrap{display:flex; align-items:center; gap:24px; height:52px}
+.nav .merk{font-family:var(--serif); font-size:20px; font-weight:600; color:var(--licht); white-space:nowrap}
+.nav ul{list-style:none; padding:0; display:flex; gap:20px; overflow-x:auto; scrollbar-width:none; flex:1; justify-content:flex-end}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{color:var(--op-zee-2); text-decoration:none; font-size:14px; white-space:nowrap}
+.nav a:hover{color:var(--licht)}
+@media (max-width:760px){ .nav .merk{display:none} .nav ul{justify-content:flex-start} }
+
+/* hero */
+.hero{position:relative; background:var(--zee); color:var(--licht); padding:0; overflow:hidden}
+.hero img{width:100%; height:clamp(420px,62vw,680px); object-fit:cover}
+.hero::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(21,48,74,.97) 0%, rgba(21,48,74,.82) 45%, rgba(21,48,74,.35) 75%, rgba(21,48,74,.1) 100%)}
+.hero .inhoud{position:absolute; left:0; right:0; bottom:0; z-index:1; padding-block:clamp(28px,5vw,64px)}
+.hero .inhoud .wrap{display:flex; flex-direction:column; gap:16px}
+.hero .eyebrow{color:var(--roest-licht)}
+.hero h1{font-family:var(--serif); font-weight:600; font-size:clamp(40px,7vw,84px); line-height:1; text-wrap:balance; max-width:20ch}
+.hero .lead{color:var(--op-zee); max-width:56ch}
+.hero .klein{font-size:13.5px; color:var(--op-zee-2)}
+
+/* opgave */
+.cijfers{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+.cijfer{background:var(--papier); border:1px solid var(--rand); border-radius:14px; padding:24px 26px}
+.cijfer.hoofd{background:var(--zee); border-color:var(--zee)}
+.cijfer b{display:block; font-family:var(--serif); font-weight:600; font-size:clamp(56px,8vw,88px); line-height:1; color:var(--zee)}
+.cijfer.hoofd b{color:var(--licht)}
+.cijfer span{font-size:16px}
+.cijfer.hoofd span{color:var(--op-zee)}
+.opgave-tekst{display:flex; flex-direction:column; gap:10px; margin-top:32px}
+.opgave-tekst .groot{font-size:clamp(20px,2.2vw,24px); color:var(--zee)}
+
+/* kaarten */
+.raster-3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.raster-2{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
+.raster-4{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+.kaart{background:var(--papier); border-radius:14px; padding:28px; display:flex; flex-direction:column; gap:10px}
+.kaart.lijn{border:1px solid var(--rand)}
+.kaart .label{font-size:14px; font-weight:600; color:var(--roest)}
+.kaart h4{margin:0; font-size:18px; line-height:1.3; color:var(--zee)}
+.aanname{margin-top:28px; border-left:3px solid var(--roest); padding:4px 0 4px 22px; color:var(--zee); max-width:75ch}
+
+/* advertenties */
+.variant{display:flex; flex-direction:column; gap:18px}
+.variant + .variant{margin-top:48px}
+.variant-kop{display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 16px}
+.variant-kop .tag{font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--roest)}
+.ads{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.ads figure{margin:0; display:flex; flex-direction:column; gap:10px}
+.ads img{width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:10px; box-shadow:0 10px 30px -18px rgba(21,48,74,.5)}
+.ads figcaption{font-size:15px}
+.ad-noot{font-size:15px; color:var(--zacht); max-width:80ch}
+.ads-scroll{overflow-x:auto}
+
+/* landingspagina */
+.lp-boven{display:grid; grid-template-columns:1.2fr 1fr; gap:32px; align-items:start}
+.lp-lijst{padding-left:20px; display:flex; flex-direction:column; gap:10px}
+.lp-link{margin-top:22px; font-size:16px; word-break:break-word}
+.na-verzenden{background:var(--zee); color:var(--op-zee); border-radius:14px; padding:28px; display:flex; flex-direction:column; gap:14px}
+.na-verzenden h3{color:var(--licht)}
+.na-verzenden ol{padding-left:22px; display:flex; flex-direction:column; gap:8px}
+.na-verzenden li::marker{color:var(--roest-licht); font-weight:600}
+.schermen{margin-top:56px; display:flex; flex-direction:column; gap:40px}
+.scherm-kop{font-size:13px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--zacht); margin-bottom:14px}
+.desktops{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+.browser{background:var(--papier); border:1px solid var(--rand); border-radius:10px; overflow:hidden; box-shadow:0 14px 34px -22px rgba(21,48,74,.55)}
+.browser .balk{display:flex; gap:6px; align-items:center; padding:9px 12px; border-bottom:1px solid var(--rand); background:#F1ECE3}
+.browser .balk i{width:9px; height:9px; border-radius:50%; background:#D6CBB9}
+.browser img{width:100%; aspect-ratio:16/10; object-fit:cover; object-position:top}
+.telefoons{display:grid; grid-template-columns:repeat(3,minmax(0,260px)); gap:28px; justify-content:start}
+.telefoon{background:#0F2236; border-radius:34px; padding:9px; box-shadow:0 18px 40px -24px rgba(21,48,74,.7)}
+.telefoon img{width:100%; aspect-ratio:390/844; object-fit:cover; object-position:top; border-radius:26px}
+figure.scherm{margin:0; display:flex; flex-direction:column; gap:10px}
+figure.scherm figcaption{font-size:14.5px}
+
+/* verkoopweekend */
+.streep{border-top:3px solid var(--roest-licht); padding-top:22px; display:flex; flex-direction:column; gap:10px}
+.uitlicht{margin-top:40px; font-size:clamp(19px,2vw,22px); color:var(--licht); max-width:62ch}
+.uitlicht b{color:var(--roest-licht); font-weight:600}
+
+/* opvolging */
+.stap{background:var(--papier); border:1px solid var(--rand); border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:8px}
+.stap .label{font-size:14px; font-weight:600; color:var(--roest)}
+.stap h3{font-family:var(--sans); font-size:18px; line-height:1.3}
+.verdeling{margin-top:28px; display:grid; grid-template-columns:1fr 1fr; gap:20px}
+.verdeling b{color:var(--zee)}
+
+/* meetlus */
+.keten{list-style:none; padding:0; display:flex; align-items:stretch; gap:0; margin-bottom:36px}
+.keten li{flex:1; display:flex; align-items:center}
+.keten li span{flex:1; text-align:center; font-weight:600; font-size:15px; color:var(--zee); background:var(--papier); border:1px solid #D9CEBB; border-radius:10px; padding:14px 8px}
+.keten li:first-child span{background:var(--zee); color:var(--licht); border-color:var(--zee)}
+.keten li:last-child span{background:var(--roest); color:var(--licht); border-color:var(--roest)}
+.pijl{flex:none; width:26px; display:flex; align-items:center}
+.pijl svg{width:26px; height:12px}
+
+/* tabel */
+.tabel-wrap{overflow-x:auto}
+table{width:100%; border-collapse:collapse; font-size:16px}
+th{text-align:left; font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--roest); padding:0 16px 12px 0; border-bottom:2px solid var(--zee)}
+td{padding:14px 16px 14px 0; border-bottom:1px solid var(--rand); vertical-align:top}
+td.r,th.r{text-align:right; padding-right:0}
+
+/* recraparcs */
+.rp{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start}
+.rp .groot-getal{font-family:var(--serif); font-weight:600; font-size:clamp(96px,14vw,168px); line-height:.9; color:var(--zee)}
+.rp ul{padding-left:20px; display:flex; flex-direction:column; gap:8px; margin-top:24px}
+
+footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-block:28px}
+
+@media (max-width:900px){
+  .raster-4{grid-template-columns:repeat(2,1fr)}
+  .lp-boven,.rp{grid-template-columns:1fr}
+  .desktops{grid-template-columns:1fr}
+  .keten{flex-direction:column; gap:0}
+  .keten li{flex-direction:column}
+  .pijl{width:auto; height:22px; justify-content:center}
+  .pijl svg{transform:rotate(90deg)}
+  .keten li span{width:100%}
+}
+@media (max-width:700px){
+  .hero img{height:280px}
+  .hero::after{display:none}
+  .hero .inhoud{position:static; background:var(--zee)}
+  table{font-size:14.5px}
+  .cijfers,.raster-3,.raster-2,.verdeling{grid-template-columns:1fr}
+  .ads{grid-template-columns:repeat(3,72%); overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:6px}
+  .ads figure{scroll-snap-align:start}
+  .telefoons{grid-template-columns:repeat(3,64%); overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:8px}
+  .telefoons figure{scroll-snap-align:start}
+  .raster-4{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+html{scroll-behavior:smooth; scroll-padding-top:60px}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Onderdelen">
+  <div class="wrap">
+    <span class="merk">Strand Residence</span>
+    <ul>
+      <li><a href="#opgave">Opgave</a></li>
+      <li><a href="#kopers">Kopers</a></li>
+      <li><a href="#advertenties">Advertenties</a></li>
+      <li><a href="#landingspagina">Landingspagina</a></li>
+      <li><a href="#verkoopweekend">Verkoopweekend</a></li>
+      <li><a href="#opvolging">Opvolging</a></li>
+      <li><a href="#meten">Meten</a></li>
+      <li><a href="#recraparcs">Recraparcs</a></li>
+      <li><a href="#start">Start</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <img src="img/render-avond.jpg" alt="Impressie van Strand Residence bij avondlicht">
+  <div class="inhoud">
+    <div class="wrap">
+      <p class="eyebrow">Voorstel van Recraparcs aan Torero Invest</p>
+      <h1>Strand Residence Bergen aan Zee</h1>
+      <p class="lead">Zo verkopen wij de resterende appartementen: meetbaar per advertentie, per afspraak en per verkoop.</p>
+      <p class="klein">September 2026 · Impressie: Strand Residence</p>
+    </div>
+  </div>
+</header>
+
+<section id="opgave">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">De opgave</p>
+      <h2>Wat er nog te verkopen is</h2>
+    </div>
+    <div class="cijfers num">
+      <div class="cijfer hoofd"><b>36</b><span>appartementen beschikbaar</span></div>
+      <div class="cijfer"><b>7</b><span>in optie</span></div>
+      <div class="cijfer"><b>27</b><span>verkocht</span></div>
+    </div>
+    <div class="opgave-tekst">
+      <p class="groot"><b>Circa € 25,6 miljoen</b> aan beschikbare appartementen, v.o.n. excl. btw.</p>
+      <p>Van € 541.500 tot € 993.000, vooral voor 4 tot 6 personen. De 2-persoonsappartementen en penthouses zijn weg. Oplevering 2028.</p>
+    </div>
+    <p class="bron">Bron: eigen telling van alle 70 appartementen in de woningzoeker van strandresidence.nl, 26 september 2026.</p>
+  </div>
+</section>
+
+<section id="kopers" class="zand">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">Onze aanname, uit het marktonderzoek</p>
+      <h2>Wie koopt een appartement in Bergen aan Zee</h2>
+    </div>
+    <div class="raster-3">
+      <div class="kaart">
+        <p class="label">Profiel 1 · verwacht de grootste groep</p>
+        <h3>Het vermogende stel van 55 tot 72</h3>
+        <p>Wil een eigen plek aan zee voor het gezin en de kleinkinderen. Het rendement maakt de aankoop verdedigbaar, niet begeerlijk.</p>
+      </div>
+      <div class="kaart">
+        <p class="label">Profiel 2</p>
+        <h3>De ondernemer met vermogen in de BV</h3>
+        <p>Wil tastbaar vermogen dat hij zelf kan gebruiken. Rekent: prognose per appartement, btw bij verhuur, privé of BV.</p>
+      </div>
+      <div class="kaart">
+        <p class="label">Profiel 3</p>
+        <h3>De Duitse koper van een tweede thuis</h3>
+        <p>Wil een plek aan de Noordzee die geld oplevert door verhuur, in plaats van een tweede huis dat alleen geld kost. Zonder zelf iets te regelen. Alleen met Duitstalige opvolging.</p>
+      </div>
+    </div>
+    <p class="aanname"><b>Dit is onze aanname, en we wachten niet af.</b> Vanaf de eerste afspraak legt de makelaar vast wie er komt. Zo zien we per advertentie direct welk type koper reageert, en stellen we de profielen bij.</p>
+  </div>
+</section>
+
+<section id="advertenties">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">De advertenties</p>
+      <h2>Het moment dat de droom werkelijkheid wordt</h2>
+    </div>
+
+    <div class="variant">
+      <div class="variant-kop"><span class="tag">Variant A</span><h3>Sfeer</h3></div>
+      <div class="ads">
+        <figure><img src="img/ad-ochtend.jpg" alt="Advertentie: vrouw met koffie op een terras in de duinen, kop Honderd meter van uw voordeur tot de branding" loading="lazy"><figcaption>De eerste ochtend</figcaption></figure>
+        <figure><img src="img/ad-kleinkinderen.jpg" alt="Advertentie: grootvader en kleinkinderen op een duinpad naar het strand" loading="lazy"><figcaption>De kleinkinderen</figcaption></figure>
+        <figure><img src="img/ad-vrijdag.jpg" alt="Advertentie: lachend stel op het strand bij zonsondergang" loading="lazy"><figcaption>Vrijdagmiddag</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="variant">
+      <div class="variant-kop"><span class="tag">Variant B</span><h3>Dezelfde boodschap, met de appartementen erbij</h3></div>
+      <div class="ads">
+        <figure><img src="img/ad-ochtend-impressie.jpg" alt="Advertentie: vrouw met koffie boven, impressie van het gebouw aan de Zeeweg onder" loading="lazy"><figcaption>De eerste ochtend, met impressie</figcaption></figure>
+        <figure><img src="img/ad-kleinkinderen-impressie.jpg" alt="Advertentie: grootvader en kleinkinderen boven, impressie van de duinentuin onder" loading="lazy"><figcaption>De kleinkinderen, met impressie</figcaption></figure>
+        <figure><img src="img/ad-vrijdag-impressie.jpg" alt="Advertentie: stel op het strand boven, impressie van het gebouw bij zonsondergang onder" loading="lazy"><figcaption>Vrijdagmiddag, met impressie</figcaption></figure>
+      </div>
+      <p class="ad-noot">De eerste test: sfeer alleen (A) tegenover sfeer met het gebouw (B). Wat meer afspraken en verkopen oplevert, blijft.</p>
+    </div>
+
+    <p class="bron">Elke advertentie: belegging benoemd, huurinkomsten in plaats van een percentage, prijs als filter en de AFM-zin in beeld.</p>
+  </div>
+</section>
+
+<section id="landingspagina" class="zand">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">De landingspagina</p>
+      <h2>Van advertentie naar het verkoopweekend</h2>
+    </div>
+    <div class="lp-boven">
+      <div>
+        <ul class="lp-lijst">
+          <li>Dezelfde belofte als de advertentie: uw eigen plek aan zee, 100 meter van het strand</li>
+          <li>Twee knoppen: aanmelden voor het verkoopweekend, of eerst de brochure</li>
+          <li>Het formulier kwalificeert: telefoonnummer, eigen gebruik of belegging, privé of BV</li>
+          <li>De bezwaren staan beantwoord: kosten, verhuur, eigen gebruik, btw en box 3, oplevering, AFM-melding</li>
+        </ul>
+        <p class="lp-link">Bekijk de pagina: <a href="https://rubenkraan-droid.github.io/strand-residence-landingspagina/" target="_blank" rel="noopener">rubenkraan-droid.github.io/strand-residence-landingspagina</a></p>
+      </div>
+      <div class="na-verzenden">
+        <h3>Wat de bezoeker ziet na verzenden</h3>
+        <ol>
+          <li>De brochure direct per e-mail</li>
+          <li>Binnen één werkdag belt een adviseur</li>
+          <li>Een vast tijdvak op het eerstvolgende verkoopweekend, of doordeweeks een afspraak of videogesprek</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="schermen">
+      <div>
+        <p class="scherm-kop">Op de computer</p>
+        <div class="desktops">
+          <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="img/lp-desk-hero.jpg" alt="Landingspagina op de computer: openingsscherm met impressie van het gebouw en twee knoppen" loading="lazy"></div><figcaption>De opening: dezelfde belofte als de advertentie</figcaption></figure>
+          <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="img/lp-desk-verschillen.jpg" alt="Landingspagina op de computer: drie verschillen met een vakantiepark, met luchtfoto van Bergen aan Zee" loading="lazy"></div><figcaption>Drie verschillen met een vakantiepark</figcaption></figure>
+          <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="img/lp-desk-vragen.jpg" alt="Landingspagina op de computer: de negen vragen die in elk gesprek langskomen" loading="lazy"></div><figcaption>De vragen uit elk gesprek, vooraf beantwoord</figcaption></figure>
+        </div>
+      </div>
+      <div>
+        <p class="scherm-kop">Op de telefoon</p>
+        <div class="telefoons">
+          <figure class="scherm"><div class="telefoon"><img src="img/lp-mob-hero.jpg" alt="Landingspagina op de telefoon: openingsscherm met vaste knoppen onderaan" loading="lazy"></div><figcaption>De opening, met vaste knoppen onderaan</figcaption></figure>
+          <figure class="scherm"><div class="telefoon"><img src="img/lp-mob-verschillen.jpg" alt="Landingspagina op de telefoon: drie verschillen met een vakantiepark" loading="lazy"></div><figcaption>Drie verschillen met een vakantiepark</figcaption></figure>
+          <figure class="scherm"><div class="telefoon"><img src="img/lp-mob-vragen.jpg" alt="Landingspagina op de telefoon: de vragen uit elk gesprek" loading="lazy"></div><figcaption>De vragen uit elk gesprek</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="verkoopweekend" class="donker">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">Schaarste zichtbaar maken</p>
+      <h2>Eén verkoopweekend per drie weken</h2>
+    </div>
+    <div class="raster-3">
+      <div class="streep"><h3>Kopers zien elkaar</h3><p>Afspraken op vaste tijdvakken, zo gepland dat bezoekers elkaar zien aankomen en vertrekken. De vraag wordt zichtbaar.</p></div>
+      <div class="streep"><h3>Alles op één moment</h3><p>Drie weken aanvragen worden nagebeld en naar hetzelfde weekend geleid. De makelaars staan er volledig voor klaar.</p></div>
+      <div class="streep"><h3>Een beslismoment</h3><p>Wie twijfelt, weet dat het volgende weekend pas over drie weken is. Een optie van één week geeft ruimte om te beslissen.</p></div>
+    </div>
+    <p class="uitlicht">Bij Wielsche Dreef leidde een aanmelding voor de verkoopdag ongeveer <b>3,7 keer vaker tot een afspraak</b> dan een brochure-aanvraag.</p>
+    <p class="bron">Bron: eigen cijfers Recraparcs, Wielsche Dreef: 12,5% tegenover 3,4% van de aanvragen leidde tot een afspraak.</p>
+  </div>
+</section>
+
+<section id="opvolging">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">De opvolging</p>
+      <h2>Elke aanvraag wordt gebeld tot er een afspraak of een duidelijk nee is</h2>
+    </div>
+    <div class="raster-4">
+      <div class="stap"><p class="label">Stap 1</p><h3>Binnen één werkdag gebeld</h3><p>Door onze afsprakenplanner, ook 's avonds en op zaterdag.</p></div>
+      <div class="stap"><p class="label">Stap 2</p><h3>Geen gehoor</h3><p>Een mail waarin de koper kiest: ochtend, middag of avond. Daarna opnieuw bellen.</p></div>
+      <div class="stap"><p class="label">Stap 3</p><h3>Een tijdvak op het weekend</h3><p>Direct in de agenda van de makelaar. Wie dan niet kan, krijgt een afspraak doordeweeks of een videogesprek.</p></div>
+      <div class="stap"><p class="label">Stap 4</p><h3>Na het gesprek</h3><p>De makelaar legt het resultaat vast in het CRM: kopersprofiel, interesse, vervolg.</p></div>
+    </div>
+    <div class="verdeling">
+      <p><b>Gaat automatisch:</b> de belrij, de mails bij geen gehoor, de koppeling van elke aanvraag aan de advertentie.</p>
+      <p><b>Doen mensen:</b> bellen, afspraken voeren, verkopen en na elk gesprek twee minuten terugkoppelen.</p>
+    </div>
+  </div>
+</section>
+
+<section id="meten" class="zand">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">Meten en bijsturen</p>
+      <h2>We meten wat werkt en doen daar meer van</h2>
+    </div>
+    <ol class="keten" aria-label="De meetlus">
+      <li><span>Advertentie</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Aanvraag</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Afspraak</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Verkoop</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Makelaar rapporteert</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Nieuwe varianten</span></li>
+    </ol>
+    <div class="raster-2">
+      <div class="kaart"><h3>Elke week</h3><p>Nieuwe varianten van de advertenties: andere openingszin, ander beeld, ander profiel. Wat afspraken oplevert, blijft; de rest wordt vervangen.</p></div>
+      <div class="kaart"><h3>Elke drie weken</h3><p>Het verkoopweekend. Daarna rekenen we per advertentie door tot en met de verkoop, en daar sturen we de volgende drie weken op.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="terugkoppeling">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">De terugkoppeling</p>
+      <h2>Wat de makelaar na elk gesprek vastlegt</h2>
+    </div>
+    <div class="tabel-wrap">
+      <table>
+        <thead><tr><th style="width:50%">De makelaar legt vast</th><th>Wat het ons vertelt</th></tr></thead>
+        <tbody>
+          <tr><td>Hoe het gesprek liep en het vervolg: optie, tweede gesprek, koop</td><td>Kosten per afspraak en per verkoop, per advertentie</td></tr>
+          <tr><td>Kopersprofiel: leeftijd, woonplaats, privé of BV</td><td>Welk type koper elke advertentie oplevert</td></tr>
+          <tr><td>Eigen gebruik of vooral belegging</td><td>Welke boodschap bij welk motief past</td></tr>
+          <tr><td>Bezwaren en afhaakreden, in de woorden van de koper</td><td>Nieuwe advertenties en betere antwoorden op de pagina</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="aanname">Een vaste notitie in het CRM, in twee minuten ingevuld. De koppeling met de advertentie gaat automatisch.</p>
+  </div>
+</section>
+
+<section id="inzicht" class="zand">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">Wat u ziet</p>
+      <h2>Na elk verkoopweekend een helder overzicht</h2>
+    </div>
+    <div class="raster-2">
+      <div class="kaart"><h3>Kosten per verkoop</h3><p>Per advertentie: wat een aanvraag, een afspraak en een verkoop heeft gekost.</p></div>
+      <div class="kaart"><h3>Type koper per advertentie</h3><p>Welke boodschap welk profiel aantrekt: het stel, de ondernemer, de Duitse koper.</p></div>
+      <div class="kaart"><h3>Waarom kopers afhaken</h3><p>De bezwaren uit de gesprekken, zodat u ziet wat de verkoop remt.</p></div>
+      <div class="kaart"><h3>Voortgang van de verkoop</h3><p>Aanvragen, afspraken, opties en verkopen per verkoopweekend.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="recraparcs">
+  <div class="wrap rp">
+    <div>
+      <div class="sectie-kop">
+        <p class="eyebrow">Recraparcs</p>
+        <h2>U ontwikkelt. Wij verkopen.</h2>
+      </div>
+      <p class="groot-getal num">271</p>
+      <p class="lead" style="margin-top:12px">kavels en woningen verkocht in vijf volledig uitverkochte parken, in de afgelopen twee jaar.</p>
+    </div>
+    <div>
+      <div class="tabel-wrap">
+        <table style="min-width:0">
+          <thead><tr><th>Eerder verkochte projecten</th><th class="r">Aantal</th></tr></thead>
+          <tbody class="num">
+            <tr><td>Hellendoorn</td><td class="r">114, uitverkocht</td></tr>
+            <tr><td>Huis ter Heide, Zeijen</td><td class="r">70, uitverkocht</td></tr>
+            <tr><td>Fryske Mar</td><td class="r">57, uitverkocht</td></tr>
+            <tr><td>Stelleplas</td><td class="r">21, uitverkocht</td></tr>
+            <tr><td>Lake Retreats, Vinkeveen</td><td class="r">9 woningen, uitverkocht</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li>Eigen makelaars en een afsprakenplanner die elke aanvraag nabelt</li>
+        <li>Elke verkoop herleidbaar tot de advertentie waar hij vandaan kwam</li>
+        <li>Nu ook actief: Wielsche Dreef, Niebert en twee parken in Frankrijk</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="start" class="donker">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">Voorstel</p>
+      <h2>Hoe we starten</h2>
+    </div>
+    <div class="raster-3">
+      <div class="streep"><h3>Stap 1</h3><p>Inzicht in de huidige cijfers en de 27 kopers. Feiten bevestigen: beschikbaarheid, eigendom, planning, verhuur.</p></div>
+      <div class="streep"><h3>Stap 2</h3><p>Advertenties en landingspagina live, de belrij draait, het eerste verkoopweekend staat gepland.</p></div>
+      <div class="streep"><h3>Stap 3</h3><p>Elke week nieuwe varianten, elke drie weken een verkoopweekend en een overzicht tot en met de verkoop.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Recraparcs · Voorstel voor Torero Invest · September 2026. Alle beelden van het gebouw zijn impressies.</div>
+</footer>
+</body>
+</html>
