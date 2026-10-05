@@ -18,22 +18,22 @@
   --sans:'Public Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth; scroll-padding-top:60px}
+html{scroll-behavior:smooth; scroll-padding-top:60px; background:var(--licht)}
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 body{margin:0; background:var(--licht); color:var(--tekst); font-family:var(--sans); font-size:17px; line-height:1.55; -webkit-font-smoothing:antialiased}
-h1,h2,h3,p,ul,ol{margin:0}
+h1,h2,h3,h4,p,ul,ol{margin:0}
 img{max-width:100%; display:block}
 a{color:var(--zee)}
 a:focus-visible{outline:2px solid var(--roest); outline-offset:3px}
 
 .wrap{max-width:1080px; margin:0 auto; padding-inline:clamp(16px,4vw,40px)}
 section{padding-block:clamp(52px,7vw,92px)}
-.sectie-kop{display:flex; flex-direction:column; gap:12px; margin-bottom:clamp(26px,4vw,44px); max-width:760px}
+.sectie-kop{display:flex; flex-direction:column; gap:12px; margin-bottom:clamp(26px,4vw,44px); max-width:780px}
 .eyebrow{font-size:13px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--roest)}
 h2{font-family:var(--serif); font-weight:600; font-size:clamp(32px,4.4vw,50px); line-height:1.08; color:var(--zee); text-wrap:balance}
 h3{font-family:var(--serif); font-weight:600; font-size:clamp(23px,2.4vw,28px); line-height:1.15; color:var(--zee); text-wrap:balance}
-.lead{font-size:clamp(18px,1.8vw,20px); line-height:1.5; max-width:62ch}
-.noot{font-size:15px; color:var(--zacht); max-width:75ch}
+.lead{font-size:clamp(18px,1.8vw,20px); line-height:1.5; max-width:64ch}
+.noot{font-size:15px; color:var(--zacht); max-width:78ch}
 .zand{background:var(--zand)}
 .donker{background:var(--zee); color:var(--op-zee)}
 .donker h2,.donker h3{color:var(--licht)}
@@ -42,60 +42,97 @@ h3{font-family:var(--serif); font-weight:600; font-size:clamp(23px,2.4vw,28px); 
 
 /* navigatie */
 .nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:10; background:rgba(21,48,74,.96)}
-.nav .wrap{display:flex; align-items:center; gap:24px; height:52px}
+.nav .wrap{display:flex; align-items:center; gap:20px; height:52px}
 .nav .logo{display:flex; align-items:center; background:#fff; border-radius:6px; padding:5px 10px; flex:none}
 .nav .logo img{height:24px; width:auto}
-.contact .logo-groot{height:44px; width:auto; margin-bottom:10px}
 .nav .merk{font-family:var(--serif); font-size:20px; font-weight:600; color:var(--licht); white-space:nowrap}
 .nav ul{list-style:none; padding:0; display:flex; gap:20px; overflow-x:auto; scrollbar-width:none; flex:1; justify-content:flex-end}
 .nav ul::-webkit-scrollbar{display:none}
 .nav a{color:var(--op-zee-2); text-decoration:none; font-size:14px; white-space:nowrap}
 .nav a:hover{color:var(--licht)}
-@media (max-width:760px){ .nav .merk{display:none} .nav ul{justify-content:flex-start} }
+@media (max-width:860px){ .nav .merk{display:none} .nav ul{justify-content:flex-start} }
 
 /* opening */
 .hero{position:relative; background:var(--zee); color:var(--licht); overflow:hidden}
-.hero img{width:100%; height:clamp(340px,44vw,500px); object-fit:cover}
+.hero > img{width:100%; height:clamp(360px,46vw,520px); object-fit:cover}
 .hero::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(21,48,74,.97) 0%, rgba(21,48,74,.84) 45%, rgba(21,48,74,.4) 78%, rgba(21,48,74,.15) 100%)}
 .hero .inhoud{position:absolute; left:0; right:0; bottom:0; z-index:1; padding-block:clamp(26px,4.5vw,56px)}
 .hero .inhoud .wrap{display:flex; flex-direction:column; gap:14px}
+.hero .logo-kop{display:inline-flex; align-self:flex-start; background:#fff; border-radius:8px; padding:8px 14px; margin-bottom:6px}
+.hero .logo-kop img{height:40px; width:auto}
 .hero .eyebrow{color:var(--roest-licht)}
 .hero h1{font-family:var(--serif); font-weight:600; font-size:clamp(40px,6.4vw,76px); line-height:1; text-wrap:balance; max-width:20ch}
 .hero .lead{color:var(--op-zee)}
 .hero .klein{font-size:13.5px; color:var(--op-zee-2)}
 @media (max-width:700px){
-  .hero img{height:240px}
+  .hero > img{height:240px}
   .hero::after{display:none}
   .hero .inhoud{position:static}
 }
 
-/* vergoeding */
-.tarieven{display:grid; grid-template-columns:1fr 1fr; gap:20px}
-.tarief{background:var(--papier); border:1px solid var(--rand); border-radius:14px; padding:28px; display:flex; flex-direction:column; gap:12px}
-.tarief.hoofd{background:var(--zee); border-color:var(--zee); color:var(--op-zee)}
-.tarief.hoofd h3{color:var(--licht)}
-.tarief .vraag{font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--roest)}
-.tarief.hoofd .vraag{color:var(--roest-licht)}
-.tarief .pct{font-family:var(--serif); font-weight:600; font-size:clamp(56px,7vw,80px); line-height:1; color:var(--zee); font-variant-numeric:lining-nums}
-.tarief.hoofd .pct{color:var(--licht)}
-.opbouw{list-style:none; padding:0; display:flex; flex-direction:column; gap:6px; border-top:1px solid rgba(191,208,222,.35); padding-top:12px; font-size:16px}
-.opbouw li{display:flex; justify-content:space-between; gap:16px}
-.opbouw li b{font-weight:600; color:var(--licht)}
-.tarief:not(.hoofd) .opbouw{border-top-color:var(--rand)}
-.tarief:not(.hoofd) .opbouw li b{color:var(--zee)}
-.na-tarief{margin-top:24px}
+/* werkzaamheden */
+.stappen{list-style:none; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+.stap{background:var(--papier); border:1px solid var(--rand); border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:10px}
+.stap .nr{font-family:var(--serif); font-weight:600; font-size:34px; line-height:1; color:var(--roest); font-variant-numeric:lining-nums}
+.stap p{font-size:16px}
+.ads{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+.ads figure{margin:0; display:flex; flex-direction:column; gap:8px}
+.ads img{width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:10px; box-shadow:0 10px 28px -18px rgba(21,48,74,.5)}
+.ads figcaption{font-size:14.5px}
+.variant-label{font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--zacht); margin:24px 0 12px}
+.browser{background:var(--papier); border:1px solid var(--rand); border-radius:10px; overflow:hidden; box-shadow:0 14px 34px -22px rgba(21,48,74,.55)}
+.browser .balk{display:flex; gap:6px; align-items:center; padding:8px 12px; border-bottom:1px solid var(--rand); background:#F1ECE3}
+.browser .balk i{width:9px; height:9px; border-radius:50%; background:#D6CBB9}
+.browser img{width:100%; aspect-ratio:16/10; object-fit:cover; object-position:top}
+.telefoon{background:#0F2236; border-radius:30px; padding:8px; box-shadow:0 18px 40px -24px rgba(21,48,74,.7)}
+.telefoon img{width:100%; aspect-ratio:390/844; object-fit:cover; object-position:top; border-radius:23px}
+figure.scherm{margin:0; display:flex; flex-direction:column; gap:8px}
+figure.scherm figcaption{font-size:14px}
+.desktops-rij{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+.telefoons-rij{display:grid; grid-template-columns:repeat(3,minmax(0,220px)); gap:24px}
+@media (max-width:860px){ .stappen{grid-template-columns:1fr 1fr} .desktops-rij{grid-template-columns:1fr} }
+@media (max-width:700px){
+  .stappen{grid-template-columns:1fr}
+  .ads{grid-template-columns:repeat(3,72%); overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:6px}
+  .ads figure{scroll-snap-align:start}
+  .telefoons-rij{grid-template-columns:repeat(3,64%); overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:8px}
+}
+
+/* meten */
+.keten{list-style:none; padding:0; display:flex; align-items:stretch; margin-bottom:32px}
+.keten li{flex:1; display:flex; align-items:center}
+.keten li span{flex:1; text-align:center; font-weight:600; font-size:15px; color:var(--zee); background:var(--papier); border:1px solid #D9CEBB; border-radius:10px; padding:14px 8px}
+.keten li:first-child span{background:var(--zee); color:var(--licht); border-color:var(--zee)}
+.keten li:last-child span{background:var(--roest); color:var(--licht); border-color:var(--roest)}
+.pijl{flex:none; width:26px; display:flex; align-items:center}
+.pijl svg{width:26px; height:12px}
+.kolommen{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.kaart{background:var(--zand); border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:8px}
+.kaart p{font-size:16px}
+.verdeling{margin-top:24px; display:grid; grid-template-columns:1fr 1fr; gap:20px}
+.verdeling > div{border-top:2px solid var(--roest); padding-top:14px; display:flex; flex-direction:column; gap:6px}
+.verdeling h4{font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--roest)}
+.verdeling ul{padding-left:18px; display:flex; flex-direction:column; gap:4px; font-size:16px}
+@media (max-width:860px){
+  .kolommen,.verdeling{grid-template-columns:1fr}
+  .keten{flex-direction:column}
+  .keten li{flex-direction:column}
+  .pijl{width:auto; height:22px; justify-content:center}
+  .pijl svg{transform:rotate(90deg)}
+  .keten li span{width:100%}
+}
 
 /* kaders */
 .kader{margin-top:28px; background:var(--papier); border:1px solid var(--rand); border-left:3px solid var(--roest); border-radius:4px 14px 14px 4px; padding:22px 26px; display:flex; flex-direction:column; gap:8px; max-width:820px}
 .kader h3{font-size:clamp(21px,2vw,25px)}
-.kader .bedrag{font-family:var(--serif); font-weight:600; font-size:clamp(34px,4vw,44px); line-height:1; color:var(--zee); font-variant-numeric:lining-nums}
+.kader .bedrag{font-family:var(--serif); font-weight:600; font-size:clamp(30px,3.6vw,40px); line-height:1.05; color:var(--zee); font-variant-numeric:lining-nums}
 .kaders{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px}
 .kaders .kader{margin-top:0; max-width:none}
 @media (max-width:760px){ .kaders{grid-template-columns:1fr} }
 
 /* tijdlijn */
 .tijdlijn{list-style:none; padding:0; display:flex; flex-direction:column}
-.moment{display:grid; grid-template-columns:170px 1fr; gap:28px; padding-block:30px; border-top:1px solid var(--rand)}
+.moment{display:grid; grid-template-columns:170px 1fr; gap:28px; padding-block:28px; border-top:1px solid var(--rand)}
 .moment:last-child{border-bottom:1px solid var(--rand)}
 .datum{display:flex; flex-direction:column; gap:2px}
 .datum b{font-family:var(--serif); font-weight:600; font-size:30px; line-height:1.05; color:var(--zee); font-variant-numeric:lining-nums}
@@ -109,12 +146,12 @@ h3{font-family:var(--serif); font-weight:600; font-size:clamp(23px,2.4vw,28px); 
 @media (max-width:760px){
   .moment{grid-template-columns:1fr; gap:12px}
   .datum{flex-direction:row; align-items:baseline; gap:10px}
-  .taken,.tarieven{grid-template-columns:1fr}
+  .taken{grid-template-columns:1fr}
 }
 
 /* verwachting */
 .som{display:grid; grid-template-columns:1fr auto 1fr auto 1fr; align-items:stretch; gap:14px}
-.som .blok{background:var(--papier); border-radius:14px; padding:22px 24px; display:flex; flex-direction:column; gap:6px}
+.som .blok{background:var(--zand); border-radius:14px; padding:22px 24px; display:flex; flex-direction:column; gap:6px}
 .som .blok b{font-family:var(--serif); font-weight:600; font-size:clamp(40px,5vw,56px); line-height:1; color:var(--zee); font-variant-numeric:lining-nums}
 .som .blok.uitkomst{background:var(--zee)}
 .som .blok.uitkomst b{color:var(--licht)}
@@ -127,8 +164,23 @@ h3{font-family:var(--serif); font-weight:600; font-size:clamp(23px,2.4vw,28px); 
   .som .teken{justify-self:center; line-height:1}
 }
 
+/* vergoeding */
+.tarieven{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+.tarief{background:var(--papier); border:1px solid var(--rand); border-radius:14px; padding:28px; display:flex; flex-direction:column; gap:12px}
+.tarief.hoofd{background:var(--zee); border-color:var(--zee); color:var(--op-zee)}
+.tarief .vraag{font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--roest)}
+.tarief.hoofd .vraag{color:var(--roest-licht)}
+.tarief .pct{font-family:var(--serif); font-weight:600; font-size:clamp(56px,7vw,80px); line-height:1; color:var(--zee); font-variant-numeric:lining-nums}
+.tarief.hoofd .pct{color:var(--licht)}
+.opbouw{list-style:none; padding:0; display:flex; flex-direction:column; gap:6px; border-top:1px solid rgba(191,208,222,.35); padding-top:12px; font-size:16px; margin-top:auto}
+.opbouw li{display:flex; justify-content:space-between; gap:16px}
+.opbouw li b{font-weight:600; color:var(--licht)}
+.tarief:not(.hoofd) .opbouw{border-top-color:var(--rand)}
+.tarief:not(.hoofd) .opbouw li b{color:var(--zee)}
+@media (max-width:760px){ .tarieven{grid-template-columns:1fr} }
+
 /* voorwaarden */
-.voorwaarden{list-style:none; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:14px 32px}
+.voorwaarden{list-style:none; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:16px 32px}
 .voorwaarden li{border-top:2px solid var(--roest-licht); padding-top:14px; display:flex; flex-direction:column; gap:4px}
 .voorwaarden li b{color:var(--licht); font-weight:600}
 @media (max-width:760px){ .voorwaarden{grid-template-columns:1fr} }
@@ -136,23 +188,43 @@ h3{font-family:var(--serif); font-weight:600; font-size:clamp(23px,2.4vw,28px); 
 /* contact */
 .contact{display:flex; flex-wrap:wrap; gap:28px 56px; align-items:flex-start; justify-content:space-between}
 .contact .persoon{display:flex; flex-direction:column; gap:4px}
+.contact .logo-groot{height:52px; width:auto; margin-bottom:12px}
 .contact .persoon b{font-family:var(--serif); font-size:28px; font-weight:600; color:var(--zee)}
 .contact .tel{font-size:20px; color:var(--zee); font-variant-numeric:tabular-nums; user-select:all}
 footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-block:26px}
+
+/* afdrukken en pdf */
+@page{size:A4; margin:0}
+@media print{
+  html,body{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+  .nav{display:none}
+  .hero{break-after:page}
+  .hero > img{height:1490px}
+  .hero .inhoud{padding-block:96px}
+  .hero h1{font-size:88px}
+  .hero .logo-kop img{height:56px}
+  section{padding-block:48px}
+  .stap,.kaart,.kader,.tarief,.som,.moment,.voorwaarden li,.ads figure,figure.scherm,.keten,.verdeling > div,.persoon{break-inside:avoid}
+  .sectie-kop,.variant-label,h2,h3{break-after:avoid}
+  .pagina-nieuw{break-before:page}
+  .ads img,.browser,.telefoon{box-shadow:none}
+}
 </style>
 </head>
 <body>
 
 <nav class="nav" aria-label="Onderdelen">
   <div class="wrap">
-    <a class="logo" href="https://recraparcs.nl" target="_blank" rel="noopener"><img src="https://cdn.prod.website-files.com/67ca0cdb82be331c18e0b67d/67d1f94f2472ef3857bce81d_Recraparcs-5.2.png" alt="Recraparcs" onerror="this.parentNode.style.display='none'"></a>
+    <a class="logo" href="https://recraparcs.nl" target="_blank" rel="noopener"><img src="img/recraparcs-logo.png" alt="Recraparcs"></a>
     <span class="merk">Strand Residence</span>
     <ul>
-      <li><a href="#vergoeding">Vergoeding</a></li>
-      <li><a href="#planning">Plan van aanpak</a></li>
+      <li><a href="#werkzaamheden">Werkzaamheden</a></li>
+      <li><a href="#voorbeelden">Voorbeelden</a></li>
+      <li><a href="#meten">Meten en sturen</a></li>
+      <li><a href="#planning">Planning</a></li>
       <li><a href="#verwachting">Verwachting</a></li>
+      <li><a href="#vergoeding">Vergoeding</a></li>
       <li><a href="#voorwaarden">Voorwaarden</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -161,44 +233,142 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
   <img src="../voorstel/img/render-avond.jpg" alt="Impressie van Strand Residence bij avondlicht">
   <div class="inhoud">
     <div class="wrap">
-      <p class="eyebrow">Recraparcs voor Torero Invest</p>
+      <span class="logo-kop"><img src="img/recraparcs-logo.png" alt="Recraparcs"></span>
+      <p class="eyebrow">Voorstel aan Torero Invest</p>
       <h1>Plan van aanpak Strand Residence</h1>
-      <p class="lead">Ons antwoord op jullie vier vragen, uitgaande van een start op maandag 12 oktober 2026.</p>
+      <p class="lead">Hoe wij de marketing en verkoop van Strand Residence overnemen, met een start op maandag 12 oktober 2026.</p>
       <p class="klein">Oktober 2026 · Impressie: Strand Residence</p>
     </div>
   </div>
 </header>
 
-<section id="vergoeding">
+<section id="werkzaamheden">
   <div class="wrap">
     <div class="sectie-kop">
-      <p class="eyebrow">Vraag 1 en 2</p>
-      <h2>Onze vergoeding per verkoop</h2>
+      <p class="eyebrow">Onze werkzaamheden</p>
+      <h2>Van advertentie tot getekende koopovereenkomst</h2>
+      <p class="lead">Wij nemen de marketing en de verkoop van begin tot eind over. Onze verantwoordelijkheid loopt tot en met het tekenen van de koopovereenkomst.</p>
     </div>
-    <div class="tarieven">
-      <div class="tarief">
-        <p class="vraag">Aanvraag via jullie of de huidige makelaars</p>
-        <p class="pct">2,5%</p>
-        <p>Wij volgen de aanvraag op en sluiten de verkoop.</p>
-        <ul class="opbouw num">
-          <li><span>Makelaarskosten</span><b>2,5%</b></li>
+    <ol class="stappen">
+      <li class="stap">
+        <span class="nr">1</span>
+        <h3>Advertenties</h3>
+        <p>Advertenties op Meta, gericht op drie kopersprofielen: het vermogende stel, de ondernemer met een BV en de Duitse koper van een tweede thuis. Elke advertentie benoemt de belegging, spreekt over huurinkomsten in plaats van een percentage en toont de verplichte AFM-melding.</p>
+      </li>
+      <li class="stap">
+        <span class="nr">2</span>
+        <h3>Landingspagina</h3>
+        <p>Dezelfde belofte als de advertentie. De bezoeker kiest: aanmelden voor het verkoopweekend of eerst de brochure. Het formulier vraagt naar eigen gebruik of belegging en privé of BV, en de vragen die elke koper stelt staan vooraf beantwoord.</p>
+      </li>
+      <li class="stap">
+        <span class="nr">3</span>
+        <h3>Nabellen en afspraken</h3>
+        <p>Elke aanvraag wordt binnen één werkdag gebeld door onze afsprakenplanner, ook 's avonds en op zaterdag. We bellen minimaal vijf keer, verspreid over maximaal drie weken, tot er een afspraak of een duidelijk nee is. Bij geen gehoor kiest de koper per mail wanneer hij gebeld wil worden.</p>
+      </li>
+      <li class="stap">
+        <span class="nr">4</span>
+        <h3>Verkoopweekend</h3>
+        <p>Eén verkoopweekend per drie weken, met afspraken op vaste tijdvakken. Kopers zien elkaar aankomen en vertrekken, en weten dat het volgende moment pas over drie weken is. Wie dan niet kan, krijgt doordeweeks een afspraak of een videogesprek.</p>
+      </li>
+      <li class="stap">
+        <span class="nr">5</span>
+        <h3>Verkoop</h3>
+        <p>Onze makelaars voeren de gesprekken en begeleiden de koper tot en met het tekenen van de koopovereenkomst.</p>
+      </li>
+      <li class="stap">
+        <span class="nr">6</span>
+        <h3>Terugkoppeling</h3>
+        <p>Na elk gesprek legt de makelaar vast: kopersprofiel, eigen gebruik of belegging, bezwaren en vervolg. Zo weten we per advertentie welk type koper reageert en waarom kopers afhaken.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="voorbeelden" class="zand pagina-nieuw">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">Voorbeelden</p>
+      <h2>De eerste advertenties en de landingspagina</h2>
+      <p class="lead">Klaar om in de eerste week met jullie af te stemmen. Alle beelden van het gebouw zijn impressies.</p>
+    </div>
+
+    <p class="variant-label">Advertenties, variant A: sfeer</p>
+    <div class="ads">
+      <figure><img src="../voorstel/img/ad-ochtend.jpg" alt="Advertentie: vrouw met koffie op een terras in de duinen"><figcaption>De eerste ochtend</figcaption></figure>
+      <figure><img src="../voorstel/img/ad-kleinkinderen.jpg" alt="Advertentie: grootvader en kleinkinderen op een duinpad naar het strand"><figcaption>De kleinkinderen</figcaption></figure>
+      <figure><img src="../voorstel/img/ad-vrijdag.jpg" alt="Advertentie: lachend stel op het strand bij zonsondergang"><figcaption>Vrijdagmiddag</figcaption></figure>
+    </div>
+
+    <p class="variant-label">Advertenties, variant B: met de appartementen erbij</p>
+    <div class="ads">
+      <figure><img src="../voorstel/img/ad-ochtend-impressie.jpg" alt="Advertentie: vrouw met koffie boven, impressie van het gebouw onder"><figcaption>De eerste ochtend, met impressie</figcaption></figure>
+      <figure><img src="../voorstel/img/ad-kleinkinderen-impressie.jpg" alt="Advertentie: grootvader en kleinkinderen boven, impressie van de duinentuin onder"><figcaption>De kleinkinderen, met impressie</figcaption></figure>
+      <figure><img src="../voorstel/img/ad-vrijdag-impressie.jpg" alt="Advertentie: stel op het strand boven, impressie van het gebouw bij zonsondergang onder"><figcaption>Vrijdagmiddag, met impressie</figcaption></figure>
+    </div>
+    <p class="noot" style="margin-top:16px">De eerste test: sfeer alleen (A) tegenover sfeer met het gebouw (B). Wat meer afspraken en verkopen oplevert, blijft.</p>
+
+    <div class="pagina-nieuw" style="padding-top:8px">
+      <p class="variant-label">Landingspagina op de computer</p>
+      <div class="desktops-rij">
+        <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="../voorstel/img/lp-desk-hero.jpg" alt="Landingspagina op de computer: opening met impressie en twee knoppen"></div><figcaption>De opening: dezelfde belofte als de advertentie</figcaption></figure>
+        <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="../voorstel/img/lp-desk-verschillen.jpg" alt="Landingspagina op de computer: drie verschillen met een vakantiepark"></div><figcaption>Drie verschillen met een vakantiepark</figcaption></figure>
+        <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="../voorstel/img/lp-desk-vragen.jpg" alt="Landingspagina op de computer: de vragen uit elk gesprek"></div><figcaption>De vragen uit elk gesprek, vooraf beantwoord</figcaption></figure>
+      </div>
+      <p class="variant-label">Landingspagina op de telefoon</p>
+      <div class="telefoons-rij">
+        <figure class="scherm"><div class="telefoon"><img src="../voorstel/img/lp-mob-hero.jpg" alt="Landingspagina op de telefoon: opening met vaste knoppen onderaan"></div><figcaption>De opening, met vaste knoppen onderaan</figcaption></figure>
+        <figure class="scherm"><div class="telefoon"><img src="../voorstel/img/lp-mob-verschillen.jpg" alt="Landingspagina op de telefoon: drie verschillen met een vakantiepark"></div><figcaption>Drie verschillen met een vakantiepark</figcaption></figure>
+        <figure class="scherm"><div class="telefoon"><img src="../voorstel/img/lp-mob-vragen.jpg" alt="Landingspagina op de telefoon: de vragen uit elk gesprek"></div><figcaption>De vragen uit elk gesprek</figcaption></figure>
+      </div>
+      <p class="noot" style="margin-top:16px">Voorbeeldpagina: <a href="https://rubenkraan-droid.github.io/strand-residence-landingspagina/">rubenkraan-droid.github.io/strand-residence-landingspagina</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="meten" class="pagina-nieuw">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">Meten, testen en sturen</p>
+      <h2>We meten wat werkt en doen daar meer van</h2>
+    </div>
+    <ol class="keten" aria-label="Van advertentie tot nieuwe varianten">
+      <li><span>Advertentie</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Aanvraag</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Afspraak</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Verkoop</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Terugkoppeling</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Nieuwe varianten</span></li>
+    </ol>
+    <div class="kolommen">
+      <div class="kaart"><h3>Meten</h3><p>Elke aanvraag wordt automatisch gekoppeld aan de advertentie waar hij vandaan komt. Zo zien we per advertentie wat een aanvraag, een afspraak en een verkoop heeft gekost.</p></div>
+      <div class="kaart"><h3>Testen</h3><p>Elke week nieuwe varianten: een andere openingszin, een ander beeld, een ander kopersprofiel. Wat afspraken oplevert, blijft; de rest vervangen we.</p></div>
+      <div class="kaart"><h3>Sturen</h3><p>We sturen op kosten per afspraak en per verkoop, niet op klikken. Het advertentiebudget verhogen we geleidelijk, op basis van wat meetbaar werkt, tot de gewenste verkoopsnelheid per maand.</p></div>
+    </div>
+    <div class="verdeling">
+      <div>
+        <h4>Gaat automatisch</h4>
+        <ul>
+          <li>Aanvragen komen direct in ons CRM, gekoppeld aan de advertentie</li>
+          <li>De belrij voor de afsprakenplanner</li>
+          <li>De mail bij geen gehoor</li>
+          <li>Het overzicht na elk verkoopweekend</li>
         </ul>
       </div>
-      <div class="tarief hoofd">
-        <p class="vraag">Aanvraag via onze advertenties, database of netwerk</p>
-        <p class="pct">3,0%</p>
-        <p>Wij brengen de koper aan, volgen op en sluiten de verkoop.</p>
-        <ul class="opbouw num">
-          <li><span>Makelaarskosten</span><b>2,5%</b></li>
-          <li><span>Marketingkosten</span><b>0,5%</b></li>
+      <div>
+        <h4>Doen wij zelf</h4>
+        <ul>
+          <li>Nabellen en afspraken plannen</li>
+          <li>Gesprekken voeren en verkopen, tot en met het tekenen</li>
+          <li>Na elk gesprek terugkoppelen</li>
+          <li>Wekelijks nieuwe advertenties maken en bijsturen</li>
         </ul>
       </div>
     </div>
     <div class="kaders">
       <div class="kader">
-        <p class="eyebrow">Advertentiebudget</p>
-        <p class="bedrag num">€ 10.000 per maand</p>
-        <p>Ons advies. Het budget is voor rekening van Torero en komt bovenop onze vergoeding. Als richtlijn rekenen we met advertentiekosten van circa 1% van de koopprijs per verkoop.</p>
+        <p class="eyebrow">Wat jullie zien</p>
+        <h3>Na elk verkoopweekend een overzicht</h3>
+        <p>Per advertentie de kosten per aanvraag, afspraak en verkoop, welk type koper reageert, waarom kopers afhaken en de voortgang van de verkoop.</p>
       </div>
       <div class="kader">
         <p class="eyebrow">Onze voorkeur</p>
@@ -209,10 +379,10 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
   </div>
 </section>
 
-<section id="planning" class="zand">
+<section id="planning" class="zand pagina-nieuw">
   <div class="wrap">
     <div class="sectie-kop">
-      <p class="eyebrow">Vraag 3</p>
+      <p class="eyebrow">Planning</p>
       <h2>Plan van aanpak vanaf maandag 12 oktober</h2>
       <p class="lead">In twee weken staat alles klaar. Vanaf 26 oktober lopen de advertenties, half november is het eerste verkoopweekend.</p>
     </div>
@@ -237,7 +407,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
                 <li>Prognose per appartement, plattegronden, beeldmateriaal en brochure</li>
                 <li>Een profiel van de 27 kopers</li>
                 <li>Toegang tot de Facebook-pagina en het advertentieaccount</li>
-                <li>Het advertentiebudget vaststellen; ons advies is € 10.000 per maand</li>
+                <li>Het advertentiebudget vaststellen: minimaal € 7.000, ons advies € 10.000 per maand</li>
               </ul>
             </div>
           </div>
@@ -276,7 +446,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
               <h4>Wij</h4>
               <ul>
                 <li>Advertenties live</li>
-                <li>Elke aanvraag binnen één werkdag gebeld, tot er een afspraak of een duidelijk nee is</li>
+                <li>Elke aanvraag binnen één werkdag gebeld, daarna minimaal vijf keer verspreid over maximaal drie weken</li>
                 <li>Elke week nieuwe advertentievarianten; wat afspraken oplevert, blijft</li>
               </ul>
             </div>
@@ -299,13 +469,13 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
               <ul>
                 <li>Afspraken op vaste tijdvakken, onze makelaars op locatie</li>
                 <li>Wie dan niet kan, krijgt doordeweeks een afspraak of een videogesprek</li>
-                <li>Na het weekend een overzicht: kosten per afspraak en per verkoop, type koper en waarom kopers afhaken</li>
+                <li>Na het weekend het overzicht, en op basis daarvan het advertentiebudget bijsturen</li>
               </ul>
             </div>
             <div class="jullie">
               <h4>Jullie</h4>
               <ul>
-                <li>Verkooplocatie beschikbaar voor het weekend</li>
+                <li>Een opgeknapt verkoopkantoor, beschikbaar voor het weekend</li>
               </ul>
             </div>
           </div>
@@ -330,7 +500,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
 <section id="verwachting">
   <div class="wrap">
     <div class="sectie-kop">
-      <p class="eyebrow">Vraag 4</p>
+      <p class="eyebrow">Verwachting</p>
       <h2>Onze verwachting voor de komende maanden</h2>
       <p class="lead">De eerste verkopen verwachten we vanaf het eerste verkoopweekend half november.</p>
     </div>
@@ -346,6 +516,39 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
   </div>
 </section>
 
+<section id="vergoeding" class="zand pagina-nieuw">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <p class="eyebrow">Vergoeding</p>
+      <h2>Onze vergoeding per verkoop</h2>
+    </div>
+    <div class="tarieven">
+      <div class="tarief">
+        <p class="vraag">Aanvraag via jullie of de huidige makelaars</p>
+        <p class="pct">2,5%</p>
+        <p>Inclusief de volledige opvolging: nabellen, afspraken plannen, gesprekken voeren en verkopen tot en met het tekenen van de koopovereenkomst.</p>
+        <ul class="opbouw num">
+          <li><span>Makelaarskosten</span><b>2,5%</b></li>
+        </ul>
+      </div>
+      <div class="tarief hoofd">
+        <p class="vraag">Aanvraag via onze advertenties, database of netwerk</p>
+        <p class="pct">3,0%</p>
+        <p>Wij brengen de koper aan en doen de volledige opvolging: nabellen, afspraken plannen, gesprekken voeren en verkopen tot en met het tekenen.</p>
+        <ul class="opbouw num">
+          <li><span>Makelaarskosten</span><b>2,5%</b></li>
+          <li><span>Marketingkosten</span><b>0,5%</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="kader" style="max-width:none">
+      <p class="eyebrow">Advertentiebudget</p>
+      <p class="bedrag num">Minimaal € 7.000 per maand, advies € 10.000</p>
+      <p>Het budget is voor rekening van Torero en komt bovenop onze vergoeding. We verhogen het geleidelijk, op basis van wat meetbaar werkt, tot de gewenste verkoopsnelheid per maand.</p>
+    </div>
+  </div>
+</section>
+
 <section id="voorwaarden" class="donker">
   <div class="wrap">
     <div class="sectie-kop">
@@ -353,8 +556,10 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <h2>Wat we met elkaar afspreken</h2>
     </div>
     <ul class="voorwaarden">
+      <li><b>Verantwoordelijk tot het tekenen</b><span>Onze verantwoordelijkheid loopt tot en met het tekenen van de koopovereenkomst.</span></li>
       <li><b>Opzegtermijn van één maand</b><span>Beide partijen kunnen de samenwerking met een maand opzeggen.</span></li>
-      <li><b>Advertentiebudget voor Torero</b><span>Het budget komt bovenop onze vergoeding. Ons advies is € 10.000 per maand; we sturen er wekelijks op bij.</span></li>
+      <li><b>Advertentiebudget voor Torero</b><span>Minimaal € 7.000 per maand, bovenop onze vergoeding. Ons advies is € 10.000 per maand.</span></li>
+      <li><b>Goedkeuring vooraf</b><span>Advertenties en landingspagina gaan pas live na jullie akkoord.</span></li>
       <li><b>Vergoeding bij de notaris</b><span>Onze vergoeding is verschuldigd bij de notariële overdracht, maar uiterlijk twee maanden nadat de koopovereenkomst definitief is geworden.</span></li>
       <li><b>Ook bij ontbinding</b><span>Ontbindt de koper de koop tegen betaling van de boete van 10%, dan is onze vergoeding ook verschuldigd.</span></li>
     </ul>
@@ -366,10 +571,10 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
     <div class="sectie-kop" style="margin-bottom:0">
       <p class="eyebrow">Contact</p>
       <h2>Vragen of aanvullingen?</h2>
-      <p>Bekijk ook ons eerdere voorstel met de advertenties en de landingspagina: <a href="../voorstel/">het voorstel aan Torero Invest</a>.</p>
+      <p>Bekijk ook ons eerdere voorstel: <a href="https://rubenkraan-droid.github.io/strand-residence-landingspagina/voorstel/">het voorstel aan Torero Invest</a>.</p>
     </div>
     <div class="persoon">
-      <img class="logo-groot" src="https://cdn.prod.website-files.com/67ca0cdb82be331c18e0b67d/67d1f94f2472ef3857bce81d_Recraparcs-5.2.png" alt="Recraparcs" onerror="this.style.display='none'">
+      <img class="logo-groot" src="img/recraparcs-logo.png" alt="Recraparcs">
       <b>Ruben van der Kraan</b>
       <span>Hoofd Marketing, Recraparcs</span>
       <span class="tel">+31 6 40020098</span>
