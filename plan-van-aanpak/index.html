@@ -43,6 +43,9 @@ h3{font-family:var(--serif); font-weight:600; font-size:clamp(23px,2.4vw,28px); 
 /* navigatie */
 .nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:10; background:rgba(21,48,74,.96)}
 .nav .wrap{display:flex; align-items:center; gap:24px; height:52px}
+.nav .logo{display:flex; align-items:center; background:#fff; border-radius:6px; padding:5px 10px; flex:none}
+.nav .logo img{height:24px; width:auto}
+.contact .logo-groot{height:44px; width:auto; margin-bottom:10px}
 .nav .merk{font-family:var(--serif); font-size:20px; font-weight:600; color:var(--licht); white-space:nowrap}
 .nav ul{list-style:none; padding:0; display:flex; gap:20px; overflow-x:auto; scrollbar-width:none; flex:1; justify-content:flex-end}
 .nav ul::-webkit-scrollbar{display:none}
@@ -142,6 +145,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
 
 <nav class="nav" aria-label="Onderdelen">
   <div class="wrap">
+    <a class="logo" href="https://recraparcs.nl" target="_blank" rel="noopener"><img src="https://cdn.prod.website-files.com/67ca0cdb82be331c18e0b67d/67d1f94f2472ef3857bce81d_Recraparcs-5.2.png" alt="Recraparcs" onerror="this.parentNode.style.display='none'"></a>
     <span class="merk">Strand Residence</span>
     <ul>
       <li><a href="#vergoeding">Vergoeding</a></li>
@@ -365,6 +369,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <p>Bekijk ook ons eerdere voorstel met de advertenties en de landingspagina: <a href="../voorstel/">het voorstel aan Torero Invest</a>.</p>
     </div>
     <div class="persoon">
+      <img class="logo-groot" src="https://cdn.prod.website-files.com/67ca0cdb82be331c18e0b67d/67d1f94f2472ef3857bce81d_Recraparcs-5.2.png" alt="Recraparcs" onerror="this.style.display='none'">
       <b>Ruben van der Kraan</b>
       <span>Hoofd Marketing, Recraparcs</span>
       <span class="tel">+31 6 40020098</span>
