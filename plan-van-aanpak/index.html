@@ -207,6 +207,10 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
   .stap,.kaart,.kader,.tarief,.som,.moment,.voorwaarden li,.ads figure,figure.scherm,.keten,.verdeling > div,.persoon{break-inside:avoid}
   .sectie-kop,.variant-label,h2,h3{break-after:avoid}
   .pagina-nieuw{break-before:page}
+  #verwachting{break-inside:avoid}
+  #vergoeding .sectie-kop{break-before:auto}
+  #vergoeding .tarieven{break-inside:avoid}
+  #voorwaarden{break-inside:avoid}
   .ads img,.browser,.telefoon{box-shadow:none}
 }
 </style>
@@ -278,9 +282,14 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <li class="stap">
         <span class="nr">6</span>
         <h3>Terugkoppeling</h3>
-        <p>Na elk gesprek legt de makelaar vast: kopersprofiel, eigen gebruik of belegging, bezwaren en vervolg. Zo weten we per advertentie welk type koper reageert en waarom kopers afhaken.</p>
+        <p>Na elk gesprek legt de makelaar vast: kopersprofiel, eigen gebruik of belegging, bezwaren en vervolg. Zo weten we per advertentie welk type koper reageert, waarom kopers afhaken en waarom ze kopen.</p>
       </li>
     </ol>
+    <div class="kader">
+      <p class="eyebrow">Duitse kopers</p>
+      <h3>Eerst Nederland</h3>
+      <p>Duitse aanvragen kunnen wij oppakken, inplannen en de afspraak lopen. Wij adviseren wel om eerst op Nederland te focussen en de Duitse markt pas daarna actief te benaderen.</p>
+    </div>
   </div>
 </section>
 
@@ -368,7 +377,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <div class="kader">
         <p class="eyebrow">Wat jullie zien</p>
         <h3>Na elk verkoopweekend een overzicht</h3>
-        <p>Per advertentie de kosten per aanvraag, afspraak en verkoop, welk type koper reageert, waarom kopers afhaken en de voortgang van de verkoop.</p>
+        <p>Per advertentie de kosten per aanvraag, afspraak en verkoop, welk type koper reageert, waarom kopers afhaken, waarom ze kopen en de voortgang van de verkoop.</p>
       </div>
       <div class="kader">
         <p class="eyebrow">Onze voorkeur</p>
@@ -384,7 +393,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
     <div class="sectie-kop">
       <p class="eyebrow">Planning</p>
       <h2>Plan van aanpak vanaf maandag 12 oktober</h2>
-      <p class="lead">In twee weken staat alles klaar. Vanaf 26 oktober lopen de advertenties, half november is het eerste verkoopweekend.</p>
+      <p class="lead">In twee weken staat alles klaar. Vanaf 26 oktober lopen de advertenties. Het eerste verkoopweekend is op 27 en 28 november, zodat er tijd is om iedereen te trainen en de eerste campagne goed te testen.</p>
     </div>
     <ol class="tijdlijn">
       <li class="moment">
@@ -430,8 +439,8 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
               <h4>Jullie</h4>
               <ul>
                 <li>Landingspagina en advertenties goedkeuren voor livegang</li>
-                <li>Data en locatie van het eerste verkoopweekend bevestigen</li>
-                <li>Het verkoopkantoor opknappen voor het eerste verkoopweekend</li>
+                <li>Samen de verkooplocatie kiezen en de data van het eerste verkoopweekend bevestigen</li>
+                <li>Bij een verkoopweekend op locatie: het verkoopkantoor opknappen</li>
               </ul>
             </div>
           </div>
@@ -440,12 +449,13 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <li class="moment">
         <div class="datum"><b>26 okt</b><span>vanaf week 3</span></div>
         <div class="inhoud-moment">
-          <h3>Live</h3>
+          <h3>Live, testen en trainen</h3>
           <div class="taken">
             <div>
               <h4>Wij</h4>
               <ul>
-                <li>Advertenties live</li>
+                <li>Advertenties live; de eerste campagne testen en bijsturen</li>
+                <li>Ons team trainen op de bestaande aanvragen: de oude leads nabellen en zo het project en de vragen van kopers leren kennen</li>
                 <li>Elke aanvraag binnen één werkdag gebeld, daarna minimaal vijf keer verspreid over maximaal drie weken</li>
                 <li>Elke week nieuwe advertentievarianten; wat afspraken oplevert, blijft</li>
               </ul>
@@ -460,7 +470,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
         </div>
       </li>
       <li class="moment mijlpaal">
-        <div class="datum"><b>14 en 15 nov</b><span>zaterdag en zondag</span></div>
+        <div class="datum"><b>27 en 28 nov</b><span>vrijdag en zaterdag</span></div>
         <div class="inhoud-moment">
           <h3>Eerste verkoopweekend</h3>
           <div class="taken">
@@ -469,20 +479,21 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
               <ul>
                 <li>Afspraken op vaste tijdvakken, onze makelaars op locatie</li>
                 <li>Wie dan niet kan, krijgt doordeweeks een afspraak of een videogesprek</li>
-                <li>Na het weekend het overzicht, en op basis daarvan het advertentiebudget bijsturen</li>
+                <li>Na het weekend een overzicht: kosten per afspraak en per verkoop, type koper en waarom kopers afhaken en kopen</li>
+                <li>Op basis daarvan het advertentiebudget bijsturen</li>
               </ul>
             </div>
             <div class="jullie">
               <h4>Jullie</h4>
               <ul>
-                <li>Een opgeknapt verkoopkantoor, beschikbaar voor het weekend</li>
+                <li>Verkooplocatie beschikbaar voor het weekend</li>
               </ul>
             </div>
           </div>
         </div>
       </li>
       <li class="moment">
-        <div class="datum"><b>5 en 6 dec</b><span>daarna elke drie weken</span></div>
+        <div class="datum"><b>18 en 19 dec</b><span>daarna elke drie weken</span></div>
         <div class="inhoud-moment">
           <h3>Tweede verkoopweekend, en zo verder</h3>
           <p>Elke drie weken een verkoopweekend, met na elk weekend een overzicht tot en met de verkoop. Rond de feestdagen stemmen we de datum met jullie af.</p>
@@ -490,9 +501,9 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       </li>
     </ol>
     <div class="kader">
-      <p class="eyebrow">Eén verzoek vooraf</p>
-      <h3>Het verkoopkantoor</h3>
-      <p>Bij ons bezoek op locatie zagen we dat het verkoopkantoor nog niet de uitstraling heeft die bij Strand Residence past. Kopers beoordelen het project ook op die eerste indruk. Zouden jullie het willen opknappen voor het eerste verkoopweekend op 14 en 15 november?</p>
+      <p class="eyebrow">Te bespreken</p>
+      <h3>De verkooplocatie</h3>
+      <p>Wij bespreken graag met jullie waar we de verkoopweekenden houden: op locatie in Bergen aan Zee of in Alkmaar, en of we dat in een restaurant doen. Bij ons bezoek zagen we dat het verkoopkantoor nog niet de uitstraling heeft die bij Strand Residence past, terwijl kopers het project ook op die eerste indruk beoordelen. Kiezen we voor de locatie zelf, zouden jullie het verkoopkantoor dan willen opknappen voor 27 en 28 november?</p>
     </div>
   </div>
 </section>
@@ -502,7 +513,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
     <div class="sectie-kop">
       <p class="eyebrow">Verwachting</p>
       <h2>Onze verwachting voor de komende maanden</h2>
-      <p class="lead">De eerste verkopen verwachten we vanaf het eerste verkoopweekend half november.</p>
+      <p class="lead">De eerste verkopen verwachten we vanaf het eerste verkoopweekend op 27 en 28 november.</p>
     </div>
     <div class="som">
       <div class="blok"><b>8 tot 10</b><span>afspraken op locatie per verkoopweekend</span></div>
@@ -516,7 +527,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
   </div>
 </section>
 
-<section id="vergoeding" class="zand pagina-nieuw">
+<section id="vergoeding" class="zand">
   <div class="wrap">
     <div class="sectie-kop">
       <p class="eyebrow">Vergoeding</p>
