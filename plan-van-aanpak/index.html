@@ -131,6 +131,13 @@ figure.scherm figcaption{font-size:14px}
   .telefoons-rij{grid-template-columns:repeat(3,64%); overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:8px}
 }
 
+.lp-kop{display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin-bottom:8px}
+.lp-label{font-size:12.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--roest); border:1px solid var(--roest); border-radius:999px; padding:4px 12px}
+.lp-vitrine{margin-top:20px; background:var(--zee); border-radius:18px; padding:clamp(18px,3vw,30px); display:grid; grid-template-columns:1fr 200px; gap:26px 30px; align-items:end}
+.lp-vitrine figcaption{color:var(--op-zee); font-size:14px}
+.lp-vitrine .browser{border-color:transparent}
+@media (max-width:700px){ .lp-vitrine{grid-template-columns:1fr} .lp-vitrine .telefoon{max-width:220px} }
+
 /* meten */
 .keten{list-style:none; padding:0; display:flex; align-items:stretch; margin-bottom:32px}
 .keten li{flex:1; display:flex; align-items:center}
@@ -223,6 +230,10 @@ figure.scherm figcaption{font-size:14px}
 .contact .persoon{display:flex; flex-direction:column; align-items:center; text-align:center; gap:4px; background:var(--papier); border:1px solid var(--rand); border-radius:14px; padding:26px 34px}
 .contact .logo-groot{height:56px; width:auto; margin-bottom:14px; padding-bottom:16px; box-sizing:content-box; border-bottom:1px solid var(--rand)}
 .contact .persoon b{font-family:var(--serif); font-size:28px; font-weight:600; color:var(--zee)}
+.contact .personen{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+.contact .personen > div{display:flex; flex-direction:column; gap:2px}
+.contact .personen b{font-size:24px}
+@media (max-width:520px){ .contact .personen{grid-template-columns:1fr} }
 .contact .tel{font-size:20px; color:var(--zee); font-variant-numeric:tabular-nums; user-select:all}
 footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-block:26px}
 
@@ -236,6 +247,8 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
   .hero::after{display:none}
   .dash,.tegel,.dash table{break-inside:avoid}
   .dash-intro{padding-top:48px; margin-top:0 !important}
+  .lp-blok{padding-top:40px}
+  #vergoeding{break-before:page}
   .hero{break-after:page}
   .hero > img{height:1490px}
   .hero .inhoud{padding-block:96px}
@@ -289,8 +302,8 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
   <div class="wrap">
     <div class="sectie-kop">
       <p class="eyebrow">Onze werkzaamheden</p>
-      <h2>Van advertentie tot getekende koopovereenkomst</h2>
-      <p class="lead">Indien wij de marketing en de verkoop van begin tot eind overnemen, loopt onze verantwoordelijkheid van de eerste klik tot en met het tekenen van de koopovereenkomst.</p>
+      <h2>Van eerste klik tot definitieve koopovereenkomst</h2>
+      <p class="lead">Indien wij de marketing en de verkoop van begin tot eind overnemen, loopt onze verantwoordelijkheid van de eerste klik tot en met het definitief zijn van de koopovereenkomst.</p>
     </div>
     <ol class="stappen">
       <li class="stap">
@@ -301,22 +314,22 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <li class="stap">
         <span class="nr">2</span>
         <h3>Landingspagina</h3>
-        <p>Dezelfde belofte als de advertentie. De bezoeker kiest: aanmelden voor het verkoopweekend of eerst de brochure. Het formulier vraagt naar eigen gebruik of belegging en privé of BV, en de vragen die elke koper stelt staan vooraf beantwoord.</p>
+        <p>Dezelfde belofte als de advertentie. De bezoeker kiest: aanmelden voor het verkoopweekend of eerst de brochure. De vragen die elke koper stelt, staan vooraf beantwoord, ook over het verwachte rendement.</p>
       </li>
       <li class="stap">
         <span class="nr">3</span>
         <h3>Nabellen en afspraken</h3>
-        <p>Elke aanvraag wordt binnen één werkdag gebeld door onze afsprakenplanner, ook 's avonds en op zaterdag. We bellen minimaal vijf keer, verspreid over maximaal drie weken, tot er een afspraak of een duidelijk nee is. Bij geen gehoor kiest de koper per mail wanneer hij gebeld wil worden.</p>
+        <p>Elke lead wordt binnen één werkdag gebeld door onze afsprakenplanner, ook 's avonds en op zaterdag. We bellen minimaal vijf keer, verspreid over maximaal drie weken, tot er een afspraak of een duidelijk nee is. Bij geen gehoor kiest de koper per mail wanneer hij gebeld wil worden.</p>
       </li>
       <li class="stap">
         <span class="nr">4</span>
         <h3>Verkoopweekend</h3>
-        <p>Eén verkoopweekend per drie weken, met afspraken op vaste tijdvakken. Kopers zien elkaar aankomen en vertrekken, en weten dat het volgende moment pas over drie weken is. Wie dan niet kan, krijgt doordeweeks een afspraak of een videogesprek.</p>
+        <p>Eén verkoopweekend per drie weken, waarin elke koper een vaste afspraaktijd heeft. Daar sturen we bewust op: kopers zien andere kopers aankomen en vertrekken en hebben echt een afspraak. Dat creëert schaarste. Wie dan niet kan, krijgt doordeweeks een afspraak of een videogesprek.</p>
       </li>
       <li class="stap">
         <span class="nr">5</span>
         <h3>Verkoop</h3>
-        <p>Onze makelaars voeren de gesprekken en begeleiden de koper tot en met het tekenen van de koopovereenkomst.</p>
+        <p>Onze makelaars voeren de gesprekken en begeleiden de koper tot de koopovereenkomst definitief is.</p>
       </li>
       <li class="stap">
         <span class="nr">6</span>
@@ -327,7 +340,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
     <div class="kader">
       <p class="eyebrow">Duitse kopers</p>
       <h3>Eerst Nederland</h3>
-      <p>Duitse aanvragen kunnen wij oppakken, inplannen en de afspraak lopen. Wij adviseren wel om eerst op Nederland te focussen en de Duitse markt pas daarna actief te benaderen.</p>
+      <p>Duitse leads kunnen wij oppakken, inplannen en de afspraak lopen. Wij adviseren wel om eerst op Nederland te focussen en de Duitse markt pas daarna actief te benaderen.</p>
     </div>
   </div>
 </section>
@@ -342,33 +355,31 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
 
     <p class="variant-label">Advertenties, variant A: sfeer</p>
     <div class="ads">
-      <figure><img src="../voorstel/img/ad-ochtend.jpg" alt="Advertentie: vrouw met koffie op een terras in de duinen"><figcaption>De eerste ochtend</figcaption></figure>
-      <figure><img src="../voorstel/img/ad-kleinkinderen.jpg" alt="Advertentie: grootvader en kleinkinderen op een duinpad naar het strand"><figcaption>De kleinkinderen</figcaption></figure>
-      <figure><img src="../voorstel/img/ad-vrijdag.jpg" alt="Advertentie: lachend stel op het strand bij zonsondergang"><figcaption>Vrijdagmiddag</figcaption></figure>
+      <figure><img src="img/ads/ad-ochtend.jpg" alt="Advertentie: vrouw met koffie op een terras in de duinen"><figcaption>De eerste ochtend</figcaption></figure>
+      <figure><img src="img/ads/ad-kleinkinderen.jpg" alt="Advertentie: grootvader en kleinkinderen op een duinpad naar het strand"><figcaption>De kleinkinderen</figcaption></figure>
+      <figure><img src="img/ads/ad-vrijdag.jpg" alt="Advertentie: lachend stel op het strand bij zonsondergang"><figcaption>Vrijdagmiddag</figcaption></figure>
     </div>
 
     <p class="variant-label">Advertenties, variant B: met de appartementen erbij</p>
     <div class="ads">
-      <figure><img src="../voorstel/img/ad-ochtend-impressie.jpg" alt="Advertentie: vrouw met koffie boven, impressie van het gebouw onder"><figcaption>De eerste ochtend, met impressie</figcaption></figure>
-      <figure><img src="../voorstel/img/ad-kleinkinderen-impressie.jpg" alt="Advertentie: grootvader en kleinkinderen boven, impressie van de duinentuin onder"><figcaption>De kleinkinderen, met impressie</figcaption></figure>
-      <figure><img src="../voorstel/img/ad-vrijdag-impressie.jpg" alt="Advertentie: stel op het strand boven, impressie van het gebouw bij zonsondergang onder"><figcaption>Vrijdagmiddag, met impressie</figcaption></figure>
+      <figure><img src="img/ads/ad-ochtend-impressie.jpg" alt="Advertentie: vrouw met koffie boven, impressie van het gebouw onder"><figcaption>De eerste ochtend, met impressie</figcaption></figure>
+      <figure><img src="img/ads/ad-kleinkinderen-impressie.jpg" alt="Advertentie: grootvader en kleinkinderen boven, impressie van de duinentuin onder"><figcaption>De kleinkinderen, met impressie</figcaption></figure>
+      <figure><img src="img/ads/ad-vrijdag-impressie.jpg" alt="Advertentie: stel op het strand boven, impressie van het gebouw bij zonsondergang onder"><figcaption>Vrijdagmiddag, met impressie</figcaption></figure>
     </div>
     <p class="noot" style="margin-top:16px">De eerste test: sfeer alleen (A) tegenover sfeer met het gebouw (B). Wat meer afspraken en verkopen oplevert, blijft.</p>
 
-    <div class="pagina-nieuw" style="padding-top:8px">
-      <p class="variant-label">Landingspagina op de computer</p>
-      <div class="desktops-rij">
-        <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="../voorstel/img/lp-desk-hero.jpg" alt="Landingspagina op de computer: opening met impressie en twee knoppen"></div><figcaption>De opening: dezelfde belofte als de advertentie</figcaption></figure>
-        <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="../voorstel/img/lp-desk-verschillen.jpg" alt="Landingspagina op de computer: drie verschillen met een vakantiepark"></div><figcaption>Drie verschillen met een vakantiepark</figcaption></figure>
-        <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="../voorstel/img/lp-desk-vragen.jpg" alt="Landingspagina op de computer: de vragen uit elk gesprek"></div><figcaption>De vragen uit elk gesprek, vooraf beantwoord</figcaption></figure>
+    <div class="pagina-nieuw lp-blok">
+      <div class="lp-kop">
+        <p class="variant-label" style="margin:0">De landingspagina</p>
+        <span class="lp-label">Snel voorbeeld, niet het eindproduct</span>
       </div>
-      <p class="variant-label">Landingspagina op de telefoon</p>
-      <div class="telefoons-rij">
-        <figure class="scherm"><div class="telefoon"><img src="../voorstel/img/lp-mob-hero.jpg" alt="Landingspagina op de telefoon: opening met vaste knoppen onderaan"></div><figcaption>De opening, met vaste knoppen onderaan</figcaption></figure>
-        <figure class="scherm"><div class="telefoon"><img src="../voorstel/img/lp-mob-verschillen.jpg" alt="Landingspagina op de telefoon: drie verschillen met een vakantiepark"></div><figcaption>Drie verschillen met een vakantiepark</figcaption></figure>
-        <figure class="scherm"><div class="telefoon"><img src="../voorstel/img/lp-mob-vragen.jpg" alt="Landingspagina op de telefoon: de vragen uit elk gesprek"></div><figcaption>De vragen uit elk gesprek</figcaption></figure>
+      <p class="noot">Een eerste opzet om te laten zien hoe de advertentie doorloopt naar de pagina. De definitieve pagina maken we in week 2 samen met jullie af.</p>
+      <div class="lp-vitrine">
+        <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="img/lp-desk-hero.jpg" alt="Landingspagina op de computer: opening met impressie en twee knoppen"></div><figcaption>De opening: dezelfde belofte als de advertentie</figcaption></figure>
+        <figure class="scherm"><div class="telefoon"><img src="img/lp-mob-hero.jpg" alt="Landingspagina op de telefoon: opening met vaste knoppen onderaan"></div><figcaption>Op de telefoon</figcaption></figure>
+        <figure class="scherm"><div class="browser"><div class="balk"><i></i><i></i><i></i></div><img src="img/lp-desk-rendement.jpg" alt="Landingspagina op de computer: het verwachte rendement per appartement met de aannames"></div><figcaption>Het verwachte rendement per appartement, met alle aannames erbij</figcaption></figure>
+        <figure class="scherm"><div class="telefoon"><img src="img/lp-mob-rendement.jpg" alt="Landingspagina op de telefoon: het verwachte rendement"></div><figcaption>Het rendement op de telefoon</figcaption></figure>
       </div>
-      <p class="noot" style="margin-top:16px">Voorbeeldpagina: <a href="https://rubenkraan-droid.github.io/strand-residence-landingspagina/">rubenkraan-droid.github.io/strand-residence-landingspagina</a></p>
     </div>
   </div>
 </section>
@@ -381,22 +392,22 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
     </div>
     <ol class="keten" aria-label="Van advertentie tot nieuwe varianten">
       <li><span>Advertentie</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
-      <li><span>Aanvraag</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
+      <li><span>Lead</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
       <li><span>Afspraak</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
       <li><span>Verkoop</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
       <li><span>Terugkoppeling</span><i class="pijl" aria-hidden="true"><svg viewBox="0 0 26 12"><path d="M1 6h21M17 1l6 5-6 5" fill="none" stroke="#A5602F" stroke-width="2"/></svg></i></li>
       <li><span>Nieuwe varianten</span></li>
     </ol>
     <div class="kolommen">
-      <div class="kaart"><h3>Meten</h3><p>Elke aanvraag wordt automatisch gekoppeld aan de advertentie waar hij vandaan komt. Zo zien we per advertentie wat een aanvraag, een afspraak en een verkoop heeft gekost.</p></div>
-      <div class="kaart"><h3>Testen</h3><p>Elke week nieuwe varianten: een andere openingszin, een ander beeld, een ander kopersprofiel. Wat afspraken oplevert, blijft; de rest vervangen we.</p></div>
+      <div class="kaart"><h3>Meten</h3><p>Elke lead wordt automatisch gekoppeld aan de advertentie waar hij vandaan komt. Zo zien we per advertentie wat een lead, een afspraak en een verkoop heeft gekost.</p></div>
+      <div class="kaart"><h3>Testen</h3><p>Nieuwe varianten zodra die nodig zijn of er nieuwe ideeën zijn: een andere openingszin, een ander beeld, een ander kopersprofiel. Nieuwe beelden kunnen we altijd als advertentie testen. Wat afspraken oplevert, blijft; de rest vervangen we.</p></div>
       <div class="kaart"><h3>Sturen</h3><p>We sturen op kosten per afspraak en per verkoop, niet op klikken. Het advertentiebudget verhogen we geleidelijk, op basis van wat meetbaar werkt, tot de gewenste verkoopsnelheid per maand.</p></div>
     </div>
     <div class="verdeling">
       <div>
         <h4>Gaat automatisch</h4>
         <ul>
-          <li>Aanvragen komen direct in ons CRM, gekoppeld aan de advertentie</li>
+          <li>Leads komen direct in ons CRM, gekoppeld aan de advertentie</li>
           <li>De belrij voor de afsprakenplanner</li>
           <li>De mail bij geen gehoor</li>
           <li>Het overzicht na elk verkoopweekend</li>
@@ -406,9 +417,9 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
         <h4>Doen wij zelf</h4>
         <ul>
           <li>Nabellen en afspraken plannen</li>
-          <li>Gesprekken voeren en verkopen, tot en met het tekenen</li>
+          <li>Gesprekken voeren en verkopen, tot de koopovereenkomst definitief is</li>
           <li>Na elk gesprek terugkoppelen</li>
-          <li>Wekelijks nieuwe advertenties maken en bijsturen</li>
+          <li>Nieuwe advertenties maken zodra dat nodig is, en bijsturen</li>
         </ul>
       </div>
     </div>
@@ -416,13 +427,13 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <div class="kader">
         <p class="eyebrow">Onze voorkeur</p>
         <h3>De volledige marketing bij ons</h3>
-        <p>Alleen dan is alles goed te meten. Een koper die wij met Meta-advertenties warm maken, komt soms uiteindelijk binnen via Google. Het werk is dan door ons gedaan, maar de aanvraag komt niet via ons binnen. Liggen de kanalen bij verschillende partijen, dan krijgen jullie bovendien een vertekend beeld van welke marketing werkt en wie het goed doet.</p>
+        <p>Alleen dan is alles goed te meten. Een koper die wij met Meta-advertenties warm maken, komt soms uiteindelijk binnen via Google. Het werk is dan door ons gedaan, maar de lead komt niet via ons binnen. Liggen de kanalen bij verschillende partijen, dan krijgen jullie bovendien een vertekend beeld van welke marketing werkt en wie het goed doet.</p>
       </div>
     </div>
     <div class="sectie-kop pagina-nieuw dash-intro" style="margin-top:clamp(44px,6vw,72px); margin-bottom:0">
       <p class="eyebrow">Het overzicht</p>
       <h2>Wat jullie na elk verkoopweekend zien</h2>
-      <p class="lead">Per advertentie de kosten per aanvraag, afspraak en verkoop, het type koper, en waarom kopers afhaken en kopen.</p>
+      <p class="lead">Per advertentie de kosten per lead, afspraak en verkoop, het type koper, en waarom kopers afhaken en kopen. Dit is een versimpelde weergave; in de rapportage gaan we er veel dieper op in.</p>
     </div>
     <div class="dash" aria-label="Voorbeeld van het overzicht na een verkoopweekend">
       <div class="dash-kop">
@@ -434,7 +445,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       </div>
       <div class="tegels">
         <div class="tegel"><span class="label">Advertentiekosten</span><b>€ 8.000</b><span class="per">5 weken</span></div>
-        <div class="tegel"><span class="label">Aanvragen</span><b>96</b><span class="per">€ 83 per aanvraag</span></div>
+        <div class="tegel"><span class="label">Leads</span><b>305</b><span class="per">€ 26 per lead</span></div>
         <div class="tegel"><span class="label">Afspraken op locatie</span><b>9</b><span class="per">€ 889 per afspraak</span></div>
         <div class="tegel"><span class="label">Verkopen</span><b>2</b><span class="per">€ 4.000 per verkoop</span></div>
       </div>
@@ -442,13 +453,13 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
         <div>
           <h4>Per advertentie</h4>
           <div class="tabel-scroll"><table>
-            <thead><tr><th>Advertentie</th><th>Kosten</th><th>Aanvragen</th><th>Afspraken</th><th>Verkopen</th><th>Per afspraak</th></tr></thead>
+            <thead><tr><th>Advertentie</th><th>Kosten</th><th>Leads</th><th>Afspraken</th><th>Verkopen</th><th>Per afspraak</th></tr></thead>
             <tbody>
-              <tr><td>De eerste ochtend, met impressie</td><td>€ 2.700</td><td>38</td><td>4</td><td>1</td><td>€ 675</td></tr>
-              <tr><td>De kleinkinderen</td><td>€ 2.400</td><td>27</td><td>3</td><td>1</td><td>€ 800</td></tr>
-              <tr><td>Vrijdagmiddag, met impressie</td><td>€ 1.700</td><td>19</td><td>1</td><td>0</td><td>€ 1.700</td></tr>
-              <tr><td>Vrijdagmiddag</td><td>€ 1.200</td><td>12</td><td>1</td><td>0</td><td>€ 1.200</td></tr>
-              <tr class="som-rij"><td>Totaal</td><td>€ 8.000</td><td>96</td><td>9</td><td>2</td><td>€ 889</td></tr>
+              <tr><td>De eerste ochtend, met impressie</td><td>€ 2.700</td><td>120</td><td>4</td><td>1</td><td>€ 675</td></tr>
+              <tr><td>De kleinkinderen</td><td>€ 2.400</td><td>86</td><td>3</td><td>1</td><td>€ 800</td></tr>
+              <tr><td>Vrijdagmiddag, met impressie</td><td>€ 1.700</td><td>60</td><td>1</td><td>0</td><td>€ 1.700</td></tr>
+              <tr><td>Vrijdagmiddag</td><td>€ 1.200</td><td>39</td><td>1</td><td>0</td><td>€ 1.200</td></tr>
+              <tr class="som-rij"><td>Totaal</td><td>€ 8.000</td><td>305</td><td>9</td><td>2</td><td>€ 889</td></tr>
             </tbody>
           </table></div>
         </div>
@@ -482,6 +493,11 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
         </div>
       </div>
     </div>
+    <div class="kader" style="max-width:none">
+      <p class="eyebrow">Wat realistisch is</p>
+      <h3>Advertentiekosten per verkoop</h3>
+      <p>Bij woningen tussen € 200.000 en € 450.000 is het realistisch om 1 tot 1,5% van de koopprijs aan advertenties uit te geven per verkoop. Bij woningen in ongeveer jullie prijsklasse, € 400.000 tot € 600.000, zitten we op dit moment onder de 1%. Dat blijft ons streven.</p>
+    </div>
   </div>
 </section>
 
@@ -501,8 +517,8 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
             <div>
               <h4>Wij</h4>
               <ul>
-                <li>Kick-off op maandag 12 oktober met jullie en de huidige makelaars: rollen, opvolging, terugkoppeling en de contractafwikkeling vastleggen</li>
-                <li>Lopende opties en aanvragen overnemen in ons CRM, zodat niemand dubbel wordt benaderd</li>
+                <li>Kick-off op maandag 12 oktober met jullie en de huidige makelaars: rollen, opvolging, terugkoppeling, de contractafwikkeling en wie de vragen van kopers beantwoordt vastleggen</li>
+                <li>Lopende opties en leads overnemen in ons CRM, zodat niemand dubbel wordt benaderd</li>
                 <li>De feiten voor alle communicatie controleren: beschikbaarheid, planning, verhuur</li>
               </ul>
             </div>
@@ -528,8 +544,9 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
               <h4>Wij</h4>
               <ul>
                 <li>Landingspagina, formulieren en advertenties afronden</li>
-                <li>Aanvragen komen automatisch in ons CRM; belrij en afsprakenplanning ingericht</li>
-                <li>Makelaars en afsprakenplanner inwerken op het project: prijzen, prognoses, verhuur, btw en oplevering</li>
+                <li>Leads komen automatisch in ons CRM; belrij en afsprakenplanning ingericht</li>
+                <li>Makelaars en afsprakenplanner trainen en op het project zetten, zodat zij zich alles eigen maken: prijzen, prognoses, verhuur, btw en oplevering</li>
+                <li>Ons team trainen op de bestaande leads: de oude leads nabellen en zo het project en de vragen van kopers leren kennen</li>
               </ul>
             </div>
             <div class="jullie">
@@ -546,15 +563,14 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <li class="moment">
         <div class="datum"><b>26 okt</b><span>vanaf week 3</span></div>
         <div class="inhoud-moment">
-          <h3>Live, testen en trainen</h3>
+          <h3>Live en testen</h3>
           <div class="taken">
             <div>
               <h4>Wij</h4>
               <ul>
                 <li>Advertenties live; de eerste campagne testen en bijsturen</li>
-                <li>Ons team trainen op de bestaande aanvragen: de oude leads nabellen en zo het project en de vragen van kopers leren kennen</li>
-                <li>Elke aanvraag binnen één werkdag gebeld, daarna minimaal vijf keer verspreid over maximaal drie weken</li>
-                <li>Elke week nieuwe advertentievarianten; wat afspraken oplevert, blijft</li>
+                <li>Elke lead binnen één werkdag gebeld, daarna minimaal vijf keer verspreid over maximaal drie weken</li>
+                <li>Nieuwe advertentievarianten zodra die nodig zijn of er nieuwe ideeën zijn; wat afspraken oplevert, blijft</li>
               </ul>
             </div>
             <div class="jullie">
@@ -574,10 +590,9 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
             <div>
               <h4>Wij</h4>
               <ul>
-                <li>Afspraken op vaste tijdvakken, onze makelaars op locatie</li>
+                <li>Elke koper een vaste afspraaktijd, onze makelaars op locatie</li>
                 <li>Wie dan niet kan, krijgt doordeweeks een afspraak of een videogesprek</li>
                 <li>Na het weekend een overzicht: kosten per afspraak en per verkoop, type koper en waarom kopers afhaken en kopen</li>
-                <li>Op basis daarvan het advertentiebudget bijsturen</li>
               </ul>
             </div>
             <div class="jullie">
@@ -587,6 +602,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
               </ul>
             </div>
           </div>
+          <p class="noot">Bij het tweede verkoopweekend is de opkomst vaak hoger dan bij het eerste, door de opstartperiode.</p>
         </div>
       </li>
       <li class="moment">
@@ -598,9 +614,14 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       </li>
     </ol>
     <div class="kader">
+      <p class="eyebrow">Ons advies</p>
+      <h3>Een opstartperiode van drie maanden</h3>
+      <p>Wij adviseren een opstartperiode van drie maanden. In die tijd trainen we het team, testen we de campagnes en draaien de eerste verkoopweekenden. Pas daarna is goed te beoordelen wat de aanpak per verkoop oplevert.</p>
+    </div>
+    <div class="kader">
       <p class="eyebrow">Te bespreken</p>
       <h3>De verkooplocatie</h3>
-      <p>Wij bespreken graag met jullie waar we de verkoopweekenden houden: op locatie in Bergen aan Zee of in Alkmaar, en of we dat in een restaurant doen. Bij ons bezoek zagen we dat het verkoopkantoor nog niet de uitstraling heeft die bij Strand Residence past, terwijl kopers het project ook op die eerste indruk beoordelen. Kiezen we voor de locatie zelf, zouden jullie het verkoopkantoor dan willen opknappen voor 27 en 28 november?</p>
+      <p>Wij bespreken graag met jullie waar we de verkoopweekenden houden: op locatie in Bergen aan Zee of in Alkmaar, en of we dat in een restaurant doen. Bij ons bezoek zagen we dat het verkoopkantoor nog niet de uitstraling heeft die bij Strand Residence past, terwijl kopers het project ook op die eerste indruk beoordelen. Kiezen we voor de locatie zelf, zouden jullie het verkoopkantoor dan willen opknappen voor 27 en 28 november? Daarnaast willen we vanuit Recraparcs zelf een samenwerking opzetten met een lokaal restaurant, in de sfeer van de Eetclub.</p>
     </div>
   </div>
 </section>
@@ -613,14 +634,14 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <p class="lead">De eerste verkopen verwachten we vanaf het eerste verkoopweekend op 27 en 28 november.</p>
     </div>
     <div class="som">
-      <div class="blok"><b>8 tot 10</b><span>afspraken op locatie per maand</span></div>
+      <div class="blok"><b>10 tot 12</b><span>afspraken op locatie per maand</span></div>
       <div class="teken" aria-hidden="true">×</div>
-      <div class="blok"><b>circa 30%</b><span>van de afspraken op locatie leidt in onze ervaring tot een koop</span></div>
+      <div class="blok"><b>20 tot 25%</b><span>van de afspraken op locatie leidt tot een koop, voorzichtig gerekend</span></div>
       <div class="teken" aria-hidden="true">=</div>
       <div class="blok uitkomst"><b>2 tot 3</b><span>verkopen per maand</span></div>
     </div>
     <p class="totaal">Vanaf het eerste verkoopweekend eind november verwachten we <b>2 tot 3 verkopen per maand</b> bij het geadviseerde budget van € 10.000 per maand.</p>
-    <p class="noot" style="margin-top:14px">Dit is een inschatting. Na het eerste verkoopweekend baseren we de verwachting op de echte cijfers van dit project, en verhogen we het budget waar de cijfers dat rechtvaardigen.</p>
+    <p class="noot" style="margin-top:14px">Dit is een inschatting. Na het eerste verkoopweekend baseren we de verwachting op de echte cijfers van dit project, en verhogen we het budget waar de cijfers dat rechtvaardigen. Wij adviseren een opstartperiode van drie maanden.</p>
   </div>
 </section>
 
@@ -632,17 +653,17 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
     </div>
     <div class="tarieven">
       <div class="tarief">
-        <p class="vraag">Aanvraag via jullie of de huidige makelaars</p>
+        <p class="vraag">Lead via jullie of de huidige makelaars</p>
         <p class="pct">2,5%</p>
-        <p>Inclusief de volledige opvolging: nabellen, afspraken plannen, gesprekken voeren en verkopen tot en met het tekenen van de koopovereenkomst.</p>
+        <p>Inclusief de volledige opvolging: nabellen, afspraken plannen, gesprekken voeren en verkopen tot de koopovereenkomst definitief is.</p>
         <ul class="opbouw num">
           <li><span>Makelaarskosten</span><b>2,5%</b></li>
         </ul>
       </div>
       <div class="tarief hoofd">
-        <p class="vraag">Aanvraag via onze advertenties, database of netwerk</p>
+        <p class="vraag">Lead via onze advertenties, database of netwerk</p>
         <p class="pct">3,0%</p>
-        <p>Wij brengen de koper aan en doen de volledige opvolging: nabellen, afspraken plannen, gesprekken voeren en verkopen tot en met het tekenen.</p>
+        <p>Wij brengen de koper aan en doen de volledige opvolging: nabellen, afspraken plannen, gesprekken voeren en verkopen tot de koopovereenkomst definitief is.</p>
         <ul class="opbouw num">
           <li><span>Makelaarskosten</span><b>2,5%</b></li>
           <li><span>Marketingkosten</span><b>0,5%</b></li>
@@ -664,14 +685,14 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <h2>Wat we met elkaar afspreken</h2>
     </div>
     <ul class="voorwaarden">
-      <li><b>Verantwoordelijk tot het tekenen</b><span>Nemen wij de marketing en de verkoop van begin tot eind over, dan loopt onze verantwoordelijkheid van de eerste klik tot en met het tekenen van de koopovereenkomst.</span></li>
+      <li><b>Verantwoordelijk tot een definitieve koopovereenkomst</b><span>Nemen wij de marketing en de verkoop van begin tot eind over, dan loopt onze verantwoordelijkheid van de eerste klik tot en met het definitief zijn van de koopovereenkomst.</span></li>
       <li><b>Opzegtermijn van één maand</b><span>Beide partijen kunnen de samenwerking met een maand opzeggen.</span></li>
       <li><b>Advertentiebudget voor Torero</b><span>Minimaal € 7.000 per maand, bovenop onze vergoeding. Ons advies is € 10.000 per maand.</span></li>
-      <li><b>Goedkeuring vooraf</b><span>Advertenties en landingspagina gaan pas live na jullie akkoord.</span></li>
-      <li><b>Vergoeding bij de notaris</b><span>Onze vergoeding is verschuldigd bij de notariële overdracht, maar uiterlijk twee maanden nadat de koopovereenkomst definitief is geworden.</span></li>
+      <li><b>Goedkeuring vooraf</b><span>Landingspagina en advertenties sturen we altijd vooraf ter goedkeuring en plaatsen we pas na akkoord. Spreken we af dat geen bericht goed bericht is, dan plaatsen we na 48 uur. Nieuwe beelden kunnen we altijd als advertentie testen.</span></li>
+      <li><b>Afrekening via de projectnotaris</b><span>Onze vergoeding is verschuldigd bij de notariële overdracht, bij voorkeur af te rekenen via de projectnotaris, en uiterlijk twee maanden nadat de koopovereenkomst definitief is geworden.</span></li>
       <li><b>Ook bij ontbinding</b><span>Ontbindt de koper de koop tegen betaling van de boete van 10%, dan is onze vergoeding ook verschuldigd.</span></li>
       <li><b>Nawerking van vier maanden</b><span>Kopen klanten die bij ons in behandeling zijn binnen vier maanden na een opzegging alsnog, dan is onze vergoeding ook verschuldigd. Bij opzegging ontvangen jullie een overzicht van deze klanten.</span></li>
-      <li><b>Contractafwikkeling</b><span>Wie de koopovereenkomst opstelt en de afwikkeling tot aan de notaris verzorgt, leggen we vast in de kick-off.</span></li>
+      <li><b>Contractafwikkeling</b><span>Wie de koopovereenkomst opstelt, de afwikkeling tot aan de notaris verzorgt en de vragen van kopers beantwoordt, leggen we vast in de kick-off.</span></li>
     </ul>
   </div>
 </section>
@@ -681,13 +702,14 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
     <div class="sectie-kop" style="margin-bottom:0">
       <p class="eyebrow">Contact</p>
       <h2>Vragen of aanvullingen?</h2>
-      <p>Bekijk ook ons eerdere voorstel: <a href="https://rubenkraan-droid.github.io/strand-residence-landingspagina/voorstel/">het voorstel aan Torero Invest</a>.</p>
+      <p>Neem gerust contact op met een van ons.</p>
     </div>
     <div class="persoon">
       <img class="logo-groot" src="img/recraparcs-logo.png" alt="Recraparcs">
-      <b>Ruben van der Kraan</b>
-      <span>Hoofd Marketing, Recraparcs</span>
-      <span class="tel">+31 6 40020098</span>
+      <div class="personen">
+        <div><b>Ruben van der Kraan</b><span>Hoofd Marketing</span><span class="tel">+31 6 40020098</span></div>
+        <div><b>Willem van de Griend</b><span>Hoofd Makelaardij</span><span class="tel">+31 6 45190444</span></div>
+      </div>
     </div>
   </div>
 </section>
