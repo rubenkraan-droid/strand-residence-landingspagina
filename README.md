@@ -16,6 +16,7 @@ https://rubenkraan-droid.github.io/strand-residence-landingspagina/
 | `images/` | projectbeeld, afkomstig uit het officiële archief van strandresidence.nl |
 | `ghl/formulieren.md` | velden, labels en tags voor de twee GoHighLevel-formulieren |
 | `voorstel/` | webversie van het voorstel aan Torero Invest (aanpak verkoop en marketing), met eigen beelden in `voorstel/img/` |
+| `plan-van-aanpak/` | plan van aanpak voor Torero Invest: vergoeding, planning vanaf 12 oktober, verwachting en voorwaarden |
 
 ## Wijzigen
 
