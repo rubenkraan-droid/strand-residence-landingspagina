@@ -70,6 +70,39 @@ h3{font-family:var(--serif); font-weight:600; font-size:clamp(23px,2.4vw,28px); 
   .hero .inhoud{position:static}
 }
 
+.cover-print{display:none}
+
+/* overzicht (voorbeeld) */
+.dash{margin-top:32px; background:var(--papier); border:1px solid var(--rand); border-radius:16px; padding:clamp(18px,3vw,30px); display:flex; flex-direction:column; gap:22px}
+.dash-kop{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:8px 24px; border-bottom:1px solid var(--rand); padding-bottom:16px}
+.dash-kop .eyebrow{color:var(--zacht)}
+.dash-kop p.sub{font-size:14.5px; color:var(--zacht)}
+.tegels{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+.tegel{background:var(--licht); border-radius:12px; padding:16px 18px; display:flex; flex-direction:column; gap:2px}
+.tegel .label{font-size:13px; color:var(--zacht)}
+.tegel b{font-family:var(--serif); font-weight:600; font-size:38px; line-height:1.05; color:var(--zee); font-variant-numeric:lining-nums}
+.tegel .per{font-size:14px; color:var(--tekst); font-variant-numeric:tabular-nums}
+.dash-raster{display:grid; grid-template-columns:1.9fr 1fr; gap:26px}
+.dash h4{font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--roest); margin-bottom:10px}
+.dash table{width:100%; border-collapse:collapse; font-size:14.5px; font-variant-numeric:tabular-nums}
+.dash th{text-align:right; font-size:12px; font-weight:600; color:var(--zacht); padding:0 0 8px 10px; border-bottom:1px solid var(--rand)}
+.dash th:first-child,.dash td:first-child{text-align:left; padding-left:0}
+.dash td{text-align:right; padding:9px 0 9px 10px; border-bottom:1px solid var(--rand)}
+.dash td:not(:first-child),.dash th:not(:first-child){white-space:nowrap}
+.dash .tabel-scroll{overflow-x:auto}
+.dash tr.som-rij td{font-weight:600; color:var(--zee); border-bottom:0}
+.balken{list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; font-size:14.5px}
+.balken li{display:grid; grid-template-columns:1fr auto; gap:4px 10px; align-items:center}
+.balken .spoor{grid-column:1 / -1; height:10px; background:var(--licht); border-radius:0 4px 4px 0}
+.balken .vul{height:10px; background:var(--zee); border-radius:0 4px 4px 0}
+.balken .n{font-variant-numeric:tabular-nums; color:var(--zee); font-weight:600}
+.redenen{list-style:none; padding:0; display:flex; flex-direction:column; gap:6px; font-size:14.5px}
+.redenen li{display:flex; justify-content:space-between; gap:12px; border-bottom:1px solid var(--rand); padding-bottom:6px}
+.redenen li span:last-child{font-variant-numeric:tabular-nums; color:var(--zacht)}
+.dash-rechts{display:flex; flex-direction:column; gap:22px}
+.dash-onder{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+@media (max-width:860px){ .tegels{grid-template-columns:1fr 1fr} .dash-raster,.dash-onder{grid-template-columns:1fr} }
+
 /* werkzaamheden */
 .stappen{list-style:none; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
 .stap{background:var(--papier); border:1px solid var(--rand); border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:10px}
@@ -198,6 +231,11 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
 @media print{
   html,body{-webkit-print-color-adjust:exact; print-color-adjust:exact}
   .nav{display:none}
+  .cover-scherm{display:none}
+  .hero > img.cover-print{display:block; width:100%; height:1490px; object-fit:cover}
+  .hero::after{display:none}
+  .dash,.tegel,.dash table{break-inside:avoid}
+  .dash-intro{padding-top:48px; margin-top:0 !important}
   .hero{break-after:page}
   .hero > img{height:1490px}
   .hero .inhoud{padding-block:96px}
@@ -234,7 +272,8 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
 </nav>
 
 <header class="hero">
-  <img src="../voorstel/img/render-avond.jpg" alt="Impressie van Strand Residence bij avondlicht">
+  <img class="cover-scherm" src="../voorstel/img/render-avond.jpg" alt="Impressie van Strand Residence bij avondlicht">
+  <img class="cover-print" src="img/cover-print.jpg" alt="">
   <div class="inhoud">
     <div class="wrap">
       <span class="logo-kop"><img src="img/recraparcs-logo.png" alt="Recraparcs"></span>
@@ -257,7 +296,7 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
       <li class="stap">
         <span class="nr">1</span>
         <h3>Advertenties</h3>
-        <p>Advertenties op Meta, gericht op drie kopersprofielen: het vermogende stel, de ondernemer met een BV en de Duitse koper van een tweede thuis. Elke advertentie benoemt de belegging, spreekt over huurinkomsten in plaats van een percentage en toont de verplichte AFM-melding.</p>
+        <p>Advertenties op Meta, gericht op drie kopersprofielen: het vermogende stel, de ondernemer met een BV en iemand die een erfenis heeft ontvangen. Elke advertentie benoemt de belegging en spreekt over huurinkomsten in plaats van een percentage.</p>
       </li>
       <li class="stap">
         <span class="nr">2</span>
@@ -373,16 +412,74 @@ footer{background:var(--zee); color:var(--op-zee-2); font-size:14px; padding-blo
         </ul>
       </div>
     </div>
-    <div class="kaders">
-      <div class="kader">
-        <p class="eyebrow">Wat jullie zien</p>
-        <h3>Na elk verkoopweekend een overzicht</h3>
-        <p>Per advertentie de kosten per aanvraag, afspraak en verkoop, welk type koper reageert, waarom kopers afhaken, waarom ze kopen en de voortgang van de verkoop.</p>
-      </div>
+    <div class="kaders" style="grid-template-columns:1fr">
       <div class="kader">
         <p class="eyebrow">Onze voorkeur</p>
         <h3>De volledige marketing bij ons</h3>
         <p>Alleen dan is alles goed te meten. Een koper die wij met Meta-advertenties warm maken, komt soms uiteindelijk binnen via Google. Het werk is dan door ons gedaan, maar de aanvraag komt niet via ons binnen. Liggen de kanalen bij verschillende partijen, dan krijgen jullie bovendien een vertekend beeld van welke marketing werkt en wie het goed doet.</p>
+      </div>
+    </div>
+    <div class="sectie-kop pagina-nieuw dash-intro" style="margin-top:clamp(44px,6vw,72px); margin-bottom:0">
+      <p class="eyebrow">Het overzicht</p>
+      <h2>Wat jullie na elk verkoopweekend zien</h2>
+      <p class="lead">Per advertentie de kosten per aanvraag, afspraak en verkoop, het type koper, en waarom kopers afhaken en kopen.</p>
+    </div>
+    <div class="dash" aria-label="Voorbeeld van het overzicht na een verkoopweekend">
+      <div class="dash-kop">
+        <div>
+          <p class="eyebrow">Voorbeeld met fictieve cijfers</p>
+          <h3>Overzicht na het verkoopweekend van 27 en 28 november</h3>
+        </div>
+        <p class="sub">Periode 26 oktober t/m 28 november</p>
+      </div>
+      <div class="tegels">
+        <div class="tegel"><span class="label">Advertentiekosten</span><b>€ 8.000</b><span class="per">5 weken</span></div>
+        <div class="tegel"><span class="label">Aanvragen</span><b>96</b><span class="per">€ 83 per aanvraag</span></div>
+        <div class="tegel"><span class="label">Afspraken op locatie</span><b>9</b><span class="per">€ 889 per afspraak</span></div>
+        <div class="tegel"><span class="label">Verkopen</span><b>2</b><span class="per">€ 4.000 per verkoop</span></div>
+      </div>
+      <div class="dash-raster">
+        <div>
+          <h4>Per advertentie</h4>
+          <div class="tabel-scroll"><table>
+            <thead><tr><th>Advertentie</th><th>Kosten</th><th>Aanvragen</th><th>Afspraken</th><th>Verkopen</th><th>Per afspraak</th></tr></thead>
+            <tbody>
+              <tr><td>De eerste ochtend, met impressie</td><td>€ 2.700</td><td>38</td><td>4</td><td>1</td><td>€ 675</td></tr>
+              <tr><td>De kleinkinderen</td><td>€ 2.400</td><td>27</td><td>3</td><td>1</td><td>€ 800</td></tr>
+              <tr><td>Vrijdagmiddag, met impressie</td><td>€ 1.700</td><td>19</td><td>1</td><td>0</td><td>€ 1.700</td></tr>
+              <tr><td>Vrijdagmiddag</td><td>€ 1.200</td><td>12</td><td>1</td><td>0</td><td>€ 1.200</td></tr>
+              <tr class="som-rij"><td>Totaal</td><td>€ 8.000</td><td>96</td><td>9</td><td>2</td><td>€ 889</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="dash-rechts">
+          <div>
+            <h4>Type koper bij de afspraken</h4>
+            <ul class="balken">
+              <li><span>Vermogend stel, 55 tot 72</span><span class="n">5</span><span class="spoor"><span class="vul" style="display:block; width:100%"></span></span></li>
+              <li><span>Ondernemer met een BV</span><span class="n">3</span><span class="spoor"><span class="vul" style="display:block; width:60%"></span></span></li>
+              <li><span>Erfenis ontvangen</span><span class="n">1</span><span class="spoor"><span class="vul" style="display:block; width:20%"></span></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="dash-onder">
+        <div>
+          <h4>Waarom kopers afhaken</h4>
+          <ul class="redenen">
+            <li><span>Wil de prognose eerst laten narekenen</span><span>3</span></li>
+            <li><span>Oplevering pas in 2028</span><span>2</span></li>
+            <li><span>Prijs boven het budget</span><span>2</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Waarom kopers kopen</h4>
+          <ul class="redenen">
+            <li><span>100 meter van zee, in het dorp</span><span>2</span></li>
+            <li><span>Zelf gebruiken, de rest van het jaar verhuurd</span><span>2</span></li>
+            <li><span>Verhuur in handen van de familie</span><span>1</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
