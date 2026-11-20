@@ -64,6 +64,6 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 - **"exclusief btw"** bevat het verboden woord "exclusief". Op de pagina staat daarom "zonder btw" (DE: "zzgl. MwSt.").
 - **Bankgarantie**: om percentages buiten de rendementssectie te houden staat er "een tiende van de aanneemsom" in plaats van 10%.
 - **Knoptekst Terracotta**: wit op #9E6B60 haalt 4,4:1. Dat is AA voor grote tekst, daarom staan de knoppen op 19 px vet (de balkknoppen 18,7 px vet). Kleiner of dunner maken betekent een donkerdere Terracotta nodig hebben, bijvoorbeeld #8E5E54 (5,4:1).
-- **AFM-zin op /de** is een Duitse vertaling. Juridisch laten bevestigen of daar ook de Nederlandse zin letterlijk moet staan.
+- **AFM-zin op /de** staat alleen in het Duits, zonder de Nederlandse zin erbij (besloten 20 november 2026).
 - **Vrijblijvend-regel** in het Duits: "Unverbindlich. Sie gehen keinerlei Verpflichtung ein."
 - **"op ons kantoor in Alkmaar"** is bewust "in Alkmaar" gebleven: het feitenblad noemt geen kantoor.
