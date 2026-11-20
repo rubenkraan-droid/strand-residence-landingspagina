@@ -110,6 +110,29 @@
 .srp .voet .logo{width:120px;color:var(--kiezel);margin-bottom:24px}
 .srp .voet .logo svg{display:block;width:100%;height:auto}
 .srp .voet p{max-width:62em}
+/* sfeer-mozaiek direct na de hero, volle breedte */
+.srp .sfeer{padding-bottom:0}
+.srp .mozaiek{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:28px}
+.srp .mozaiek figure{position:relative;overflow:hidden;aspect-ratio:4/3}
+.srp .mozaiek .m-groot{grid-column:1/-1;aspect-ratio:3/2}
+.srp .mozaiek img{width:100%;height:100%;object-fit:cover}
+.srp .mozaiek figcaption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:28px 12px 10px;font-size:.8rem;line-height:1.3;color:var(--wit);background:linear-gradient(180deg,rgba(49,58,73,0),rgba(49,58,73,.78))}
+/* beeldband met tekst */
+.srp .band{position:relative;min-height:440px;display:flex;align-items:flex-end;background:var(--nacht);color:var(--wit);overflow:hidden}
+.srp .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.srp .band::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(49,58,73,0) 35%,rgba(49,58,73,.85) 100%)}
+.srp .band .wrap{position:relative;z-index:2;width:100%;padding-top:40px;padding-bottom:34px}
+.srp .band p{font-family:var(--serif);font-weight:600;font-size:clamp(1.3rem,3.6vw,2rem);line-height:1.25;max-width:24em;margin:0}
+.srp .band span{display:block;font-size:.8rem;margin-top:10px;color:var(--kiezel)}
+/* woningtypen */
+.srp .plattegrond{max-width:300px;margin:0 auto;background:#fff;padding:14px;border-radius:var(--r)}
+.srp .pakketten{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.srp .pakketten figure:nth-child(-n+2){grid-column:1/-1}
+/* contactpersoon */
+.srp .contact{display:flex;align-items:center;gap:16px;max-width:30em;margin:26px auto 0;text-align:left;background:var(--kiezel);border-radius:var(--r);padding:14px 18px}
+.srp .contact img{flex:0 0 76px;width:76px;height:76px;border-radius:50%;object-fit:cover}
+.srp .contact p{margin:0;font-size:.95rem;line-height:1.45}
+.srp .contact strong{display:block;font-size:1.02rem;color:var(--tekst)}
 /* vaste balk onderaan (mobiel): sticky binnen blok 1, stopt vanzelf boven de formulieren */
 .srp .balk{position:sticky;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(250,249,247,.97);border-top:1px solid var(--kiezel);box-shadow:0 -2px 10px rgba(49,58,73,.08)}
 .srp .balk .btn{min-height:48px;font-size:18.7px;padding:8px 10px}
@@ -130,4 +153,11 @@
   .srp .specs div:last-child{grid-column:auto}
   .srp .stappen{grid-template-columns:repeat(3,1fr)}
   .srp .balk{display:none}
+  .srp .mozaiek{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;margin-top:36px}
+  .srp .mozaiek figure,.srp .mozaiek .m-groot{aspect-ratio:auto;min-height:250px}
+  .srp .mozaiek .m-groot{grid-column:1/3;grid-row:1/3;min-height:520px}
+  .srp .band{min-height:68vh}
+  .srp .band .wrap{padding-bottom:56px}
+  .srp .pakketten{grid-template-columns:1fr 1fr}
+  .srp .pakketten figure:nth-child(-n+2){grid-column:auto}
 }

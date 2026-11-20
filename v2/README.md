@@ -40,7 +40,7 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 5. Citaat van Tom Stroomer (en Duitse vertaling)
 
 **Rendement en kosten**
-6. Is de koopsom van 1.0.4 (€ 651.000) v.o.n. zonder btw, net als de prijslijst?
+6. ~~Koopsom 1.0.4 v.o.n. zonder btw~~: bevestigd op 20 november 2026.
 7. Is de netto opbrengst jaar 1 (€ 35.414) vóór of na aftrek van de jaarlijkse kosten (€ 8.600)? Dit moet helder zijn voordat de tabel live gaat.
 8. Uit welke posten de jaarlijkse kosten bestaan (VvE, verzekering, belastingen)
 
@@ -55,11 +55,19 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 **Voettekst**
 13. Link naar privacyverklaring en contactgegevens (DE: ook Datenschutzerklärung en Impressum)
 
+**Woningtypen** (sectie 6, toegevoegd 20 november 2026)
+16. Overzicht per woningtype uit de prijslijst van 1 november 2026: naam of code, personen, slaapkamers, m², sauna of spa, vanafprijs, aantal beschikbaar
+17. Welk interieurbeeld bij Beach Luxury hoort en welk bij Residence Chique
+18. "Nog 23 van de 70 beschikbaar" komt uit de prijslijst van 1 november: controleren op de dag van livegang
+
 **Alleen DE**
 14. Fiscale aandachtspunten voor kopers uit Duitsland, Oostenrijk of Zwitserland
 15. Of de makelaar Duits spreekt
 
 ## Keuzes om te weten
+
+- **Sfeer eerder (20 november 2026)**: direct na de feitenband staat een beeldmozaïek (dorp en zee, strand, woonkamer, binnentuin, gebouw). Twee beeldbanden over de volle breedte: begane grond met voorzieningen (na sectie 5) en de duinovergang (voor het rendement). Webformaten staan als `images/sfeer-*.webp`.
+- **Willem van de Griend** staat met foto bij de formulierkop en in stap 2 van "wat er gebeurt na verzenden" (`images/willem-van-de-griend.webp`).
 
 - **"exclusief btw"** bevat het verboden woord "exclusief". Op de pagina staat daarom "zonder btw" (DE: "zzgl. MwSt.").
 - **Bankgarantie**: om percentages buiten de rendementssectie te houden staat er "een tiende van de aanneemsom" in plaats van 10%.

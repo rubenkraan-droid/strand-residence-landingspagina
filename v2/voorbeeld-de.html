@@ -110,6 +110,29 @@
 .srp .voet .logo{width:120px;color:var(--kiezel);margin-bottom:24px}
 .srp .voet .logo svg{display:block;width:100%;height:auto}
 .srp .voet p{max-width:62em}
+/* sfeer-mozaiek direct na de hero, volle breedte */
+.srp .sfeer{padding-bottom:0}
+.srp .mozaiek{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:28px}
+.srp .mozaiek figure{position:relative;overflow:hidden;aspect-ratio:4/3}
+.srp .mozaiek .m-groot{grid-column:1/-1;aspect-ratio:3/2}
+.srp .mozaiek img{width:100%;height:100%;object-fit:cover}
+.srp .mozaiek figcaption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:28px 12px 10px;font-size:.8rem;line-height:1.3;color:var(--wit);background:linear-gradient(180deg,rgba(49,58,73,0),rgba(49,58,73,.78))}
+/* beeldband met tekst */
+.srp .band{position:relative;min-height:440px;display:flex;align-items:flex-end;background:var(--nacht);color:var(--wit);overflow:hidden}
+.srp .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.srp .band::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(49,58,73,0) 35%,rgba(49,58,73,.85) 100%)}
+.srp .band .wrap{position:relative;z-index:2;width:100%;padding-top:40px;padding-bottom:34px}
+.srp .band p{font-family:var(--serif);font-weight:600;font-size:clamp(1.3rem,3.6vw,2rem);line-height:1.25;max-width:24em;margin:0}
+.srp .band span{display:block;font-size:.8rem;margin-top:10px;color:var(--kiezel)}
+/* woningtypen */
+.srp .plattegrond{max-width:300px;margin:0 auto;background:#fff;padding:14px;border-radius:var(--r)}
+.srp .pakketten{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.srp .pakketten figure:nth-child(-n+2){grid-column:1/-1}
+/* contactpersoon */
+.srp .contact{display:flex;align-items:center;gap:16px;max-width:30em;margin:26px auto 0;text-align:left;background:var(--kiezel);border-radius:var(--r);padding:14px 18px}
+.srp .contact img{flex:0 0 76px;width:76px;height:76px;border-radius:50%;object-fit:cover}
+.srp .contact p{margin:0;font-size:.95rem;line-height:1.45}
+.srp .contact strong{display:block;font-size:1.02rem;color:var(--tekst)}
 /* vaste balk onderaan (mobiel): sticky binnen blok 1, stopt vanzelf boven de formulieren */
 .srp .balk{position:sticky;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(250,249,247,.97);border-top:1px solid var(--kiezel);box-shadow:0 -2px 10px rgba(49,58,73,.08)}
 .srp .balk .btn{min-height:48px;font-size:18.7px;padding:8px 10px}
@@ -130,6 +153,13 @@
   .srp .specs div:last-child{grid-column:auto}
   .srp .stappen{grid-template-columns:repeat(3,1fr)}
   .srp .balk{display:none}
+  .srp .mozaiek{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;margin-top:36px}
+  .srp .mozaiek figure,.srp .mozaiek .m-groot{aspect-ratio:auto;min-height:250px}
+  .srp .mozaiek .m-groot{grid-column:1/3;grid-row:1/3;min-height:520px}
+  .srp .band{min-height:68vh}
+  .srp .band .wrap{padding-bottom:56px}
+  .srp .pakketten{grid-template-columns:1fr 1fr}
+  .srp .pakketten figure:nth-child(-n+2){grid-column:auto}
 }
 </style></head><body>
 <div class="srp" lang="de">
@@ -166,8 +196,23 @@
   </div>
 </section>
 
+<!-- 2B. STIMMUNG -->
+<section class="sfeer">
+  <div class="wrap">
+    <span class="label">Bergen aan Zee</span>
+    <h2 class="zz">Das Dorf, die Dünen und das Meer, zu Fuß von Ihrer Haustür</h2>
+  </div>
+  <div class="mozaiek">
+    <figure class="m-groot"><img src="../images/sfeer-dorp-zee.webp" width="1400" height="933" loading="lazy" alt="Bergen aan Zee von oben bei Sonnenuntergang: das Dorf, die Dünen, der Strand und die Nordsee"><figcaption>Das Dorf, die Dünen und der Strand.</figcaption></figure>
+    <figure><img src="../images/sfeer-strandhuisjes.webp" width="1000" height="667" loading="lazy" alt="Strandhäuschen und Badegäste am Strand von Bergen aan Zee"><figcaption>Der Strand, etwa 100 Meter entfernt.</figcaption></figure>
+    <figure><img src="../images/sfeer-woonkamer.webp" width="1000" height="667" loading="lazy" alt="Helles Wohnzimmer mit Sitzecke und offener Küche im Abendlicht"><figcaption>Visualisierung Wohnzimmer.</figcaption></figure>
+    <figure><img src="../images/sfeer-binnentuin.webp" width="1000" height="558" loading="lazy" alt="Kinder laufen durch den Innengarten mit Dünengras zwischen den beiden Gebäuden"><figcaption>Visualisierung Innengarten.</figcaption></figure>
+    <figure><img src="../images/sfeer-gebouw-zonsondergang.webp" width="1200" height="800" loading="lazy" alt="Das Gebäude am Zeeweg bei Sonnenuntergang mit beleuchteten Fenstern"><figcaption>Visualisierung Zeeweg bei Sonnenuntergang.</figcaption></figure>
+  </div>
+</section>
+
 <!-- 3. ZWEI DINGE ZUGLEICH -->
-<section>
+<section class="kiezel">
   <div class="wrap">
     <span class="label">Eigennutzung und Vermietung</span>
     <h2 class="zz">Fast dreizehn Wochen im Jahr mit Ihrer Familie am Meer, den Rest des Jahres vermietet</h2>
@@ -192,15 +237,11 @@
         </ul>
       </div>
     </div>
-    <figure class="beeld schuin" style="margin-top:32px">
-      <img src="../images/duinovergang-strand.webp" width="949" height="949" loading="lazy" style="aspect-ratio:16/9;object-fit:cover" alt="Dünenübergang zum Strand von Bergen aan Zee">
-      <figcaption>Der Dünenübergang zum Strand, zu Fuß vom Gebäude erreichbar.</figcaption>
-    </figure>
   </div>
 </section>
 
 <!-- 4. SEIT 1908 -->
-<section class="kiezel">
+<section>
   <div class="wrap grid2 midden-v">
     <figure class="beeld">
       <img src="../images/gebouw-zeeweg-straatniveau.webp" width="1920" height="1072" loading="lazy" alt="Das neue Gebäude an der Zeeweg auf Straßenniveau, am Ort des früheren Hotel Prins Maurits">
@@ -218,7 +259,7 @@
 </section>
 
 <!-- 5. DREI UNTERSCHIEDE ZU EINEM FERIENPARK -->
-<section>
+<section class="kiezel">
   <div class="wrap">
     <span class="label">Kein Ferienpark</span>
     <h2 class="zz">Drei Unterschiede zu einem Ferienhaus in einem Ferienpark</h2>
@@ -234,32 +275,57 @@
   </div>
 </section>
 
-<!-- 6. DIE APARTMENTS -->
-<section class="kiezel">
+<!-- 5B. BILDBAND -->
+<div class="band">
+  <img src="../images/sfeer-gebouw-avond.webp" width="1536" height="762" loading="lazy" alt="Das Gebäude an der Ecke am Abend, mit beleuchteten Räumen im Erdgeschoss und Menschen auf der Straße">
+  <div class="wrap"><p>Im Erdgeschoss: ein Frühstücks- und Lunchroom, Fahrradverleih, das Vermietungsbüro und der Innengarten.</p><span>Visualisierung.</span></div>
+</div>
+
+<!-- 6. DIE WOHNUNGSTYPEN | Quelle: Preisliste 1. November 2026 (gültig bis 1. Februar 2027). Am Tag der Veröffentlichung prüfen. -->
+<section>
   <div class="wrap">
-    <span class="label">Die Apartments</span>
-    <h2 class="zz">Bezugsfertig übergeben, das Inventar ist bereits drin</h2>
-    <p class="lead" style="max-width:40em">Die derzeit verfügbaren Apartments bieten Platz für 4 bis 6 Personen. Sie wählen ein Inventarpaket und müssen danach nichts mehr einrichten.</p>
+    <span class="label">Die Wohnungstypen</span>
+    <h2 class="zz">Noch 23 von 70 Apartments verfügbar, für 4 bis 6 Personen</h2>
+    <p class="lead" style="max-width:42em">Strand Residence umfasst 70 Apartments, von ca. 60 bis 234 m² und für 2 bis 8 Personen. Laut Preisliste vom 1. November 2026 sind noch 23 verfügbar. Alle Apartments werden bezugsfertig übergeben: Sie wählen ein Inventarpaket und müssen danach nichts mehr einrichten.</p>
     <dl class="specs">
       <div><dt>Personen</dt><dd>4 bis 6</dd></div>
-      <div><dt>Wohnfläche</dt><dd>ca. 70 bis 145 m²</dd></div>
+      <div><dt>Wohnfläche</dt><dd>70,5 bis 145,4 m²</dd></div>
       <div><dt>Preise verfügbares Angebot</dt><dd>ab € 541.500 bis € 872.500 v.o.n.</dd></div>
     </dl>
     <p class="klein">v.o.n. bedeutet: frei von Erwerbsnebenkosten. Preise zzgl. MwSt., inklusive Stellplatz, Abstellraum und Inventarpaket.</p>
-    <div class="galerij">
-      <figure class="beeld"><img src="../images/woonkamer-stijl-1.webp" width="1536" height="1024" loading="lazy" alt="Wohnzimmer mit Sitzecke und Esstisch in warmen Erdtönen"><figcaption>Visualisierung Wohnzimmer.</figcaption></figure>
-      <figure class="beeld"><img src="../images/slaapkamer-licht.webp" width="1536" height="1024" loading="lazy" alt="Helles Schlafzimmer mit Doppelbett"><figcaption>Visualisierung Schlafzimmer.</figcaption></figure>
-      <figure class="beeld"><img src="../images/inrichting-avond.webp" width="1536" height="1024" loading="lazy" alt="Eingerichtetes Apartment am Abend mit gedämpftem Licht"><figcaption>Visualisierung Einrichtung.</figcaption></figure>
+
+    <div class="drie">
+      <div class="kaart"><h3>Zwei Gebäude, eine Adresse im Dorf</h3><p>Am Zeeweg liegen 40 Apartments mit zwei Aufzügen, am Van Hasseltweg 30 mit einem Aufzug. Dazwischen liegt der Innengarten.</p></div>
+      <div class="kaart"><h3>Fast jedes Schlafzimmer mit eigenem Bad</h3><p>Angenehm, wenn Sie mit zwei Paaren oder mit älteren Kindern kommen, und angenehm für die Gäste, die das Apartment mieten.</p></div>
+      <div class="kaart"><h3>Größere Typen mit Sauna oder Spa</h3><p>Einige größere Apartments haben eine eigene Sauna, einen Spa oder beides. Gerade außerhalb des Sommers macht das ein Apartment für Gäste attraktiv.</p></div>
     </div>
-    <div class="grid2">
+
+    <div class="grid2 midden-v" style="margin-top:40px">
+      <figure class="beeld plattegrond"><img src="../images/plattegrond-voorbeeld.webp" width="314" height="470" loading="lazy" alt="Beispiel eines Grundrisses mit Wohnzimmer, offener Küche, Schlafzimmern mit eigenem Bad und einem Balkon mit Spa"><figcaption>Beispiel eines Grundrisses. Die Aufteilung unterscheidet sich je Typ.</figcaption></figure>
+      <div>
+        <h3>Welcher Typ zu Ihnen passt</h3>
+        <p><span class="ph">[BEVESTIGEN: overzicht per woningtype uit de prijslijst van 1 november 2026: naam of code, personen, slaapkamers, m², sauna of spa, vanafprijs en aantal nog beschikbaar]</span></p>
+        <p>In der Preisliste hat jedes verfügbare Apartment eine eigene Seite mit Preis und Renditeprognose. Beim Verkaufswochenende oder in einem Gespräch geht der Makler sie mit Ihnen durch.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:44px">Zwei Inventarpakete, beide komplett</h3>
+    <div class="pakketten">
+      <figure class="beeld"><img src="../images/woonkamer-stijl-1.webp" width="1536" height="1024" loading="lazy" alt="Wohnzimmer mit Sitzecke und Esstisch in warmen Erdtönen"><figcaption><strong>Beach Luxury.</strong> Das Paket, das die meisten Käufer wählen. <span class="ph">[BEVESTIGEN: hoort dit beeld bij Beach Luxury?]</span></figcaption></figure>
+      <figure class="beeld"><img src="../images/sfeer-woonkamer-2.webp" width="1000" height="667" loading="lazy" alt="Wohnzimmer mit grauem Sofa, schwarzer Hängeleuchte und Esstisch"><figcaption><strong>Residence Chique.</strong> <span class="ph">[BEVESTIGEN: hoort dit beeld bij Residence Chique?]</span></figcaption></figure>
+      <figure class="beeld"><img src="../images/slaapkamer-licht.webp" width="1536" height="1024" loading="lazy" alt="Helles Schlafzimmer mit Doppelbett"><figcaption>Visualisierung Schlafzimmer.</figcaption></figure>
+      <figure class="beeld"><img src="../images/sfeer-slaapkamer-donker.webp" width="1000" height="667" loading="lazy" alt="Schlafzimmer mit dunklen Wänden, Doppelbett und Stimmungslicht"><figcaption>Visualisierung Schlafzimmer.</figcaption></figure>
+    </div>
+
+    <div class="grid2" style="margin-top:36px">
       <div>
         <h3>Bei Übergabe bereits vorhanden</h3>
         <ul class="vink">
           <li>Inventarpaket nach Wahl: Beach Luxury oder Residence Chique</li>
           <li>Geräte und Sanitär von Siemens, Hansgrohe, Quooker und Villeroy &amp; Boch</li>
           <li>Balkon mit gläsernen Schiebewänden</li>
-          <li>Stellplatz in der Tiefgarage</li>
-          <li>Eigener Abstellraum</li>
+          <li>Schlüssellose Anreise und ein Smart-TV</li>
+          <li>Stellplatz in der Tiefgarage und ein eigener Abstellraum</li>
         </ul>
       </div>
       <div>
@@ -278,6 +344,12 @@
     <p class="vrij">Unverbindlich. Sie gehen keinerlei Verpflichtung ein.</p>
   </div>
 </section>
+
+<!-- 7B. BILDBAND -->
+<div class="band band-zacht">
+  <img src="../images/duinovergang-strand.webp" width="949" height="949" loading="lazy" alt="Dünenübergang zum Strand von Bergen aan Zee">
+  <div class="wrap"><p>Aus der Tür, durch die Düne, an den Strand.</p></div>
+</div>
 
 <!-- 7. RENDITE -->
 <section>
@@ -300,7 +372,7 @@
     <table>
       <caption>Beispiel: Apartment 1.0.4 an der Zeeweg</caption>
       <tbody>
-        <tr><th scope="row">Kaufpreis <span class="ph">[BEVESTIGEN: v.o.n. zonder btw?]</span></th><td>€ 651.000</td></tr>
+        <tr><th scope="row">Kaufpreis, v.o.n. zzgl. MwSt.</th><td>€ 651.000</td></tr>
         <tr><th scope="row">Nettoertrag im ersten Jahr</th><td>€ 35.414</td></tr>
         <tr><th scope="row">Jährliche Kosten</th><td>€ 8.600</td></tr>
       </tbody>
@@ -360,6 +432,10 @@
   <div class="wrap midden">
     <h2 class="zz">Melden Sie sich zum Verkaufswochenende an, oder fordern Sie zuerst die Broschüre an</h2>
     <p style="max-width:34em;margin:0 auto">Wählen Sie, was zu Ihnen passt. Unverbindlich. Sie gehen keinerlei Verpflichtung ein.</p>
+    <div class="contact">
+      <img src="../images/willem-van-de-griend.webp" width="480" height="480" loading="lazy" alt="Willem van de Griend">
+      <p><strong>Willem van de Griend</strong>Makler bei Recraparcs. Willem ruft Sie innerhalb eines Werktages nach Ihrer Anmeldung an.</p>
+    </div>
   </div>
 </section>
 
@@ -382,7 +458,7 @@
     <h2 class="zz">Was geschieht, nachdem Sie absenden</h2>
     <ol class="stappen" style="list-style:none;padding:0">
       <li><h3>Sofort eine E-Mail</h3><p style="margin:0">Sie erhalten umgehend eine Bestätigung. Haben Sie die Broschüre angefordert, ist sie dabei.</p></li>
-      <li><h3>Innerhalb eines Werktages ruft ein Makler an</h3><p style="margin:0">Er oder sie beantwortet Ihre Fragen und vereinbart, wenn Sie möchten, ein Gespräch oder Ihren Besuch beim Verkaufswochenende.</p></li>
+      <li><h3>Innerhalb eines Werktages ruft Willem van de Griend an</h3><p style="margin:0">Der Makler beantwortet Ihre Fragen und vereinbart, wenn Sie möchten, ein Gespräch oder Ihren Besuch beim Verkaufswochenende.</p></li>
       <li><h3>Möchten Sie nicht weiter, dann belassen wir es dabei</h3><p style="margin:0">Sie gehen keinerlei Verpflichtung ein.</p></li>
     </ol>
   </div>
