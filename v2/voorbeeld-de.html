@@ -128,6 +128,9 @@
 .srp .plattegrond{max-width:300px;margin:0 auto;background:#fff;padding:14px;border-radius:var(--r)}
 .srp .pakketten{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
 .srp .pakketten figure:nth-child(-n+2){grid-column:1/-1}
+/* toen en straks */
+.srp .duo{display:grid;gap:16px}
+.srp .duo img{aspect-ratio:3/2;object-fit:cover}
 /* contactpersoon */
 .srp .contact{display:flex;align-items:center;gap:16px;max-width:30em;margin:26px auto 0;text-align:left;background:var(--kiezel);border-radius:var(--r);padding:14px 18px}
 .srp .contact img{flex:0 0 76px;width:76px;height:76px;border-radius:50%;object-fit:cover}
@@ -243,10 +246,16 @@
 <!-- 4. SEIT 1908 -->
 <section>
   <div class="wrap grid2 midden-v">
-    <figure class="beeld">
-      <img src="../images/gebouw-zeeweg-straatniveau.webp" width="1920" height="1072" loading="lazy" alt="Das neue Gebäude an der Zeeweg auf Straßenniveau, am Ort des früheren Hotel Prins Maurits">
-      <figcaption>Visualisierung des Gebäudes an der Zeeweg.</figcaption>
-    </figure>
+    <div class="duo">
+      <figure class="beeld">
+        <img src="../images/hotel-prins-maurits.webp" width="1024" height="745" loading="lazy" alt="Das frühere Hotel Prins Maurits in Bergen aan Zee, mit Balkonen, Terrasse und Markisen an der Straße">
+        <figcaption><strong>Früher.</strong> Hotel Prins Maurits der Familie Stroomer.</figcaption>
+      </figure>
+      <figure class="beeld">
+        <img src="../images/gebouw-zeeweg-straatniveau.webp" width="1920" height="1072" loading="lazy" alt="Das neue Gebäude an der Zeeweg auf Straßenniveau, am Ort des früheren Hotel Prins Maurits">
+        <figcaption><strong>Bald.</strong> Visualisierung von Strand Residence an der Zeeweg.</figcaption>
+      </figure>
+    </div>
     <div>
       <span class="label">Seit 1908</span>
       <h2 class="zz">An diesem Ort empfängt die Familie Stroomer seit über einem Jahrhundert Gäste</h2>
