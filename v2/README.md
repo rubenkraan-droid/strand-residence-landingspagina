@@ -49,7 +49,7 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 10. Kopen via een BV mogelijk, en waar op te letten (DE: via een Duitse vennootschap)
 
 **Verkoopweekend**
-11. Tijden en adres van Strandpaviljoen De Jongens op 12 december
+11. Tijden en adres van Strandpaviljoen De Jongens op 12 december, en of de latere weekenden op dezelfde plek zijn
 12. Wat de bezoeker op het verkoopweekend ziet en met wie hij spreekt
 
 **Voettekst**
@@ -66,6 +66,8 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 15. Of de makelaar Duits spreekt
 
 ## Keuzes om te weten
+
+- **Data verkoopweekenden (23 november 2026)**: 12 december, daarna 8 en 9 januari en vanaf dan elke drie weken op vrijdag en zaterdag. De lijst staat in sectie 9 van `src/nl.html` en `src/de.html` (`<ol class="data">`, per datum `data-eind`). Een klein script in blok 1 haalt verstreken data weg, de eerstvolgende staat groot en er zijn er maximaal vier zichtbaar. De lijst loopt tot 4 en 5 juni 2027: vóór die tijd aanvullen, anders staat er "Nieuwe data volgen".
 
 - **Sfeer eerder (20 november 2026)**: direct na de feitenband staat een beeldmozaïek (dorp en zee, strand, woonkamer, binnentuin, gebouw). Twee beeldbanden over de volle breedte: begane grond met voorzieningen (na sectie 5) en de duinovergang (voor het rendement). Webformaten staan als `images/sfeer-*.webp`.
 - **Hotel Prins Maurits**: de foto van het oude hotel (`images/hotel-prins-maurits.webp`) staat als "toen" naast de impressie bij Sinds 1908. Gebruik goedgekeurd op 20 november 2026.

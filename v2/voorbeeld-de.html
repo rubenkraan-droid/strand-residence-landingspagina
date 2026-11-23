@@ -99,6 +99,12 @@
 /* verkoopweekend */
 .srp .datum{border:1px solid rgba(194,174,143,.55);border-radius:var(--r);padding:22px;margin:24px 0}
 .srp .datum strong{display:block;font-family:var(--serif);font-weight:600;font-size:1.6rem;line-height:1.2;color:var(--wit)}
+.srp .data{list-style:none;margin:0;padding:0}
+.srp .data li{padding:8px 0;border-top:1px solid rgba(194,174,143,.3);color:var(--kiezel)}
+.srp .data li:first-child{border-top:0;padding-top:0;font-family:var(--serif);font-weight:600;font-size:1.6rem;line-height:1.2;color:var(--wit)}
+.srp .data li:nth-child(n+5){display:none}
+.srp .datum .geen{display:none;margin:0;color:var(--wit)}
+.srp .datum.leeg .geen{display:block}
 .srp .nacht .afm{color:var(--kiezel)}
 /* formulierkop en stappen */
 .srp .formkop{padding-bottom:28px}
@@ -419,13 +425,25 @@
   <div class="wrap smal">
     <span class="label">Verkaufswochenende</span>
     <h2 class="zz">Sehen Sie sich die Pläne an und stellen Sie Ihre Fragen in Bergen aan Zee</h2>
+    <!-- Termine: 12. Dezember, dann 8. und 9. Januar und ab dann alle drei Wochen (Ruben, 23 november 2026). Ein Script entfernt vergangene Termine. Nach Juni 2027 ergänzen. -->
     <div class="datum">
-      <span class="label" style="margin-bottom:6px">Erstes Verkaufswochenende</span>
-      <strong>Samstag, 12. Dezember 2026</strong>
+      <span class="label" style="margin-bottom:6px">Die nächsten Verkaufswochenenden</span>
+      <ol class="data">
+        <li data-eind="2026-12-12">Samstag, 12. Dezember 2026</li>
+        <li data-eind="2027-01-09">Freitag, 8. und Samstag, 9. Januar 2027</li>
+        <li data-eind="2027-01-30">Freitag, 29. und Samstag, 30. Januar 2027</li>
+        <li data-eind="2027-02-20">Freitag, 19. und Samstag, 20. Februar 2027</li>
+        <li data-eind="2027-03-13">Freitag, 12. und Samstag, 13. März 2027</li>
+        <li data-eind="2027-04-03">Freitag, 2. und Samstag, 3. April 2027</li>
+        <li data-eind="2027-04-24">Freitag, 23. und Samstag, 24. April 2027</li>
+        <li data-eind="2027-05-15">Freitag, 14. und Samstag, 15. Mai 2027</li>
+        <li data-eind="2027-06-05">Freitag, 4. und Samstag, 5. Juni 2027</li>
+      </ol>
+      <p class="geen">Neue Termine folgen. Melden Sie sich an, dann erfahren Sie sie als Erste.</p>
       <p style="margin:6px 0 0">Strandpavillon De Jongens, Bergen aan Zee <span class="ph">[BEVESTIGEN: tijden en adres]</span></p>
     </div>
-    <p><span class="ph">[BEVESTIGEN: wat de bezoeker op het verkoopweekend ziet en met wie hij spreekt]</span> Nach dem 12. Dezember folgt etwa alle drei Wochen ein weiteres Verkaufswochenende.</p>
-    <h3>Der 12. Dezember passt Ihnen nicht?</h3>
+    <p><span class="ph">[BEVESTIGEN: wat de bezoeker op het verkoopweekend ziet en met wie hij spreekt]</span> Nach dem 12. Dezember findet alle drei Wochen ein Verkaufswochenende statt, jeweils freitags und samstags.</p>
+    <h3>Keiner dieser Termine passt Ihnen?</h3>
     <p>Dann vereinbaren wir ein Gespräch zu einem Zeitpunkt, der Ihnen passt: vor Ort in Bergen aan Zee, in Alkmaar oder per Video.</p>
     <div class="knoppen">
       <a class="btn btn-p" href="#sr-formulieren">Melden Sie sich zum Verkaufswochenende an</a>
@@ -434,6 +452,7 @@
     <p class="vrij">Unverbindlich. Sie gehen keinerlei Verpflichtung ein.</p>
   </div>
 </section>
+<script>(function(){var v=new Date().toISOString().slice(0,10);document.querySelectorAll(".srp .data li").forEach(function(l){if(l.dataset.eind<v)l.remove()});document.querySelectorAll(".srp .data").forEach(function(u){if(!u.children.length)u.closest(".datum").classList.add("leeg")})})();</script>
 
 <!-- 10. FORMULARKOPF -->
 <section class="formkop" id="sr-formulieren">

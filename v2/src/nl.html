@@ -254,13 +254,25 @@
   <div class="wrap smal">
     <span class="label">Verkoopweekend</span>
     <h2 class="zz">Bekijk de plannen en stel uw vragen in Bergen aan Zee</h2>
+    <!-- Data: 12 december, daarna 8 en 9 januari en vanaf dan elke drie weken (Ruben, 23 november 2026). Een script haalt verstreken data weg; de eerste die overblijft staat groot. Na juni 2027 de lijst aanvullen. -->
     <div class="datum">
-      <span class="label" style="margin-bottom:6px">Eerste verkoopweekend</span>
-      <strong>Zaterdag 12 december 2026</strong>
+      <span class="label" style="margin-bottom:6px">Eerstvolgende verkoopweekenden</span>
+      <ol class="data">
+        <li data-eind="2026-12-12">Zaterdag 12 december 2026</li>
+        <li data-eind="2027-01-09">Vrijdag 8 en zaterdag 9 januari 2027</li>
+        <li data-eind="2027-01-30">Vrijdag 29 en zaterdag 30 januari 2027</li>
+        <li data-eind="2027-02-20">Vrijdag 19 en zaterdag 20 februari 2027</li>
+        <li data-eind="2027-03-13">Vrijdag 12 en zaterdag 13 maart 2027</li>
+        <li data-eind="2027-04-03">Vrijdag 2 en zaterdag 3 april 2027</li>
+        <li data-eind="2027-04-24">Vrijdag 23 en zaterdag 24 april 2027</li>
+        <li data-eind="2027-05-15">Vrijdag 14 en zaterdag 15 mei 2027</li>
+        <li data-eind="2027-06-05">Vrijdag 4 en zaterdag 5 juni 2027</li>
+      </ol>
+      <p class="geen">Nieuwe data volgen. Meld u aan, dan hoort u ze als eerste.</p>
       <p style="margin:6px 0 0">Strandpaviljoen De Jongens, Bergen aan Zee <span class="ph">[BEVESTIGEN: tijden en adres]</span></p>
     </div>
-    <p><span class="ph">[BEVESTIGEN: wat de bezoeker op het verkoopweekend ziet en met wie hij spreekt]</span> Na 12 december volgt ongeveer elke drie weken een nieuw verkoopweekend.</p>
-    <h3>Komt 12 december u niet uit?</h3>
+    <p><span class="ph">[BEVESTIGEN: wat de bezoeker op het verkoopweekend ziet en met wie hij spreekt]</span> Na 12 december is er elke drie weken een verkoopweekend, op vrijdag en zaterdag.</p>
+    <h3>Komt geen van deze data u uit?</h3>
     <p>Dan plannen wij een gesprek op een moment dat u past: op locatie in Bergen aan Zee, in Alkmaar of via video.</p>
     <div class="knoppen">
       <a class="btn btn-p" href="#sr-formulieren">Meld u aan voor het verkoopweekend</a>
@@ -269,6 +281,7 @@
     <p class="vrij">Vrijblijvend. U zit nergens aan vast.</p>
   </div>
 </section>
+<script>(function(){var v=new Date().toISOString().slice(0,10);document.querySelectorAll(".srp .data li").forEach(function(l){if(l.dataset.eind<v)l.remove()});document.querySelectorAll(".srp .data").forEach(function(u){if(!u.children.length)u.closest(".datum").classList.add("leeg")})})();</script>
 
 <!-- 10. FORMULIERKOP | direct boven de twee GHL-formulieren -->
 <section class="formkop" id="sr-formulieren">
