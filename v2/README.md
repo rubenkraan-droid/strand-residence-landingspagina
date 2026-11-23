@@ -59,6 +59,7 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 16. Overzicht per woningtype uit de prijslijst van 1 november 2026: naam of code, personen, slaapkamers, m², sauna of spa, vanafprijs, aantal beschikbaar
 17. Welk interieurbeeld bij Beach Luxury hoort en welk bij Residence Chique
 18. "Nog 23 van de 70 beschikbaar" komt uit de prijslijst van 1 november: controleren op de dag van livegang
+19. Is de berging standaard bij de prijs inbegrepen (zoals de prijslijst zegt) of een mogelijkheid tegen meerprijs? Op de pagina staat nu "mogelijkheid tot een eigen berging".
 
 **Alleen DE**
 14. Fiscale aandachtspunten voor kopers uit Duitsland, Oostenrijk of Zwitserland
