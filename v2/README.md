@@ -41,7 +41,7 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 
 **Rendement en kosten**
 6. ~~Koopsom 1.0.4 v.o.n. zonder btw~~: bevestigd op 20 november 2026.
-7. Is de netto opbrengst jaar 1 (€ 35.414) vóór of na aftrek van de jaarlijkse kosten (€ 8.600)? Dit moet helder zijn voordat de tabel live gaat.
+7. ~~Netto opbrengst jaar 1 vóór of na kosten~~: na commissie en kosten, bevestigd op 23 november 2026 met de rendementsberekening van 1.0.4 (direct rendement 5,4%). Die berekening noemt € 35.413, de prijslijst € 35.414: op de pagina staat € 35.414.
 8. Uit welke posten de jaarlijkse kosten bestaan (VvE, verzekering, belastingen)
 
 **Kopen**
