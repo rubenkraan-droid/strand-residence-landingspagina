@@ -100,9 +100,8 @@
 .srp .datum{border:1px solid rgba(194,174,143,.55);border-radius:var(--r);padding:22px;margin:24px 0}
 .srp .datum strong{display:block;font-family:var(--serif);font-weight:600;font-size:1.6rem;line-height:1.2;color:var(--wit)}
 .srp .data{list-style:none;margin:0;padding:0}
-.srp .data li{padding:8px 0;border-top:1px solid rgba(194,174,143,.3);color:var(--kiezel)}
-.srp .data li:first-child{border-top:0;padding-top:0;font-family:var(--serif);font-weight:600;font-size:1.6rem;line-height:1.2;color:var(--wit)}
-.srp .data li:nth-child(n+5){display:none}
+.srp .data li:first-child{font-family:var(--serif);font-weight:600;font-size:1.6rem;line-height:1.2;color:var(--wit)}
+.srp .data li:nth-child(n+2){display:none}
 .srp .datum .geen{display:none;margin:0;color:var(--wit)}
 .srp .datum.leeg .geen{display:block}
 .srp .nacht .afm{color:var(--kiezel)}

@@ -31,21 +31,21 @@ Titillium Web en Source Serif 4 via Google Fonts, met "axia" en "odile" vooraan 
 Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een paar Duitse extra's.
 
 **Eigen gebruik en verhuur**
-1. Hoe en hoe ver vooruit eigenaren hun verblijf vastleggen, en of er regels gelden voor het hoogseizoen (sectie 3 en vraag 1)
+1. Hoe en hoe ver vooruit eigenaren hun verblijf vastleggen (sectie 3 en vraag 1). Regels voor het hoogseizoen: die gelden niet, bevestigd op 24 november 2026.
 2. Wie schoonmaak en klein onderhoud regelt, en hoe vaak de eigenaar een afrekening ontvangt (sectie 3)
-3. Waar de koper de hoogte van de commissie en de voorwaarden van de verhuurovereenkomst kan inzien (vraag 2)
+3. ~~Waar de koper de commissie en verhuurvoorwaarden inziet~~: geschrapt van de pagina op 24 november 2026.
 
 **Sinds 1908**
-4. Rol van Tom Stroomer bij Strand Residence Exploitatie B.V.
-5. Citaat van Tom Stroomer (en Duitse vertaling)
+4. ~~Rol van Tom Stroomer~~: initiatiefnemer en ontwikkelaar, bevestigd op 24 november 2026.
+5. ~~Citaat van Tom Stroomer~~: uit videocast 04_02 (00:00 tot 00:15), licht ingekort, met Duitse vertaling (24 november 2026). Laat Tom de ingekorte versie even goedkeuren.
 
 **Rendement en kosten**
 6. ~~Koopsom 1.0.4 v.o.n. zonder btw~~: bevestigd op 20 november 2026.
 7. ~~Netto opbrengst jaar 1 vóór of na kosten~~: na commissie en kosten, bevestigd op 23 november 2026 met de rendementsberekening van 1.0.4 (direct rendement 5,4%). Die berekening noemt € 35.413, de prijslijst € 35.414: op de pagina staat € 35.414.
-8. Uit welke posten de jaarlijkse kosten bestaan (VvE, verzekering, belastingen)
+8. ~~Uit welke posten de jaarlijkse kosten bestaan~~: geschrapt van de pagina op 24 november 2026.
 
 **Kopen**
-9. Financieringsmogelijkheden (DE: ook voor buitenlandse kopers)
+9. ~~Financieringsmogelijkheden~~: tot 70% voor inwoners van Nederland, tot € 150.000 voor inwoners van Duitsland (24 november 2026). Open: Oostenrijk en Zwitserland (alleen DE).
 10. Kopen via een BV mogelijk, en waar op te letten (DE: via een Duitse vennootschap)
 
 **Verkoopweekend**
@@ -59,7 +59,7 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 16. Overzicht per woningtype uit de prijslijst van 1 november 2026: naam of code, personen, slaapkamers, m², sauna of spa, vanafprijs, aantal beschikbaar
 17. ~~Welk interieurbeeld bij Beach Luxury hoort en welk bij Residence Chique~~: bevestigd op 23 november 2026.
 18. "Nog 23 van de 70 beschikbaar" komt uit de prijslijst van 1 november: controleren op de dag van livegang
-19. Is de berging standaard bij de prijs inbegrepen (zoals de prijslijst zegt) of een mogelijkheid tegen meerprijs? Op de pagina staat nu "mogelijkheid tot een eigen berging".
+19. ~~Berging standaard of optie~~: inbegrepen bij de prijs, bevestigd op 24 november 2026.
 
 **Holding** (toegevoegd 24 november 2026)
 20. ~~Mag "kopen vanuit uw holding" op de pagina en in de advertenties?~~: ja, bevestigd op 24 november 2026.
@@ -70,9 +70,11 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 
 ## Keuzes om te weten
 
-- **DGA-hoek (24 november 2026)**: de NL-pagina sluit aan op de Meta-advertenties voor DGA's met geld in de holding. De hero noemt holding, € 35.414, eigen grond, 89 dagen en circa 100 m. De feitenband toont dezelfde vier feiten als het cijferblok in de advertenties. Sectie 2C "Zakelijk kopen" staat direct na het sfeermozaïek, met btw, fiscale gevolgen van eigen gebruik en de bedenktijd, die alleen voor particulieren geldt. De DE-pagina is niet aangepast.
+- **Opgeschaalde beelden (24 november 2026)**: de luchtfoto (`images/luchtfoto-dorp-strand-hd.webp`) en de duinovergang (`images/duinovergang-strand-hd.webp`) zijn met AI opgeschaald via OpenArt (Nano Banana Pro, 4K). De 4K-bestanden staan in `Beeldmateriaal/Locatie/`. Bij de luchtfoto heeft de AI de details van de gebouwen opnieuw getekend; het blijft een impressie.
 
-- **Data verkoopweekenden (23 november 2026)**: 12 december, daarna 8 en 9 januari en vanaf dan elke drie weken op vrijdag en zaterdag. De lijst staat in sectie 9 van `src/nl.html` en `src/de.html` (`<ol class="data">`, per datum `data-eind`). Een klein script in blok 1 haalt verstreken data weg, de eerstvolgende staat groot en er zijn er maximaal vier zichtbaar. De lijst loopt tot 4 en 5 juni 2027: vóór die tijd aanvullen, anders staat er "Nieuwe data volgen".
+- **DGA-hoek (24 november 2026)**: de NL-pagina sluit aan op de Meta-advertenties voor DGA's met geld in de holding. De hero noemt holding, € 35.414, eigen grond, 89 dagen en circa 100 m. De feitenband toont dezelfde vier feiten als het cijferblok in de advertenties. Sectie 2C "Zakelijk kopen" staat direct na het sfeermozaïek, met btw en de fiscale gevolgen van eigen gebruik. De bedenktijd staat er op verzoek niet in (24 november 2026). De DE-pagina is niet aangepast.
+
+- **Data verkoopweekenden (23 november 2026)**: 12 december, daarna 8 en 9 januari en vanaf dan elke drie weken op vrijdag en zaterdag. Alleen het eerstvolgende weekend is zichtbaar (enkelvoud, 24 november 2026). De lijst staat in sectie 9 van `src/nl.html` en `src/de.html` (`<ol class="data">`, per datum `data-eind`). Een klein script in blok 1 haalt verstreken data weg, daarna schuift het volgende weekend vanzelf door. De lijst loopt tot 4 en 5 juni 2027: vóór die tijd aanvullen, anders staat er "Nieuwe data volgen".
 
 - **Sfeer eerder (20 november 2026)**: direct na de feitenband staat een beeldmozaïek (dorp en zee, strand, woonkamer, binnentuin, gebouw). Twee beeldbanden over de volle breedte: begane grond met voorzieningen (na sectie 5) en de duinovergang (voor het rendement). Webformaten staan als `images/sfeer-*.webp`.
 - **Hotel Prins Maurits**: de foto van het oude hotel (`images/hotel-prins-maurits.webp`) staat als "toen" naast de impressie bij Sinds 1908. Gebruik goedgekeurd op 20 november 2026.
