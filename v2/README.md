@@ -53,7 +53,7 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 12. Wat de bezoeker op het verkoopweekend ziet en met wie hij spreekt
 
 **Voettekst**
-13. Link naar privacyverklaring en contactgegevens (DE: ook Datenschutzerklärung en Impressum)
+13. Privacyverklaring: gelinkt naar strandresidence.nl/privacyverklaring (24 november 2026). Open: contactgegevens (DE: ook Impressum en of er een Duitse privacyverklaring is).
 
 **Woningtypen** (sectie 6, toegevoegd 20 november 2026)
 16. ~~Overzicht per woningtype~~: geschrapt van de pagina op 24 november 2026. De prijslijst en de makelaar geven het overzicht.
