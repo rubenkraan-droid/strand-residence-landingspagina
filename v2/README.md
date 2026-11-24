@@ -31,8 +31,8 @@ Titillium Web en Source Serif 4 via Google Fonts, met "axia" en "odile" vooraan 
 Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een paar Duitse extra's.
 
 **Eigen gebruik en verhuur**
-1. Hoe en hoe ver vooruit eigenaren hun verblijf vastleggen (sectie 3 en vraag 1). Regels voor het hoogseizoen: die gelden niet, bevestigd op 24 november 2026.
-2. Wie schoonmaak en klein onderhoud regelt, en hoe vaak de eigenaar een afrekening ontvangt (sectie 3)
+1. ~~Hoe eigenaren hun verblijf vastleggen~~: geschrapt van de pagina op 24 november 2026. Geen aparte regels voor het hoogseizoen.
+2. ~~Schoonmaak, klein onderhoud en afrekening~~: geschrapt van de pagina op 24 november 2026.
 3. ~~Waar de koper de commissie en verhuurvoorwaarden inziet~~: geschrapt van de pagina op 24 november 2026.
 
 **Sinds 1908**
@@ -49,14 +49,14 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 10. Kopen via een BV mogelijk, en waar op te letten (DE: via een Duitse vennootschap)
 
 **Verkoopweekend**
-11. Tijden en adres van Strandpaviljoen De Jongens op 12 december, en of de latere weekenden op dezelfde plek zijn
+11. ~~Tijden en adres~~: niet op de pagina; Recraparcs stuurt ze na aanmelding (24 november 2026). Het ritme van elke drie weken staat ook niet meer op de pagina.
 12. Wat de bezoeker op het verkoopweekend ziet en met wie hij spreekt
 
 **Voettekst**
 13. Link naar privacyverklaring en contactgegevens (DE: ook Datenschutzerklärung en Impressum)
 
 **Woningtypen** (sectie 6, toegevoegd 20 november 2026)
-16. Overzicht per woningtype uit de prijslijst van 1 november 2026: naam of code, personen, slaapkamers, m², sauna of spa, vanafprijs, aantal beschikbaar
+16. ~~Overzicht per woningtype~~: geschrapt van de pagina op 24 november 2026. De prijslijst en de makelaar geven het overzicht.
 17. ~~Welk interieurbeeld bij Beach Luxury hoort en welk bij Residence Chique~~: bevestigd op 23 november 2026.
 18. "Nog 23 van de 70 beschikbaar" komt uit de prijslijst van 1 november: controleren op de dag van livegang
 19. ~~Berging standaard of optie~~: inbegrepen bij de prijs, bevestigd op 24 november 2026.
@@ -71,6 +71,7 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 ## Keuzes om te weten
 
 - **Opgeschaalde beelden (24 november 2026)**: de luchtfoto (`images/luchtfoto-dorp-strand-hd.webp`) en de duinovergang (`images/duinovergang-strand-hd.webp`) zijn met AI opgeschaald via OpenArt (Nano Banana Pro, 4K). De 4K-bestanden staan in `Beeldmateriaal/Locatie/`. Bij de luchtfoto heeft de AI de details van de gebouwen opnieuw getekend; het blijft een impressie.
+- **Logo op de gevel (24 november 2026)**: in de beeldband na sectie 5 staat `images/sfeer-gebouw-avond-logo.webp`: de originele render, met het onleesbare opschrift weggewerkt en het echte logobestand uit de huisstijl in perspectief op de gevel gezet (geen AI, ramen en gevel onveranderd). Bron: `Beeldmateriaal/Locatie/gebouw-hoek-avond-logo.png`.
 
 - **DGA-hoek (24 november 2026)**: de NL-pagina sluit aan op de Meta-advertenties voor DGA's met geld in de holding. De hero noemt holding, € 35.414, eigen grond, 89 dagen en circa 100 m. De feitenband toont dezelfde vier feiten als het cijferblok in de advertenties. Sectie 2C "Zakelijk kopen" staat direct na het sfeermozaïek, met btw en de fiscale gevolgen van eigen gebruik. De bedenktijd staat er op verzoek niet in (24 november 2026). De DE-pagina is niet aangepast.
 
