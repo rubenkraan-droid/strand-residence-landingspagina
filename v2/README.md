@@ -61,11 +61,16 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 18. "Nog 23 van de 70 beschikbaar" komt uit de prijslijst van 1 november: controleren op de dag van livegang
 19. Is de berging standaard bij de prijs inbegrepen (zoals de prijslijst zegt) of een mogelijkheid tegen meerprijs? Op de pagina staat nu "mogelijkheid tot een eigen berging".
 
+**Holding** (toegevoegd 24 november 2026)
+20. Mag "kopen vanuit uw holding" op de pagina en in de advertenties? Het feitenblad staat alleen "ook zakelijk mogelijk" toe. Op de pagina staat nu "ook zakelijk te kopen, bijvoorbeeld vanuit uw holding", met de vraag geel erbij (sectie 2C en de vraag over de BV).
+
 **Alleen DE**
 14. Fiscale aandachtspunten voor kopers uit Duitsland, Oostenrijk of Zwitserland
 15. Of de makelaar Duits spreekt
 
 ## Keuzes om te weten
+
+- **DGA-hoek (24 november 2026)**: de NL-pagina sluit aan op de Meta-advertenties voor DGA's met geld in de holding. De hero noemt holding, € 35.414, eigen grond, 89 dagen en circa 100 m. De feitenband toont dezelfde vier feiten als het cijferblok in de advertenties. Sectie 2C "Zakelijk kopen" staat direct na het sfeermozaïek, met btw, fiscale gevolgen van eigen gebruik en de bedenktijd, die alleen voor particulieren geldt. De DE-pagina is niet aangepast.
 
 - **Data verkoopweekenden (23 november 2026)**: 12 december, daarna 8 en 9 januari en vanaf dan elke drie weken op vrijdag en zaterdag. De lijst staat in sectie 9 van `src/nl.html` en `src/de.html` (`<ol class="data">`, per datum `data-eind`). Een klein script in blok 1 haalt verstreken data weg, de eerstvolgende staat groot en er zijn er maximaal vier zichtbaar. De lijst loopt tot 4 en 5 juni 2027: vóór die tijd aanvullen, anders staat er "Nieuwe data volgen".
 
