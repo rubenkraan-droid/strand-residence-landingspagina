@@ -46,11 +46,11 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 
 **Kopen**
 9. ~~Financieringsmogelijkheden~~: tot 70% voor inwoners van Nederland, tot € 150.000 voor inwoners van Duitsland (24 november 2026). Open: Oostenrijk en Zwitserland (alleen DE).
-10. Kopen via een BV mogelijk, en waar op te letten (DE: via een Duitse vennootschap)
+10. Kopen via een BV: ja (NL, 24 november 2026). DE: via een Duitse GmbH in principe mogelijk volgens Belastingdienst en RSM; overdrachtsbelasting is verschuldigd, het tarief voor een rechtspersoon (8% of 10,4%) is niet zeker. Laat Torero bevestigen dat zij aan een buitenlandse vennootschap verkopen.
 
 **Verkoopweekend**
 11. ~~Tijden en adres~~: niet op de pagina; Recraparcs stuurt ze na aanmelding (24 november 2026). Het ritme van elke drie weken staat ook niet meer op de pagina.
-12. Wat de bezoeker op het verkoopweekend ziet en met wie hij spreekt
+12. ~~Wat de bezoeker op het verkoopweekend ziet~~: ingevuld op 24 november 2026 (rendementen, het hele plaatje, de omgeving).
 
 **Voettekst**
 13. Privacyverklaring: gelinkt naar strandresidence.nl/privacyverklaring (24 november 2026). Open: contactgegevens (DE: ook Impressum en of er een Duitse privacyverklaring is).
@@ -66,12 +66,12 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 
 **Alleen DE**
 14. Fiscale aandachtspunten voor kopers uit Duitsland, Oostenrijk of Zwitserland
-15. Of de makelaar Duits spreekt
+15. ~~Of de makelaar Duits spreekt~~: ja, bevestigd op 24 november 2026.
 
 ## Keuzes om te weten
 
 - **Opgeschaalde beelden (24 november 2026)**: de luchtfoto (`images/luchtfoto-dorp-strand-hd.webp`) en de duinovergang (`images/duinovergang-strand-hd.webp`) zijn met AI opgeschaald via OpenArt (Nano Banana Pro, 4K). De 4K-bestanden staan in `Beeldmateriaal/Locatie/`. Bij de luchtfoto heeft de AI de details van de gebouwen opnieuw getekend; het blijft een impressie.
-- **Logo op de gevel (24 november 2026)**: in de beeldband na sectie 5 staat `images/sfeer-gebouw-avond-logo.webp`: de originele render, met het onleesbare opschrift weggewerkt en het echte logobestand uit de huisstijl in perspectief op de gevel gezet (geen AI, ramen en gevel onveranderd). Bron: `Beeldmateriaal/Locatie/gebouw-hoek-avond-logo.png`.
+- **Gevel zonder logo (24 november 2026)**: in de beeldband na sectie 5 staat `images/sfeer-gebouw-avond-zonder-logo.webp`: de originele render met het onleesbare opschrift weggewerkt. Het logo wordt in Canva op de gevel gezet; bron zonder logo: `Beeldmateriaal/Locatie/gebouw-hoek-avond-zonder-logo.png`. Daarna dat bestand als webp in `images/` zetten en in `src/` verwijzen.
 
 - **DGA-hoek (24 november 2026)**: de NL-pagina sluit aan op de Meta-advertenties voor DGA's met geld in de holding. De hero noemt holding, € 35.414, eigen grond, 89 dagen en circa 100 m. De feitenband toont dezelfde vier feiten als het cijferblok in de advertenties. Sectie 2C "Zakelijk kopen" staat direct na het sfeermozaïek, met btw en de fiscale gevolgen van eigen gebruik. De bedenktijd staat er op verzoek niet in (24 november 2026). De DE-pagina is niet aangepast.
 
