@@ -62,7 +62,7 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 19. Is de berging standaard bij de prijs inbegrepen (zoals de prijslijst zegt) of een mogelijkheid tegen meerprijs? Op de pagina staat nu "mogelijkheid tot een eigen berging".
 
 **Holding** (toegevoegd 24 november 2026)
-20. Mag "kopen vanuit uw holding" op de pagina en in de advertenties? Het feitenblad staat alleen "ook zakelijk mogelijk" toe. Op de pagina staat nu "ook zakelijk te kopen, bijvoorbeeld vanuit uw holding", met de vraag geel erbij (sectie 2C en de vraag over de BV).
+20. ~~Mag "kopen vanuit uw holding" op de pagina en in de advertenties?~~: ja, bevestigd op 24 november 2026.
 
 **Alleen DE**
 14. Fiscale aandachtspunten voor kopers uit Duitsland, Oostenrijk of Zwitserland
