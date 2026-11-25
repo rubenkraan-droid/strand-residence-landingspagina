@@ -14,7 +14,7 @@ Gebouwd volgens `../prompt-landingspagina-strand-residence.md`. De bestaande `in
 
 ## Bedankpagina's (24 november 2026)
 
-`ghl/NL-bedankt-nl.html` en `ghl/DE-danke-de.html`: elk één Custom Code-element voor de stap /bedankt-nl en /danke-de. Bron: `src/bedankt-nl.html` en `src/danke-de.html`; voorbeeld: `voorbeeld-bedankt-nl.html` en `voorbeeld-danke-de.html`. Inhoud: bevestiging, wat er nu gebeurt (mail, Willem belt binnen één werkdag, geen verplichting), knop naar de rendementscalculator (NL: https://strandresidence.nl/rendement/, DE: https://www.strandresidence.nl/rendement/de/) en dezelfde voettekst als de landingspagina. Na het plakken in de formulieren SR - VD en SR - BROCHURE (en de Duitse) instellen: bij verzenden doorsturen naar /bedankt-nl of /danke-de.
+`ghl/NL-bedankt-nl.html` en `ghl/DE-danke-de.html`: elk één Custom Code-element voor de stap /bedankt-nl en /danke-de. Bron: `src/bedankt-nl.html` en `src/danke-de.html`; voorbeeld: `voorbeeld-bedankt-nl.html` en `voorbeeld-danke-de.html`. Inhoud: bevestiging, wat er nu gebeurt (mail, Willem belt binnen één werkdag, geen verplichting), de mededeling dat Willem het rendement met de bezoeker doorrekent, telefonisch (hij belt daarvoor) of op het verkoopweekend (eigen gebruik, eigen geld of financiering, privé of holding); bewust geen link naar de rekentool (25 november 2026) en dezelfde voettekst als de landingspagina. Na het plakken in de formulieren SR - VD en SR - BROCHURE (en de Duitse) instellen: bij verzenden doorsturen naar /bedankt-nl of /danke-de.
 
 ## Inbouwen in GHL
 
