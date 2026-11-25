@@ -177,3 +177,12 @@
   .srp .pakketten{grid-template-columns:1fr 1fr}
   .srp .pakketten figure:nth-child(-n+2){grid-column:auto}
 }
+
+/* Bedankpagina's (24 november 2026) */
+.srp .bedankt-kop{padding-top:40px}
+.srp .bedankt-kop .logo{width:128px;color:var(--kiezel);margin:0 0 40px}
+.srp .bedankt-kop .logo svg{display:block;width:100%;height:auto}
+.srp .bedankt-kop h1{color:var(--wit)}
+.srp .bedankt-kop .lead{color:var(--kiezel);max-width:34em}
+.srp .kiezel .contact{background:var(--wit);margin-left:0}
+.srp .midden .knoppen{justify-content:center;align-items:center}

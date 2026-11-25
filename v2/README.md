@@ -12,6 +12,10 @@ Gebouwd volgens `../prompt-landingspagina-strand-residence.md`. De bestaande `in
 | `ghl/DE-blok-1-...`, `ghl/DE-blok-2-...` | Hetzelfde voor /de |
 | `src/` | Bron: `nl.html`, `de.html`, `srp.css`. Hier wijzigen, daarna `python3 build.py` |
 
+## Bedankpagina's (24 november 2026)
+
+`ghl/NL-bedankt-nl.html` en `ghl/DE-danke-de.html`: elk één Custom Code-element voor de stap /bedankt-nl en /danke-de. Bron: `src/bedankt-nl.html` en `src/danke-de.html`; voorbeeld: `voorbeeld-bedankt-nl.html` en `voorbeeld-danke-de.html`. Inhoud: bevestiging, wat er nu gebeurt (mail, Willem belt binnen één werkdag, geen verplichting), knop naar de rendementscalculator (NL: https://strandresidence.nl/rendement/, DE: https://www.strandresidence.nl/rendement/de/) en dezelfde voettekst als de landingspagina. Na het plakken in de formulieren SR - VD en SR - BROCHURE (en de Duitse) instellen: bij verzenden doorsturen naar /bedankt-nl of /danke-de.
+
 ## Inbouwen in GHL
 
 1. Pagina: Custom Code-element met blok 1, daaronder een rij met twee kolommen voor de native formulieren "SR - VD" (links) en "SR - BROCHURE" (rechts), daaronder Custom Code met blok 2.

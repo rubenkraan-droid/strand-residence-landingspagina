@@ -53,4 +53,18 @@ for taal in ("nl", "de"):
         uit = kop + FONTS + f"<style>{css_min}</style>\n" + vul(blok, ABS_IMG) + "\n"
         (GHL / f"{taal.upper()}-blok-{nr}-{wat}-formulieren.html").write_text(uit)
 
+# Bedankpagina's: één Custom Code-blok per pagina
+for taal, naam, titel in (("nl", "bedankt-nl", "Bedankt | Strand Residence Bergen aan Zee"), ("de", "danke-de", "Vielen Dank | Strand Residence Bergen aan Zee")):
+    blok = deel((SRC / f"{naam}.html").read_text(), "BEDANKT")
+    pagina = (f'<!doctype html><html lang="{taal}"><head><meta charset="utf-8">'
+              '<meta name="viewport" content="width=device-width,initial-scale=1">'
+              '<meta name="robots" content="noindex,nofollow">'
+              f"<title>{titel}</title>{FONTS}"
+              f"<style>html,body{{margin:0;background:#FAF9F7}}{css}</style></head><body>\n"
+              f"{vul(blok, '../images')}\n</body></html>\n")
+    (HIER / f"voorbeeld-{naam}.html").write_text(pagina)
+    kop = (f"<!-- Strand Residence | {taal.upper()} | {naam}: volledige bedankpagina. "
+           "Plakken in één GHL Custom Code-element. Alle CSS is gescoped onder .srp -->\n")
+    (GHL / f"{taal.upper()}-{naam}.html").write_text(kop + FONTS + f"<style>{css_min}</style>\n" + vul(blok, ABS_IMG) + "\n")
+
 print("Klaar:", *sorted(p.name for p in HIER.glob("voorbeeld-*.html")), *sorted(p.name for p in GHL.iterdir()))
