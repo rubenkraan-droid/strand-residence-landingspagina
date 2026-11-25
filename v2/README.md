@@ -22,7 +22,8 @@ Gebouwd volgens `../prompt-landingspagina-strand-residence.md`. De bestaande `in
 2. Geef het formulier "SR - BROCHURE" (of de kolom eromheen) de element-ID `sr-brochure`. De knoppen "Ontvang de brochure" en "Brochure" springen daarheen. "Verkoopweekend" springt naar de formulierkop (`sr-formulieren`) in blok 1, dat werkt altijd.
 3. De beelden staan als absolute URL op GitHub Pages. Twee nieuwe beelden (`images/hero-mobiel.webp`, 73 kB, en `images/hero-desktop.webp`, 133 kB) staan nog niet online: eerst committen en pushen, anders is de hero leeg.
 4. Head/Tracking Code van de NL-pagina: het bestaande `../ghl/5-NL-head-trackingcode.html` (doorsturen naar /de op tijdzone, `?taal=nl` blijft NL). Zet in de footer-code van beide pagina's ook het anti-scrollscript tegen de Meta in-app browser (snippet 1 van de skill landingspagina).
-5. Plakken met UTF-8: `LC_ALL=en_US.UTF-8 pbcopy < ghl/NL-blok-1-boven-formulieren.html`.
+5. **Microsoft Clarity**: `ghl/clarity-head-trackingcode.html` staat in GHL bij funnel Strand Residence > Settings > Head tracking code (alle stappen), (Clarity-project "Strand Residence landingspagina", ID zj3g0eyaha). Klikken op de knoppen komen binnen als events `cta_verkoopweekend` en `cta_brochure`.
+6. Plakken met UTF-8: `LC_ALL=en_US.UTF-8 pbcopy < ghl/NL-blok-1-boven-formulieren.html`.
 
 ### Vaste balk onderaan
 De balk staat in blok 1 en gebruikt `position: sticky` in plaats van JavaScript. Hij blijft onderaan het scherm tot het einde van blok 1 en blijft dan staan boven de formulieren, dus hij komt er nooit overheen. Op desktop is hij verborgen. **Testen in GHL:** als een GHL-wrapper `overflow: hidden` heeft, plakt de balk niet. Dan voor die sectie in GHL de overflow op zichtbaar zetten.
@@ -57,7 +58,7 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 12. ~~Wat de bezoeker op het verkoopweekend ziet~~: ingevuld op 24 november 2026 (rendementen, het hele plaatje, de omgeving).
 
 **Voettekst**
-13. Privacyverklaring: gelinkt naar strandresidence.nl/privacyverklaring (24 november 2026). Open: contactgegevens (DE: ook Impressum en of er een Duitse privacyverklaring is).
+13. Privacyverklaring: gelinkt naar strandresidence.nl/privacyverklaring (24 november 2026). Contactgegevens: die van Strand Residence (Parelweg 6, 1812 RS Alkmaar, info@strandresidence.nl), op verzoek van Ruben (25 november 2026). DE: Impressum met Torero Invest B.V., KvK 76259889 (bron: privacyverklaring strandresidence.nl). Open voor DE: USt-IdNr. en vertegenwoordiger in het Impressum, en of er een Duitse privacyverklaring is.
 
 **Woningtypen** (sectie 6, toegevoegd 20 november 2026)
 16. ~~Overzicht per woningtype~~: geschrapt van de pagina op 24 november 2026. De prijslijst en de makelaar geven het overzicht.
