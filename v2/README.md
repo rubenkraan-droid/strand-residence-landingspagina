@@ -58,7 +58,7 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 12. ~~Wat de bezoeker op het verkoopweekend ziet~~: ingevuld op 24 november 2026 (rendementen, het hele plaatje, de omgeving).
 
 **Voettekst**
-13. Privacyverklaring: gelinkt naar strandresidence.nl/privacyverklaring (24 november 2026). Contactgegevens: die van Strand Residence (Parelweg 6, 1812 RS Alkmaar, info@strandresidence.nl), op verzoek van Ruben (25 november 2026). DE: Impressum met Torero Invest B.V., KvK 76259889 (bron: privacyverklaring strandresidence.nl). Open voor DE: USt-IdNr. en vertegenwoordiger in het Impressum, en of er een Duitse privacyverklaring is.
+13. Privacyverklaring: gelinkt naar strandresidence.nl/privacyverklaring (24 november 2026). Contactgegevens: die van Strand Residence (Parelweg 6, 1812 RS Alkmaar, info@strandresidence.nl, +31 30 808 0445), op verzoek van Ruben (25 november 2026). DE: Impressum met Torero Invest B.V., KvK 76259889 (bron: privacyverklaring strandresidence.nl). Open voor DE: USt-IdNr. en vertegenwoordiger in het Impressum, en of er een Duitse privacyverklaring is.
 
 **Woningtypen** (sectie 6, toegevoegd 20 november 2026)
 16. ~~Overzicht per woningtype~~: geschrapt van de pagina op 24 november 2026. De prijslijst en de makelaar geven het overzicht.
