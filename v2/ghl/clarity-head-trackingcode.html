@@ -1,0 +1,18 @@
+<!-- Microsoft Clarity | Strand Residence | staat in GHL bij funnel Strand Residence > Settings > Head tracking code (geldt voor alle stappen, NL en DE).
+     Clarity-project: "Strand Residence landingspagina" (ID zj3g0eyaha), aangemaakt 25 november 2026. -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "zj3g0eyaha");
+</script>
+<!-- Klikken op de knoppen als Clarity-event, zodat je in Clarity kunt filteren op wie klikte -->
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('.srp a[href^="#sr-"]'); if(!a||!window.clarity) return;
+  var h=a.getAttribute('href'), taal=(a.closest('.srp').getAttribute('lang')||'nl');
+  try{ clarity('event', h==='#sr-brochure' ? 'cta_brochure' : 'cta_verkoopweekend');
+       clarity('set','taal',taal); }catch(err){}
+});
+</script>
