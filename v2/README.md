@@ -118,3 +118,6 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
   geen tekst meer over het beeld. Tekst ongewijzigd. Voorbeeld: `hero-mobiel-voorstel.png`. Desktop ongewijzigd.
 
 - **Formulieren omgedraaid** (27 november 2026): op NL-control, variant B en DE staat het brochureformulier nu links (op mobiel bovenaan) en het verkoopweekend-formulier rechts. Gedaan in GHL via Layers (2 Column Row, kolommen versleept); de class `sr-brochure` is meeverhuisd.
+- **Verkoopweekendknoppen** (27 november 2026): het klikscript in de funnel-head (`ghl/clarity-head-trackingcode.html`) laat
+  `#sr-formulieren` direct naar de kolom van "SR - VD" / "SR - VD - DE" scrollen (herkend aan de formulier-ID), zodat bezoekers niet
+  eerst bij de brochure uitkomen. Getest op desktop (NL en DE) en mobiel (NL, heroknop en vaste balk).

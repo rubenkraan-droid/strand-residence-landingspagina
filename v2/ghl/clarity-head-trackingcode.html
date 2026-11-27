@@ -30,6 +30,13 @@ document.addEventListener('click',function(e){
     var f=document.querySelector('.sr-brochure'); f=f&&(f.closest('.c-column')||f);
     if(f){ e.preventDefault(); f.scrollIntoView({behavior:'smooth',block:'start'}); }
   }
+  // Verkoopweekend-knoppen direct naar het formulier SR - VD (NL) of SR - VD - DE, niet naar de kop boven beide
+  // formulieren: sinds 27 november 2026 staat de brochure links (op mobiel bovenaan). Valt terug op #sr-formulieren.
+  if(h==='#sr-formulieren'){
+    var v=document.querySelector('[id^="el_a4kVn5wNIGPutMCkOkLf_"],[id^="el_RpJlE3KlhWUTDUkOnFNT_"]');
+    v=v&&(v.closest('.c-column')||v.closest('.ghl-form-wrap')||v);
+    if(v){ e.preventDefault(); v.scrollIntoView({behavior:'smooth',block:'start'}); }
+  }
   if(!window.clarity) return;
   var taal=(a.closest('.srp').getAttribute('lang')||'nl');
   try{ clarity('event', h==='#sr-brochure' ? 'cta_brochure' : 'cta_verkoopweekend');
