@@ -18,7 +18,7 @@ Gebouwd volgens `../prompt-landingspagina-strand-residence.md`. De bestaande `in
 
 ## Inbouwen in GHL
 
-1. Pagina: Custom Code-element met blok 1, daaronder een rij met twee kolommen voor de native formulieren "SR - VD" (links) en "SR - BROCHURE" (rechts), daaronder Custom Code met blok 2.
+1. Pagina: Custom Code-element met blok 1, daaronder een rij met twee kolommen voor de native formulieren "SR - BROCHURE" (links) en "SR - VD" (rechts; omgedraaid op 27 november 2026), daaronder Custom Code met blok 2.
 2. Geef het formulier "SR - BROCHURE" (of de kolom eromheen) de element-ID `sr-brochure`. De knoppen "Ontvang de brochure" en "Brochure" springen daarheen. "Verkoopweekend" springt naar de formulierkop (`sr-formulieren`) in blok 1, dat werkt altijd.
 3. De beelden staan als absolute URL op GitHub Pages. Twee nieuwe beelden (`images/hero-mobiel.webp`, 73 kB, en `images/hero-desktop.webp`, 133 kB) staan nog niet online: eerst committen en pushen, anders is de hero leeg.
 4. Head/Tracking Code van de NL-pagina: het bestaande `../ghl/5-NL-head-trackingcode.html` (doorsturen naar /de op tijdzone, `?taal=nl` blijft NL). Zet in de footer-code van beide pagina's ook het anti-scrollscript tegen de Meta in-app browser (snippet 1 van de skill landingspagina).
@@ -116,3 +116,5 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
   Voorbeeld: `hero-overlay-lichter.jpg`.
 - **Hero mobiel** (27 november 2026): beeld vrij bovenaan (50svh, logo erop), kop, tekst en knoppen eronder op nacht-blauw;
   geen tekst meer over het beeld. Tekst ongewijzigd. Voorbeeld: `hero-mobiel-voorstel.png`. Desktop ongewijzigd.
+
+- **Formulieren omgedraaid** (27 november 2026): op NL-control, variant B en DE staat het brochureformulier nu links (op mobiel bovenaan) en het verkoopweekend-formulier rechts. Gedaan in GHL via Layers (2 Column Row, kolommen versleept); de class `sr-brochure` is meeverhuisd.
