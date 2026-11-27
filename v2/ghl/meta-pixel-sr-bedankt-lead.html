@@ -1,0 +1,28 @@
+<!-- Meta Pixel Code (Torero Pixel) + Lead of Schedule met event-ID: alleen op /bedankt-nl en /danke-de (Header Tracking van de pagina).
+     Bijgewerkt 27 november 2026. Het event en het ID komen uit sr_conv, gezet door meta-sr-formulier-head.html bij het verzenden:
+     Lead na SR - BROCHURE, Schedule na SR - VD. De server (sr-meta-capi) stuurt hetzelfde event met hetzelfde ID.
+     Zonder sr_conv (pagina direct geopend) gaat er alleen een PageView uit; de server telt de aanvraag dan nog steeds. -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1677911090727703');
+fbq('track', 'PageView');
+(function () {
+  var c = null;
+  try { c = JSON.parse(sessionStorage.getItem("sr_conv") || localStorage.getItem("sr_conv") || "null"); } catch (e) {}
+  if (!c || !c.id || (c.e !== "Lead" && c.e !== "Schedule") || Date.now() - (c.t || 0) > 3600000) return;
+  try { if (localStorage.getItem("sr_conv_verstuurd") === c.id) return; } catch (e) {}
+  fbq('track', c.e, {}, { eventID: c.id });
+  try { localStorage.setItem("sr_conv_verstuurd", c.id); sessionStorage.removeItem("sr_conv"); localStorage.removeItem("sr_conv"); } catch (e) {}
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1677911090727703&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->

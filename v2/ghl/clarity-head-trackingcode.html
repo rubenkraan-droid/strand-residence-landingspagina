@@ -1,5 +1,12 @@
-<!-- Microsoft Clarity | Strand Residence | staat in GHL bij funnel Strand Residence > Settings > Head tracking code (geldt voor alle stappen, NL en DE).
-     Clarity-project: "Strand Residence landingspagina" (ID zj3g0eyaha), aangemaakt 25 november 2026. -->
+<!-- Staat in GHL bij funnel Strand Residence > Settings > Head tracking code (alle stappen, NL en DE). Bijgewerkt 25 november 2026.
+     Microsoft Clarity, project "Strand Residence landingspagina" (zj3g0eyaha). -->
+<!-- Google Tag Manager (GTM-WG542M26), toegevoegd 25 november 2026 -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WG542M26"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
 <script type="text/javascript">
 (function(c,l,a,r,i,t,y){
 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -7,11 +14,24 @@ t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 })(window, document, "clarity", "script", "zj3g0eyaha");
 </script>
-<!-- Klikken op de knoppen als Clarity-event, zodat je in Clarity kunt filteren op wie klikte -->
+<!-- Blokken met onze code over de volle breedte, zonder witregel bovenaan of rand opzij
+     (GHL zet padding op sectie, rij en kolom, en op /de een maximale breedte van 1170 px). -->
+<style>
+.c-section:has(.srp:not(.fkop)),.c-row:has(.srp:not(.fkop)),.c-column:has(.srp:not(.fkop)){padding:0!important}
+.c-section:has(.srp:not(.fkop))>.inner{max-width:none!important}
+</style>
+<!-- Knopklikken als Clarity-event, en "Brochure" laten springen naar het formulier met klasse sr-brochure
+     (GHL-formulieren hebben een vaste ID; het brochureformulier heeft in GHL de Custom Class "sr-brochure"). -->
 <script>
 document.addEventListener('click',function(e){
-  var a=e.target.closest&&e.target.closest('.srp a[href^="#sr-"]'); if(!a||!window.clarity) return;
-  var h=a.getAttribute('href'), taal=(a.closest('.srp').getAttribute('lang')||'nl');
+  var a=e.target.closest&&e.target.closest('.srp a[href^="#sr-"]'); if(!a) return;
+  var h=a.getAttribute('href');
+  if(h==='#sr-brochure' && !document.getElementById('sr-brochure')){
+    var f=document.querySelector('.sr-brochure'); f=f&&(f.closest('.c-column')||f);
+    if(f){ e.preventDefault(); f.scrollIntoView({behavior:'smooth',block:'start'}); }
+  }
+  if(!window.clarity) return;
+  var taal=(a.closest('.srp').getAttribute('lang')||'nl');
   try{ clarity('event', h==='#sr-brochure' ? 'cta_brochure' : 'cta_verkoopweekend');
        clarity('set','taal',taal); }catch(err){}
 });

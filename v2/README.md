@@ -23,7 +23,8 @@ Gebouwd volgens `../prompt-landingspagina-strand-residence.md`. De bestaande `in
 3. De beelden staan als absolute URL op GitHub Pages. Twee nieuwe beelden (`images/hero-mobiel.webp`, 73 kB, en `images/hero-desktop.webp`, 133 kB) staan nog niet online: eerst committen en pushen, anders is de hero leeg.
 4. Head/Tracking Code van de NL-pagina: het bestaande `../ghl/5-NL-head-trackingcode.html` (doorsturen naar /de op tijdzone, `?taal=nl` blijft NL). Zet in de footer-code van beide pagina's ook het anti-scrollscript tegen de Meta in-app browser (snippet 1 van de skill landingspagina).
 5. **Microsoft Clarity**: `ghl/clarity-head-trackingcode.html` staat in GHL bij funnel Strand Residence > Settings > Head tracking code (alle stappen), (Clarity-project "Strand Residence landingspagina", ID zj3g0eyaha). Klikken op de knoppen komen binnen als events `cta_verkoopweekend` en `cta_brochure`.
-6. Plakken met UTF-8: `LC_ALL=en_US.UTF-8 pbcopy < ghl/NL-blok-1-boven-formulieren.html`.
+6. **Koppen boven de formulieren** (25 november 2026): bovenaan elke formulierkolom staat een Custom Code-element met label, titel en één regel: `ghl/NL-kop-verkoopweekend.html`, `ghl/NL-kop-brochure.html`, `ghl/DE-kop-verkaufswochenende.html`, `ghl/DE-kop-broschuere.html`. De head-code van de funnel zet de blokken met onze code over de volle breedte, zonder witregel bovenaan (GHL-padding en de maximale breedte van 1170 px op /de).
+7. Plakken met UTF-8: `LC_ALL=en_US.UTF-8 pbcopy < ghl/NL-blok-1-boven-formulieren.html`.
 
 ### Vaste balk onderaan
 De balk staat in blok 1 en gebruikt `position: sticky` in plaats van JavaScript. Hij blijft onderaan het scherm tot het einde van blok 1 en blijft dan staan boven de formulieren, dus hij komt er nooit overheen. Op desktop is hij verborgen. **Testen in GHL:** als een GHL-wrapper `overflow: hidden` heeft, plakt de balk niet. Dan voor die sectie in GHL de overflow op zichtbaar zetten.
@@ -75,8 +76,11 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 
 ## Keuzes om te weten
 
+- **Split-test headline NL (25 november 2026)**: op stap Landingspagina NL draait een variatie (GHL split-test, 50/50). Alleen de H1 verschilt. A: "Vermogen in uw holding, en een eigen plek aan zee". B: "Tot 89 dagen per jaar zelf aan zee, de rest van het jaar verhuurd" (`ghl/NL-blok-1-variant-b-headline.html`, zet in Clarity `variant=B-89-dagen`). Beoordelen op aanmeldingen verkoopweekend en doorstroom naar afspraak, niet alleen op conversie. Wijzig je blok 1, plak het dan in beide pagina's.
+
 - **Opgeschaalde beelden (24 november 2026)**: de luchtfoto (`images/luchtfoto-dorp-strand-hd.webp`) en de duinovergang (`images/duinovergang-strand-hd.webp`) zijn met AI opgeschaald via OpenArt (Nano Banana Pro, 4K). De 4K-bestanden staan in `Beeldmateriaal/Locatie/`. Bij de luchtfoto heeft de AI de details van de gebouwen opnieuw getekend; het blijft een impressie.
 - **Gevel zonder logo (24 november 2026)**: in de beeldband na sectie 5 staat `images/sfeer-gebouw-avond-zonder-logo.webp`: de originele render met het onleesbare opschrift weggewerkt. Het logo wordt in Canva op de gevel gezet; bron zonder logo: `Beeldmateriaal/Locatie/gebouw-hoek-avond-zonder-logo.png`. Daarna dat bestand als webp in `images/` zetten en in `src/` verwijzen.
+- **Nieuwe renders (25 november 2026)**: uit `Beeldmateriaal/Renders 2026-11` zijn de vier interieurbeelden bij de inventarispakketten vervangen (Beach Luxury `2-5A Woonkamer`, Residence Chique `1-4C Woonkamer`, slaapkamers `2-6C` bijgesneden naar 3:2 en `2-4C`), staat `2-6A Terras` onderaan sectie 3 (eigen gebruik) en `Gevels - Overzicht` naast de luchtfoto in sectie 5. Webp-bestanden in `images/` (`interieur-*`, `terras-spa-binnentuin`, `overzicht-duinen-zee`). Omdat de GitHub Pages-deploy die dag mislukte (serverfout 500), staan deze zes beelden in GHL Media Storage en verwijzen de geplakte blokken 1 (NL, variant B, DE) naar `files.leadconnectorhq.com`. `build.py` schrijft weer GitHub-URL's; dat is pas goed als Pages de beelden serveert. Op 27 november 2026 is het terrasbeeld (`terras-spa-binnentuin`) op verzoek van Ruben weer van alle drie de pagina's gehaald; het bestand staat nog in `images/` en in GHL Media Storage.
 
 - **DGA-hoek (24 november 2026)**: de NL-pagina sluit aan op de Meta-advertenties voor DGA's met geld in de holding. De hero noemt holding, € 35.414, eigen grond, 89 dagen en circa 100 m. De feitenband toont dezelfde vier feiten als het cijferblok in de advertenties. Sectie 2C "Zakelijk kopen" staat direct na het sfeermozaïek, met btw en de fiscale gevolgen van eigen gebruik. De bedenktijd staat er op verzoek niet in (24 november 2026). De DE-pagina is niet aangepast.
 
@@ -92,3 +96,23 @@ Geel gemarkeerd op de pagina (`class="ph"`). NL en DE hebben dezelfde, plus een 
 - **AFM-zin op /de** staat alleen in het Duits, zonder de Nederlandse zin erbij (besloten 20 november 2026).
 - **Vrijblijvend-regel** in het Duits: "Unverbindlich. Sie gehen keinerlei Verpflichtung ein."
 - **"op ons kantoor in Alkmaar"** is bewust "in Alkmaar" gebleven: het feitenblad noemt geen kantoor.
+
+## Beelden in 4K en nieuwe hero (27 november 2026)
+
+- In OpenArt (Nano Banana Pro, image2image 4K) opgeschaald, trouw aan het origineel. De 4K-PNG's staan in
+  `Beeldmateriaal/Renders 2026-11/Upscaled 4K/`.
+- Voor het web omgezet naar webp met `-hd` in de naam (`Landingspagina/images/`) en in GHL Media Storage gezet; de blokken 1
+  (NL, variant B, DE) verwijzen naar `files.leadconnectorhq.com`: de vier interieurs, het overzicht en `sfeer-gebouw-zonsondergang`
+  (2000 px breed).
+- **Nieuwe hero**: op verzoek van Ruben vervangen door de daglichtrender `Gevels - Strandresidence aan Zee`
+  (`hero-desktop-gevel-hd.webp` 2560 x 1717, `hero-mobiel-gevel-hd.webp` 1200 x 1609, uitsnede rond het hoofdgebouw met de naam).
+  De golden-hourhero met de cabrio is eraf. Alt-tekst aangepast: "overdag" in plaats van "bij zonsondergang".
+- `src/nl.html` en `src/de.html` gebruiken dezelfde `-hd`-bestandsnamen; die staan pas op GitHub Pages na een push.
+- Plakken in GHL: kopieer pas vlak voor het plakken naar het klembord en controleer de editor voor Save. Tijdens deze sessie werd het
+  klembord tussendoor overschreven; zo'n plak is telkens geannuleerd.
+- **Overlay hero** (27 november 2026): op desktop alleen donker links achter de tekst (horizontaal verloop), zodat de daglichtrender
+  zichtbaar is; op mobiel bovenaan lichter, achter de tekst donker. Uitsnede desktop `object-position:60% 55%`. Selectors zijn bewust
+  `.srp .hero.hero::before` en `.hero-img.hero-img`, omdat blok 2 dezelfde CSS met de oude overlay bevat en later op de pagina staat.
+  Voorbeeld: `hero-overlay-lichter.jpg`.
+- **Hero mobiel** (27 november 2026): beeld vrij bovenaan (50svh, logo erop), kop, tekst en knoppen eronder op nacht-blauw;
+  geen tekst meer over het beeld. Tekst ongewijzigd. Voorbeeld: `hero-mobiel-voorstel.png`. Desktop ongewijzigd.

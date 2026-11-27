@@ -1,0 +1,67 @@
+<!-- Strand Residence · Meta event-ID bij verzenden (27 november 2026).
+     Staat in GHL bij funnel Strand Residence > Settings > Head tracking code, onder Clarity (alle stappen, NL en DE).
+     Bij een klik op de verzendknop van een SR-formulier wordt onthouden welk event het wordt en met welk ID:
+       SR - BROCHURE / SR - BROCHURE - DE  -> Lead
+       SR - VD / SR - VD - DE              -> Schedule
+     ID = "lead_" of "schedule_" + eerste 32 tekens van SHA-256(e-mailadres in kleine letters).
+     De functie sr-meta-capi in Supabase rekent hetzelfde ID uit, zodat Meta browser en server ontdubbelt.
+     De bedankpagina (meta-pixel-sr-bedankt-lead.html) verstuurt het event.
+     Bijgewerkt 27 november 2026: stuurt bij verzenden ook de e-mailhash, _fbc, _fbp en fbclid naar sr-meta-capi
+     (IP en user agent leest de server zelf uit het verzoek). Geen e-mailadres, alleen de hash. -->
+<script>
+(function () {
+  var FORMS = {
+    eYjjQO7B4E4jMIeuAgxg: "Lead", "2ctVjdEc7i9XqPGPoZKC": "Lead",
+    a4kVn5wNIGPutMCkOkLf: "Schedule", RpJlE3KlhWUTDUkOnFNT: "Schedule"
+  };
+  function hash(t) {
+    return crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)).then(function (b) {
+      return Array.prototype.map.call(new Uint8Array(b), function (x) { return ("0" + x.toString(16)).slice(-2); }).join("");
+    });
+  }
+  function onthoud(wrap) {
+    var veld = wrap.querySelector('[id^="el_"]');
+    var formId = veld ? veld.id.split("_")[1] : "";
+    var ev = FORMS[formId];
+    var mail = wrap.querySelector('input[type=email],input[name=email]');
+    if (!ev || !mail || !mail.value.trim() || !window.crypto || !crypto.subtle) return;
+    hash(mail.value.trim().toLowerCase()).then(function (h) {
+      var w = JSON.stringify({ e: ev, id: (ev === "Lead" ? "lead_" : "schedule_") + h.slice(0, 32), t: Date.now() });
+      try { sessionStorage.setItem("sr_conv", w); } catch (e) {}
+      try { localStorage.setItem("sr_conv", w); } catch (e) {}
+      // Klikgegevens naar de server (sr-meta-capi), zodat de Conversions API fbc, fbp, IP en user agent meestuurt.
+      var k = JSON.stringify({ h: h, fbc: cookie("_fbc"), fbp: cookie("_fbp"), fbclid: fbclid(), url: location.href.split("#")[0] });
+      try {
+        if (!(navigator.sendBeacon && navigator.sendBeacon(KLIK, new Blob([k], { type: "text/plain" }))))
+          fetch(KLIK, { method: "POST", body: k, keepalive: true, mode: "no-cors" });
+      } catch (e) {}
+    });
+  }
+  var KLIK = "https://ooqkpazyvohsrdvxfnug.supabase.co/functions/v1/sr-meta-capi?actie=klik";
+  function cookie(n) {
+    var m = document.cookie.match(new RegExp("(?:^|; )" + n + "=([^;]*)"));
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  // fbclid uit de advertentielink bewaren (7 dagen), ook als de bezoeker later terugkomt zonder fbclid in de URL.
+  function fbclid() {
+    var u = new URLSearchParams(location.search).get("fbclid");
+    try {
+      if (u) localStorage.setItem("sr_fbclid", JSON.stringify({ v: u, t: Date.now() }));
+      var s = JSON.parse(localStorage.getItem("sr_fbclid") || "null");
+      if (s && Date.now() - s.t < 7 * 86400000) return s.v;
+    } catch (e) {}
+    return u;
+  }
+  fbclid();
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest('button[type=submit]');
+    var wrap = b && b.closest(".ghl-form-wrap");
+    if (wrap) onthoud(wrap);
+  }, true);
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Enter") return;
+    var wrap = e.target.closest && e.target.closest(".ghl-form-wrap");
+    if (wrap) onthoud(wrap);
+  }, true);
+})();
+</script>
