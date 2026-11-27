@@ -1,0 +1,11 @@
+<script>
+/* Strand Residence: bezoekers in Duitsland, Oostenrijk of Zwitserland automatisch naar de Duitse pagina */
+(function(){try{
+var q=new URLSearchParams(location.search),k=null;
+try{k=localStorage.getItem('sr_taal')}catch(e){}
+if(q.get('taal')==='nl'){try{localStorage.setItem('sr_taal','nl')}catch(e){}return}
+if(k==='nl')return;
+var tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||'');
+if(['Europe/Berlin','Europe/Busingen','Europe/Vienna','Europe/Zurich'].indexOf(tz)>-1){location.replace('https://info.strandresidence.nl/de'+location.search+location.hash)}
+}catch(e){}})();
+</script>
